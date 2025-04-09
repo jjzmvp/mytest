@@ -190,11 +190,11 @@ proxies:
     <<: *myVmessTCP
   
   - name: '🇯🇵 腾讯JP1-80-TCP'
-    server: 43.167.238.230
+    server: 43.163.220.86
     <<: *myVmessTCP
 
   - name: '🇯🇵 腾讯JP2-80-TCP'
-    server: 43.163.220.86
+    server: 43.167.238.230
     <<: *myVmessTCP
 
 proxy-groups:

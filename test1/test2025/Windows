@@ -208,11 +208,6 @@ proxies:
     server: 43.163.220.86
     <<: *myVmessTCP
 
-  - name: '🇯🇵 腾讯JP2-80-TCP'
-    server: 43.167.238.230
-    <<: *myVmessTCP
-
-
 proxy-groups:
   - name: "🎯 国内-手动-Windows"
     type: select
@@ -238,7 +233,7 @@ proxy-groups:
       - 🇰🇷 春川ARM1-80-TCP
       - 🇰🇷 春川ARM2-80-TCP
       - 🇯🇵 腾讯JP1-80-TCP
-      - 🇯🇵 腾讯JP2-80-TCP
+
     #国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -283,7 +278,6 @@ proxy-groups:
       - 🇰🇷 春川ARM1-80-TCP
       - 🇰🇷 春川ARM2-80-TCP
       - 🇯🇵 腾讯JP1-80-TCP
-      - 🇯🇵 腾讯JP2-80-TCP
 
 # Start- 机场相关配置(关键词：Airport)
 proxy-providers:

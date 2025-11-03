@@ -34,9 +34,9 @@ myVmessWS: &myVmessWS
 
 test_url1: &test_url1 https://www.gstatic.com/generate_204
 includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信"
-excludeNodes_CN: &excludeNodes_CN "香港|分流|校园|配合|官网|2倍|3倍|5倍|10倍"
+excludeNodes_CN: &excludeNodes_CN "香港|分流|校园|配合|官网|2倍|3倍|5倍|10倍|所有"
 includeNodes_GN: &includeNodes_GN "443|Kcp|Reality|HY2|中转|CDN|非免流|★|✰"
-excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰"
+excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰|所有"
 ######################################################  锚点 end  ######################################################
 
 mixed-port: 10100                 # HTTP(S) 和 SOCKS 代理混合端口

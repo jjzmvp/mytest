@@ -1,7 +1,7 @@
 ###################################################### 锚点 start ######################################################
 myVmessTCP: &myVmessTCP
   type: vmess
-  port: 22002
+  port: 22001
   uuid: 5dbd27f1-c8ea-4d9b-ac8a-9bb5348fffa1
   alterId: 0
   cipher: auto
@@ -15,7 +15,6 @@ myVmessTCP: &myVmessTCP
     headers:
       Host:
         - pull.free.video.10010.com
-
         
 test_url1: &test_url1 https://www.gstatic.com/generate_204
 includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信"
@@ -89,7 +88,7 @@ sniffer:
 
 external-controller: '127.0.0.1:9876'
 secret: '$jjzmvp@123'
-external-ui: '../ClashDashboard/metacubexd'
+external-ui: 'ui/metacubexd'
 external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
 
 # 类似于 /etc/hosts, 仅支持配置单个 IP
@@ -192,13 +191,14 @@ proxies:
   - name: '🇯🇵 腾讯JP1-80-TCP'
     server: 43.163.220.86
     <<: *myVmessTCP
+    
 
 proxy-groups:
-  - name: "🎯 国内-手动-联通钉钉"
+  - name: "🎯 国内-手动-联通手厅"
     type: select
     proxies:
-      - 🇨🇳 腾讯成都-80-TCP
       - DIRECT
+      - 🇨🇳 腾讯成都-80-TCP
       - ⚡️ 国内-自动-最低延迟
     # 国内机场配置  
     filter: *includeNodes_CN
@@ -206,7 +206,7 @@ proxy-groups:
     use:
       - ✈️ Airport_quick
   
-  - name: "🌏 国外-手动-联通钉钉"
+  - name: "🌏 国外-手动-联通手厅"
     type: select
     proxies:
       - REJECT
@@ -219,7 +219,6 @@ proxy-groups:
       - 🇰🇷 春川ARM1-80-TCP
       - 🇰🇷 春川ARM2-80-TCP
       - 🇯🇵 腾讯JP1-80-TCP
-
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -230,8 +229,7 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 333
-    tolerance: 100
-    lazy: false
+    lazy: true
     proxies:
       - 🇨🇳 腾讯成都-80-TCP
     # 国内机场配置  
@@ -244,7 +242,7 @@ proxy-groups:
     type: fallback
     url: *test_url1
     interval: 333
-    lazy: false
+    lazy: true
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
@@ -278,7 +276,7 @@ proxy-groups:
 # Start- 机场相关配置(关键词：Airport)
 proxy-providers:
   ✈️ Airport_quick:
-    url: https://sub2.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736&sethost=tms.dingtalk.com&domian2ip=1
+    url: https://sub2.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736&sethost=pull.free.video.10010.com&domian2ip=1
     type: "http"
     path: "./ProxyProviders/quick.yaml"
     proxy: 🇭🇰 腾讯HK1-80-TCP
@@ -327,11 +325,11 @@ rules:
   - DOMAIN-KEYWORD,jianguoyun,🇭🇰 腾讯HK1-80-TCP
   - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),🇭🇰 腾讯HK1-80-TCP
   # GEOSITE 国内规则
-  - GEOSITE,iqiyi,🎯 国内-手动-联通钉钉
-  - GEOSITE,baidu,🎯 国内-手动-联通钉钉
-  - GEOSITE,bilibili,🎯 国内-手动-联通钉钉
-  - GEOSITE,youku,🎯 国内-手动-联通钉钉
-  - GEOSITE,bytedance,🎯 国内-手动-联通钉钉
+  - GEOSITE,iqiyi,🎯 国内-手动-联通手厅
+  - GEOSITE,baidu,🎯 国内-手动-联通手厅
+  - GEOSITE,bilibili,🎯 国内-手动-联通手厅
+  - GEOSITE,youku,🎯 国内-手动-联通手厅
+  - GEOSITE,bytedance,🎯 国内-手动-联通手厅
   - GEOSITE,jd,🇨🇳 腾讯成都-80-TCP
   - GEOSITE,zhihu,🇨🇳 腾讯成都-80-TCP
   - GEOSITE,alibaba,🇨🇳 腾讯成都-80-TCP
@@ -349,7 +347,6 @@ rules:
   - GEOSITE,xiaomi,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,huawei,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,zaobao,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,tencent,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,oneplus,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-80-TCP
@@ -360,13 +357,14 @@ rules:
   - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,jie-quick.buzz,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-80-TCP      # Google voice
-  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-80-TCP      # Google voice
+  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-80-TCP  # Google voice
   - DOMAIN-SUFFIX,ping.pe,🇯🇵 腾讯JP1-80-TCP
   - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-80-TCP
   - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-80-TCP
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-80-TCP
   # GEOSITE 国外规则
-  - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通钉钉
+  - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通手厅
+  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-Windows
 
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,google,🇯🇵 腾讯JP1-80-TCP
@@ -380,10 +378,10 @@ rules:
   - GEOSITE,onedrive,🇯🇵 腾讯JP1-80-TCP
   - GEOSITE,wikimedia,🇯🇵 腾讯JP1-80-TCP
   - GEOSITE,cloudflare,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,telegram,🌏 国外-手动-联通钉钉
-  - GEOSITE,microsoft,🎯 国内-手动-联通钉钉
+  - GEOSITE,telegram,🌏 国外-手动-联通手厅
+  - GEOSITE,microsoft,🎯 国内-手动-联通手厅
   # GEOSITE 国内兜底
-  - GEOSITE,CN,🎯 国内-手动-联通钉钉
+  - GEOSITE,CN,🎯 国内-手动-联通手厅
 
   # IP 规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
@@ -397,6 +395,6 @@ rules:
   - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
   - IP-CIDR,1.0.0.1/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
   # GEOIP 兜底
-  - GEOIP,CN,🎯 国内-手动-联通钉钉
-  - MATCH,🌏 国外-手动-联通钉钉
+  - GEOIP,CN,🎯 国内-手动-联通手厅
+  - MATCH,🌏 国外-手动-联通手厅
   - MATCH,REJECT

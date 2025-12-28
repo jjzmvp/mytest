@@ -260,7 +260,6 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - ✈️ Airport_shen7
-      - ✈️ Airport_quick
 
   - name: "⚖️ 国外-负载均衡-轮询"
     type: load-balance

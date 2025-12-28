@@ -218,7 +218,6 @@ proxy-groups:
       - 🇰🇷 春川ARM1-80-TCP
       - 🇰🇷 春川ARM2-80-TCP
       - 🇯🇵 腾讯JP1-80-TCP
-
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -229,8 +228,8 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 333
-    tolerance: 100
-    lazy: false
+    tolerance: 150
+    lazy: true
     proxies:
       - 🇨🇳 腾讯成都-80-TCP
     # 国内机场配置  
@@ -243,7 +242,7 @@ proxy-groups:
     type: fallback
     url: *test_url1
     interval: 333
-    lazy: false
+    lazy: true
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
@@ -253,7 +252,7 @@ proxy-groups:
     type: load-balance
     url: *test_url1
     interval: 333
-    lazy: false
+    lazy: true
     strategy: consistent-hashing
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN

@@ -363,6 +363,7 @@ rules:
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-80-TCP
   # GEOSITE 国外规则
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-腾讯
+  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-腾讯
 
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,google,🇯🇵 腾讯JP1-80-TCP

@@ -34,9 +34,9 @@ myVmessWS: &myVmessWS
 
 test_url1: &test_url1 https://www.gstatic.com/generate_204
 includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信"
-excludeNodes_CN: &excludeNodes_CN "香港|分流|校园|配合|官网|2倍|3倍|5倍|10倍|所有"
+excludeNodes_CN: &excludeNodes_CN "香港|分流|校园|配合|官网|2倍|3倍|5倍|10倍"
 includeNodes_GN: &includeNodes_GN "443|Kcp|Reality|HY2|中转|CDN|非免流|★|✰"
-excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰|所有"
+excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰"
 ######################################################  锚点 end  ######################################################
 
 mixed-port: 10100                 # HTTP(S) 和 SOCKS 代理混合端口
@@ -208,6 +208,7 @@ proxies:
     server: 43.163.220.86
     <<: *myVmessTCP
 
+
 proxy-groups:
   - name: "🎯 国内-手动-Windows"
     type: select
@@ -257,8 +258,11 @@ proxy-groups:
     lazy: true
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
+    #proxies:
+    #  - ⚖️ 国外-负载均衡-轮询
     use:
       - ✈️ Airport_shen7
+      - ✈️ Airport_quick
 
   - name: "⚖️ 国外-负载均衡-轮询"
     type: load-balance
@@ -284,7 +288,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 1200
+      interval: 600
       lazy: false
       url: *test_url1
 
@@ -296,7 +300,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 1200
+      interval: 600
       lazy: false
       url: *test_url1
 # End - 机场相关配置
@@ -315,14 +319,12 @@ rules:
   - DST-PORT,22/2021,🇨🇳 腾讯成都-80-TCP
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
-  # SSH-RDP规则
-  - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-80-TCP
-  # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-80-TCP
-  # 腾讯会议udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,8001-8006),(PROCESS-NAME,com.tencent.wemeet.app)),🇭🇰 腾讯HK1-80-TCP
   # 腾讯应用udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,80/8000/8080/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-80-TCP
+  - AND,((NETWORK,UDP),(DST-PORT,80/8000/8080/16285)),DIRECT
+  # 腾讯会议udp协议
+  - AND,((NETWORK,UDP),(DST-PORT,8001-8006)),DIRECT
+  # 腾讯应用tcp协议
+  - AND,((NETWORK,TCP),(GEOSITE,tencent)),DIRECT
   # VPS域名
   - OR,((DOMAIN-KEYWORD,kramd),(DOMAIN-KEYWORD,krarm)),🇭🇰 腾讯HK1-80-TCP
   - OR,((DOMAIN-KEYWORD,scihub),(DOMAIN-KEYWORD,sci-hub)),🇭🇰 腾讯HK1-80-TCP
@@ -368,6 +370,7 @@ rules:
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-80-TCP
   # GEOSITE 国外规则
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-Windows
+  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-Windows
 
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,google,🇯🇵 腾讯JP1-80-TCP

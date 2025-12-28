@@ -19,9 +19,9 @@ myVmessTCP: &myVmessTCP
         
 test_url1: &test_url1 https://www.gstatic.com/generate_204
 includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|80"
-excludeNodes_CN: &excludeNodes_CN "非免流|中转|校园|配合|CDN|官网|客户|2x|3x|5x|10x|AZ|香港|台湾|日本|新加坡|美国|泰国|443|所有"
+excludeNodes_CN: &excludeNodes_CN "非免流|中转|校园|配合|CDN|官网|客户|2x|3x|5x|10x|AZ|香港|台湾|日本|新加坡|美国|泰国|443"
 includeNodes_GN: &includeNodes_GN "免流|直连|WS|TCP|80"
-excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|非免流|校园|中转|配合|CDN|官网|客户|2x|3x|5x|10x|443|所有"
+excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|非免流|校园|中转|配合|CDN|官网|客户|2x|3x|5x|10x|443"
 ######################################################  锚点 end  ######################################################
 
 mixed-port: 10100   # HTTP(S) 和 SOCKS 代理混合端口
@@ -89,7 +89,7 @@ sniffer:
 
 external-controller: '127.0.0.1:9876'
 secret: '$jjzmvp@123'
-external-ui: '../ClashDashboard/metacubexd'
+external-ui: 'ui/metacubexd'
 external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
 
 # 类似于 /etc/hosts, 仅支持配置单个 IP
@@ -219,7 +219,6 @@ proxy-groups:
       - 🇰🇷 春川ARM1-80-TCP
       - 🇰🇷 春川ARM2-80-TCP
       - 🇯🇵 腾讯JP1-80-TCP
-
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -230,8 +229,7 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 333
-    tolerance: 100
-    lazy: false
+    lazy: true
     proxies:
       - 🇨🇳 腾讯成都-80-TCP
     # 国内机场配置  
@@ -244,7 +242,7 @@ proxy-groups:
     type: fallback
     url: *test_url1
     interval: 333
-    lazy: false
+    lazy: true
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
@@ -349,7 +347,6 @@ rules:
   - GEOSITE,xiaomi,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,huawei,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,zaobao,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,tencent,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,oneplus,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-80-TCP
@@ -360,13 +357,14 @@ rules:
   - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,jie-quick.buzz,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-80-TCP      # Google voice
-  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-80-TCP      # Google voice
+  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-80-TCP  # Google voice
   - DOMAIN-SUFFIX,ping.pe,🇯🇵 腾讯JP1-80-TCP
   - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-80-TCP
   - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-80-TCP
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-80-TCP
   # GEOSITE 国外规则
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通钉钉
+  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-Windows
 
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,google,🇯🇵 腾讯JP1-80-TCP

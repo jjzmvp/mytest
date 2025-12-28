@@ -237,7 +237,6 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - ✈️ Airport_quick
       - ✈️ Airport_shen7
 
   - name: "⚡️ 国内-机场-自动测速"

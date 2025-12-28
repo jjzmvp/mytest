@@ -228,7 +228,6 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 333
-    tolerance: 150
     lazy: true
     proxies:
       - 🇨🇳 腾讯成都-80-TCP

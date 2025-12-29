@@ -335,6 +335,7 @@ rules:
   - GEOSITE,netease,🇨🇳 腾讯成都-80-TCP
   - GEOSITE,meituan,🇨🇳 腾讯成都-80-TCP
   - GEOSITE,shanbay,🇨🇳 腾讯成都-80-TCP
+  - GEOSITE,tencent,🇨🇳 腾讯成都-80-TCP
   - GEOSITE,unionpay,🇨🇳 腾讯成都-80-TCP
   - GEOSITE,chinamobile,🇨🇳 腾讯成都-80-TCP
   - GEOSITE,chinaunicom,🇨🇳 腾讯成都-80-TCP

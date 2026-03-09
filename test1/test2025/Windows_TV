@@ -1,0 +1,403 @@
+############################################ 锚点 start ###############################################################
+myVmessTCP: &myVmessTCP
+  type: vmess
+  port: 22001
+  uuid: 5dbd27f1-c8ea-4d9b-ac8a-9bb5348fffa1
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  udp: true
+  network: http
+  http-opts:
+    method: GET
+    path:
+      - /TS/recharge/tzUrl.html
+    headers:
+      Host:
+        - pull.free.video.10010.com   # 5G手厅
+        # - pgdt.gtimg.cn             # 腾讯混淆
+        # - tms.dingtalk.com          # 钉钉混淆
+
+myVmessWS: &myVmessWS
+  type: vmess
+  port: 22005
+  uuid: 5dbd27f1-c8ea-4d9b-ac8a-9bb5348fffa1
+  alterId: 0
+  cipher: auto
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts: 
+    path: /?ed=2048
+    headers: 
+      Host: pull.free.video.10010.com
+
+test_url1: &test_url1 https://www.gstatic.com/generate_204
+includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信"
+excludeNodes_CN: &excludeNodes_CN "香港|分流|校园|配合|官网|2倍|3倍|5倍|10倍"
+includeNodes_GN: &includeNodes_GN "443|Kcp|Reality|HY2|中转|CDN|非免流|★|✰"
+excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰"
+######################################################  锚点 end  ######################################################
+
+mixed-port: 10100                 # HTTP(S) 和 SOCKS 代理混合端口
+allow-lan: false                  # 允许局域网连接
+bind-address: "*"                 # 绑定IP地址，仅作用于 allow-lan 为 true，'*'表示所有地址
+authentication:
+- "jjzmvp:$jjzmvp@123"
+# 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备耗电问题的临时措施
+keep-alive-interval: 15
+#  find-process-mode has 3 values: always, strict, off
+#  - always, 开启，强制匹配所有进程
+#  - strict, 默认，由clash判断是否开启
+#  - off, 不匹配进程，推荐在路由器上使用此模式
+find-process-mode: strict
+unified-delay: true   # 统一延迟
+mode: rule            # 运行模式 direct/rule/script/global
+log-level: info       # 日志等级 silent/error/warning/info/debug
+ipv6: false           # 开启IPv6总开关(测试网址： https://api-ipv6.ip.sb/ip)
+udp: true             # 开启udp
+tcp-concurrent: false # TCP并发连接所有IP, 将使用最快握手的TCP
+
+geodata-mode: true
+#自定义 geox-url
+geox-url:
+  geoip: 'https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat'
+  geosite: 'https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat'
+  mmdb: 'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb'
+
+profile:
+  store-selected: true  # 储存 API 对策略组的选择，以供下次启动时使用
+  store-fake-ip: true   # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射
+
+# 嗅探域名 可选配置
+sniffer:
+  enable: true
+  ## 对 redir-host 类型识别的流量进行强制嗅探
+  ## 如：Tun、Redir 和 TProxy 并 DNS 为 redir-host 皆属于
+  force-dns-mapping: true
+  ## 对所有未获取到域名的流量进行强制嗅探
+  parse-pure-ip: true
+  # 是否使用嗅探结果作为实际访问，默认 false
+  # 全局配置，优先级低于 sniffer.sniff 实际配置
+  override-destination: false
+  sniff:
+    # TLS 默认如果不配置 ports 默认嗅探 443
+    TLS:
+      ports: [443, 8443]
+      # ports: [443, 2053, 2083, 2087, 2096, 8443, 853, 8000-9999, 5228-5230]
+      
+    # 自1.17版本开始支持quic协议
+    QUIC:
+      ports: [443, 8443]
+
+    # 默认嗅探 80
+    HTTP:
+      # 需要嗅探的端口
+      ports: [80, 8000-8880]
+      # ports: [80, 8080-8880, 2052, 2082, 2086, 2095, 853, 8000-9999, 5228-5230]
+      # 可覆盖 sniffer.override-destination
+      override-destination: true
+  # 白名单，对嗅探结果进行跳过
+  skip-domain:
+    - "+.apple.com"
+    - "Mijia Cloud"
+    - "+.mi.com"
+    - "+.jd.com"
+    - "+.baidu.com"
+
+external-controller: '127.0.0.1:9876'
+secret: '$jjzmvp@123'
+external-ui: 'ui/metacubexd'
+external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+
+# 类似于 /etc/hosts, 仅支持配置单个 IP
+hosts:
+  "localhost": 127.0.0.1
+  "dns.google": 8.8.8.8
+  "*.clash.dev": 127.0.0.1
+
+# Tun配置
+tun:
+  enable: true
+  device: MetaTun
+  stack: mixed                 # system / gvisor / mixed / lwip
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  auto-route: true             # 配置路由表
+  auto-detect-interface: true  # 自动识别出口网卡
+  mtu: 1500                    # 最大传输单元
+  strict-route: false          # 将所有连接路由到tun来防止泄漏，但你的设备将无法其他设备被访问
+
+# DNS配置
+dns:
+  enable: true                 # 关闭将使用系统 DNS
+  ipv6: true                   # false 将返回 AAAA 的空结果
+  listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
+  use-hosts: true              # 查询 hosts
+  # enhanced-mode: redir-host
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16 # fake-ip 池设置
+  fake-ip-filter:
+    - "*"
+    - "+.lan"
+    - "+.local"
+    - "+.stun.*.*"
+    - "+.msftnsci.com"
+    - "lens.l.google.com"
+    - "*.mcdn.bilivideo.cn"
+    - "connect.rom.miui.com"
+    - "+.msftconnecttest.com"
+    - "localhost.ptlogin2.qq.com"
+  default-nameserver:
+    - 'https://223.5.5.5/dns-query#🇨🇳 腾讯成都-80-TCP'         # alidns
+    #- '114.114.114.114#REJECT'
+  proxy-server-nameserver:
+    - 'https://223.5.5.5/dns-query#🇨🇳 腾讯成都-80-TCP'         # alidns
+    #- 'https://1.12.12.12/dns-query#🇨🇳 腾讯成都-80-TCP'       # dnspod
+    # 非免流佬或有支持 udp 本地免流方案的可以换用下面的
+    #- '223.5.5.5#🇨🇳 腾讯成都-80-TCP'
+    #- '119.29.29.29#🇨🇳 腾讯成都-80-TCP'
+  nameserver:
+    - 'https://8.8.8.8/dns-query#🇭🇰 腾讯HK1-80-TCP'      # google
+  fallback:
+    - 'tcp://1.0.0.1#🇭🇰 腾讯HK1-80-TCP'     # CF
+    - '192.168.43.1#DIRECT'             # hotpot
+  fallback-filter:
+    geoip: true
+    geoip-code: '!CN'
+    GEOSITE: 
+      - 'CN'
+      - 'bilibili'
+      - 'tiktok'
+      - 'douyu'
+      - 'huya'
+      - 'category-games@cn'
+      - 'tencent'
+      - 'apple-cn'
+    domain:
+      - '+.xinhuanet.com'
+      - '+.news.cn'
+
+proxies:
+  - name: '🇨🇳 腾讯成都-80-TCP'
+    server: 42.193.49.103
+    <<: *myVmessTCP
+
+  - name: '🇭🇰 腾讯HK1-80-TCP'
+    server: 43.154.96.128
+    <<: *myVmessTCP
+
+  - name: '🇰🇷 春川AMD1-80-TCP'
+    server: 140.245.65.151
+    <<: *myVmessTCP
+
+  - name: '🇰🇷 春川AMD2-80-TCP'
+    server: 158.179.162.197
+    <<: *myVmessTCP
+
+  - name: '🇰🇷 春川ARM1-80-TCP'
+    server: 158.180.72.173
+    <<: *myVmessTCP
+
+  - name: '🇰🇷 春川ARM2-80-TCP'
+    server: 146.56.107.38
+    <<: *myVmessTCP
+
+  - name: '🇯🇵 腾讯JP1-80-TCP'
+    server: 43.163.220.86
+    <<: *myVmessTCP
+
+
+proxy-groups:
+  - name: "🎯 国内-手动-Windows"
+    type: select
+    proxies:
+      - DIRECT
+      - 🇨🇳 腾讯成都-80-TCP
+      - ⚡️ 国内-机场-自动测速
+    # 国内继机场配置
+    filter: *includeNodes_CN
+    exclude-filter: *excludeNodes_CN
+    use:
+      - ✈️ Airport_quick
+
+  - name: "🌏 国外-手动-Windows"
+    type: select
+    proxies:
+      - REJECT
+      - ♻️ 国外-自动-故障转移
+      - ⚖️ 国外-负载均衡-轮询
+      - 🇭🇰 腾讯HK1-80-TCP
+      - 🇰🇷 春川AMD1-80-TCP
+      - 🇰🇷 春川AMD2-80-TCP
+      - 🇰🇷 春川ARM1-80-TCP
+      - 🇰🇷 春川ARM2-80-TCP
+      - 🇯🇵 腾讯JP1-80-TCP
+    #国外机场配置
+    filter: *includeNodes_GN
+    exclude-filter: *excludeNodes_GN
+    use:
+      - ✈️ Airport_shen7
+
+  - name: "⚡️ 国内-机场-自动测速"
+    type: url-test
+    url: *test_url1
+    interval: 333
+    lazy: true
+    # 国内继机场配置
+    filter: *includeNodes_CN
+    exclude-filter: *excludeNodes_CN
+    use:
+      - ✈️ Airport_quick
+
+  - name: "♻️ 国外-自动-故障转移"
+    type: fallback
+    url: *test_url1
+    interval: 333
+    lazy: true
+    filter: *includeNodes_GN
+    exclude-filter: *excludeNodes_GN
+    #proxies:
+    #  - ⚖️ 国外-负载均衡-轮询
+    use:
+      - ✈️ Airport_shen7
+      - ✈️ Airport_quick
+
+  - name: "⚖️ 国外-负载均衡-轮询"
+    type: load-balance
+    url: *test_url1
+    interval: 333
+    lazy: true
+    strategy: round-robin
+    proxies:
+      - 🇭🇰 腾讯HK1-80-TCP
+      - 🇰🇷 春川AMD1-80-TCP
+      - 🇰🇷 春川AMD2-80-TCP
+      - 🇰🇷 春川ARM1-80-TCP
+      - 🇰🇷 春川ARM2-80-TCP
+      - 🇯🇵 腾讯JP1-80-TCP
+
+# Start- 机场相关配置(关键词：Airport)
+proxy-providers:
+  ✈️ Airport_quick:
+    url: https://sub1.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736
+    type: "http"
+    path: "./ProxyProviders/quick.yaml"
+    proxy: 🇭🇰 腾讯HK1-80-TCP
+    interval: 43210
+    health-check:
+      enable: true
+      interval: 600
+      lazy: false
+      url: *test_url1
+
+  ✈️ Airport_shen7:
+    url: https://sub.imtp.eu.org/api/v1/client/subscribe?token=8ddeb620daafb4cd03a1284e01252b11
+    type: "http"
+    path: "./ProxyProviders/shen7.yaml"
+    proxy: 🇭🇰 腾讯HK1-80-TCP
+    interval: 43210
+    health-check:
+      enable: true
+      interval: 600
+      lazy: false
+      url: *test_url1
+# End - 机场相关配置
+
+rules:
+  # 域名规则
+  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
+  # 私有放行
+  - GEOSITE,PRIVATE,DIRECT
+  # Windows下的进程放行
+  - PROCESS-NAME,HipsDaemon.exe,DIRECT
+  # 广告拦截
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,category-public-tracker,REJECT
+  # 端口规则
+  - DST-PORT,22/2021,🇨🇳 腾讯成都-80-TCP
+  # NTP服务udp协议
+  - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+  # 腾讯应用udp协议
+  - AND,((NETWORK,UDP),(DST-PORT,80/8000/8080/16285)),DIRECT
+  # 腾讯会议udp协议
+  - AND,((NETWORK,UDP),(DST-PORT,8001-8006)),DIRECT
+  # 腾讯应用tcp协议
+  - AND,((NETWORK,TCP),(GEOSITE,tencent)),DIRECT
+  # VPS域名
+  - OR,((DOMAIN-KEYWORD,kramd),(DOMAIN-KEYWORD,krarm)),🇭🇰 腾讯HK1-80-TCP
+  - OR,((DOMAIN-KEYWORD,scihub),(DOMAIN-KEYWORD,sci-hub)),🇭🇰 腾讯HK1-80-TCP
+  - DOMAIN-SUFFIX,xuexi.cn,DIRECT
+  - DOMAIN-SUFFIX,1012345.xyz,🇭🇰 腾讯HK1-80-TCP
+  - DOMAIN-KEYWORD,chatglm,DIRECT
+  - DOMAIN-KEYWORD,jianguoyun,DIRECT
+  # GEOSITE 国内规则
+  - GEOSITE,iqiyi,DIRECT
+  - GEOSITE,baidu,DIRECT
+  - GEOSITE,youku,DIRECT
+  - GEOSITE,bilibili,DIRECT
+  - GEOSITE,bytedance,DIRECT
+  #
+  - GEOSITE,jd,DIRECT
+  - GEOSITE,cctv,DIRECT
+  - GEOSITE,alibaba,DIRECT
+  - GEOSITE,tencent,DIRECT
+  - GEOSITE,netease,DIRECT
+  - GEOSITE,shanbay,DIRECT
+  - GEOSITE,unionpay,DIRECT
+  - GEOSITE,chinamobile,DIRECT
+  - GEOSITE,chinaunicom,DIRECT
+  - GEOSITE,chinatelecom,DIRECT
+  - GEOSITE,category-bank-cn,DIRECT
+  # 域名后缀
+  - GEOSITE,oppo,🎯 国内-手动-Windows
+  - GEOSITE,xiaomi,🎯 国内-手动-Windows
+  - GEOSITE,huawei,🎯 国内-手动-Windows
+  - GEOSITE,oneplus,🎯 国内-手动-Windows
+  #
+  - GEOSITE,google-cn,🇭🇰 腾讯HK1-80-TCP
+  - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-80-TCP
+  - DOMAIN-SUFFIX,qingze-quick.top,🇭🇰 腾讯HK1-80-TCP
+  - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-80-TCP
+  - DOMAIN-SUFFIX,tsinghua.edu.cn,🇨🇳 腾讯成都-80-TCP
+  - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-80-TCP        # Google voice
+  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-80-TCP    # Google voice
+  - DOMAIN-SUFFIX,aje.com,🇯🇵 腾讯JP1-80-TCP
+  - DOMAIN-SUFFIX,ping.pe,🇯🇵 腾讯JP1-80-TCP
+  - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-80-TCP
+  - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-80-TCP
+  - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-80-TCP
+  # GEOSITE 国外规则
+  - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-Windows
+  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-Windows
+
+  # 移动网络下的配置，另OPENAI不支持HK节点
+  - GEOSITE,google,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,github,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,zaobao,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,openai,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,oracle,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,yandex,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,twitter,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,mozilla,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,onedrive,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,wikimedia,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,cloudflare,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,telegram,🌏 国外-手动-Windows
+  - GEOSITE,microsoft,🎯 国内-手动-Windows
+  # 国内兜底
+  - GEOSITE,CN,🎯 国内-手动-Windows
+
+  # IP 规则
+  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
+  # mosdns 规则
+  - IP-CIDR,223.5.5.5/32,🇨🇳 腾讯成都-80-TCP,no-resolve
+  - IP-CIDR,119.29.29.29/32,🇨🇳 腾讯成都-80-TCP,no-resolve
+  - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-80-TCP,no-resolve
+  - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
+  - IP-CIDR,1.0.0.1/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
+  # 兜底规则
+  - GEOIP,CN,🎯 国内-手动-Windows
+  - MATCH,🌏 国外-手动-Windows
+  - MATCH,REJECT

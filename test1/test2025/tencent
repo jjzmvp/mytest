@@ -275,7 +275,7 @@ proxy-groups:
 # Start- 机场相关配置(关键词：Airport)
 proxy-providers:
   ✈️ Airport_quick:
-    url: https://sub2.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736&sethost=pull.free.video.10010.com&domian2ip=1
+    url: https://sub2.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736&sethost=pgdt.gtimg.cn&domian2ip=1
     type: "http"
     path: "./ProxyProviders/quick.yaml"
     proxy: 🇭🇰 腾讯HK1-80-TCP

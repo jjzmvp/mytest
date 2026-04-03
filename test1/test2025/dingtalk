@@ -313,8 +313,8 @@ rules:
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-80-TCP
   # 腾讯会议udp协议
   - AND,((NETWORK,UDP),(DST-PORT,8001-8006),(PROCESS-NAME,com.tencent.wemeet.app)),🇭🇰 腾讯HK1-80-TCP
-  # 腾讯应用udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,80/8000/8080/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-80-TCP
+  # 腾讯应用udp协议(如微信视频电话),优先国内节点
+  - AND,((NETWORK,UDP),(DST-PORT,80/8000/8080/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-80-TCP
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-80-TCP
   - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-80-TCP

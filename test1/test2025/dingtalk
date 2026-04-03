@@ -293,6 +293,8 @@ rules:
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
+  # 放行淘宝APP(包括udp和tcp协议)
+  - PROCESS-NAME-REGEX,com.taobao.taobao,DIRECT
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT

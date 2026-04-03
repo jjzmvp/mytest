@@ -119,7 +119,7 @@ hosts:
 # Tun配置
 tun:
   enable: true
-  device: MetaTun
+  device: MetaTun-Wifi
   stack: mixed                 # system / gvisor / mixed / lwip
   dns-hijack:
     - any:53
@@ -132,7 +132,7 @@ tun:
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
-  ipv6: true                   # false 将返回 AAAA 的空结果
+  ipv6: false                  # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
   use-hosts: true              # 查询 hosts
   # enhanced-mode: redir-host
@@ -311,6 +311,9 @@ rules:
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
   # Windows下的进程放行
+  - PROCESS-NAME,TIM.exe,DIRECT
+  - PROCESS-NAME,Weixin.exe,DIRECT
+  - PROCESS-NAME,WXWork.exe,DIRECT
   - PROCESS-NAME,HipsDaemon.exe,DIRECT
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
@@ -354,7 +357,6 @@ rules:
   - GEOSITE,oppo,🎯 国内-手动-Windows
   - GEOSITE,xiaomi,🎯 国内-手动-Windows
   - GEOSITE,huawei,🎯 国内-手动-Windows
-  - GEOSITE,oneplus,🎯 国内-手动-Windows
   #
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-80-TCP
@@ -398,7 +400,7 @@ rules:
   - IP-CIDR,119.29.29.29/32,🇨🇳 腾讯成都-80-TCP,no-resolve
   - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-80-TCP,no-resolve
   - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
-  - IP-CIDR,1.0.0.1/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
+  - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
   # 兜底规则
   - GEOIP,CN,🎯 国内-手动-Windows
   - MATCH,🌏 国外-手动-Windows

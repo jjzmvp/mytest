@@ -35,9 +35,9 @@ keep-alive-interval: 24
 #  - off, 不匹配进程，推荐在路由器上使用此模式
 find-process-mode: strict
 unified-delay: true   # 统一延迟
-mode: rule           # 运行模式 direct/rule/script/global
-log-level: info        # 日志等级 silent/error/warning/info/debug
-ipv6: true             # 开启IPv6总开关
+mode: rule            # 运行模式 direct/rule/script/global
+log-level: info       # 日志等级 silent/error/warning/info/debug
+ipv6: false           # 开启IPv6总开关
 udp: true             # 开启udp
 tcp-concurrent: false # TCP并发连接所有IP, 将使用最快握手的TCP
 
@@ -101,7 +101,7 @@ hosts:
 # Tun配置
 tun:
   enable: true
-  device: MetaTun
+  device: MetaTun-联通钉钉
   stack: mixed                 # system / gvisor / mixed / lwip
   dns-hijack:
     - any:53
@@ -114,7 +114,7 @@ tun:
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
-  ipv6: true                   # false 将返回 AAAA 的空结果
+  ipv6: false                  # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
   use-hosts: true              # 查询 hosts
   # enhanced-mode: redir-host
@@ -302,6 +302,11 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-80-TCP
   # SSH-RDP规则
   - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-80-TCP
+  # 一加系统相关应用
+  - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-80-TCP
+  - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-80-TCP
+  - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-80-TCP
+  - PROCESS-NAME-REGEX,android.uid.system,🇭🇰 腾讯HK1-80-TCP
   # 腾讯应用tcp协议
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-80-TCP
   # 腾讯会议udp协议
@@ -348,7 +353,6 @@ rules:
   - GEOSITE,xiaomi,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,huawei,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,zaobao,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,oneplus,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-80-TCP

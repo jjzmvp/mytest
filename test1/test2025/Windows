@@ -337,7 +337,7 @@ rules:
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(GEOSITE,tencent)),DIRECT
+  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # 腾讯会议udp协议
   - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),DIRECT
   # 腾讯应用udp协议(如微信视频电话),优先国内节点

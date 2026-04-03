@@ -27,16 +27,18 @@ mixed-port: 10100   # HTTP(S) 和 SOCKS 代理混合端口
 allow-lan: false     # 允许局域网连接
 bind-address: "*"   # 绑定IP地址，仅作用于 allow-lan 为 true，'*'表示所有地址
 # 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备耗电问题的临时措施
-keep-alive-interval: 24
+keep-alive-interval: 90
+# TCP Keep Alive 的最大空闲时间
+keep-alive-idle: 900
 #  find-process-mode has 3 values: always, strict, off
 #  - always, 开启，强制匹配所有进程
 #  - strict, 默认，由clash判断是否开启
 #  - off, 不匹配进程，推荐在路由器上使用此模式
 find-process-mode: strict
 unified-delay: true   # 统一延迟
-mode: rule           # 运行模式 direct/rule/script/global
-log-level: info        # 日志等级 silent/error/warning/info/debug
-ipv6: true             # 开启IPv6总开关
+mode: rule            # 运行模式 direct/rule/script/global
+log-level: info       # 日志等级 silent/error/warning/info/debug
+ipv6: false           # 开启IPv6总开关
 udp: true             # 开启udp
 tcp-concurrent: false # TCP并发连接所有IP, 将使用最快握手的TCP
 
@@ -100,7 +102,7 @@ hosts:
 # Tun配置
 tun:
   enable: true
-  device: MetaTun
+  device: MetaTun-联通手厅
   stack: mixed                 # system / gvisor / mixed / lwip
   dns-hijack:
     - any:53
@@ -113,7 +115,7 @@ tun:
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
-  ipv6: true                   # false 将返回 AAAA 的空结果
+  ipv6: false                   # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
   use-hosts: true              # 查询 hosts
   # enhanced-mode: redir-host
@@ -293,6 +295,8 @@ rules:
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
+  # 放行淘宝APP(包括udp和tcp协议)
+  - PROCESS-NAME-REGEX,com.taobao.taobao,DIRECT
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
@@ -302,6 +306,11 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-80-TCP
   # SSH-RDP规则
   - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-80-TCP
+  # 一加系统相关应用
+  - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-80-TCP
+  - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-80-TCP
+  - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-80-TCP
+  - PROCESS-NAME-REGEX,android.uid.system,🇭🇰 腾讯HK1-80-TCP
   # 腾讯应用tcp协议
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-80-TCP
   # 腾讯会议udp协议
@@ -348,7 +357,6 @@ rules:
   - GEOSITE,xiaomi,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,huawei,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,zaobao,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,oneplus,🇭🇰 腾讯HK1-80-TCP
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-80-TCP
   - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-80-TCP
@@ -394,7 +402,7 @@ rules:
   - IP-CIDR,39.129.14.158/32,🇨🇳 腾讯成都-80-TCP,no-resolve  #VPN
   - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-80-TCP,no-resolve
   - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
-  - IP-CIDR,1.0.0.1/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
+  - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
   # GEOIP 兜底
   - GEOIP,CN,🎯 国内-手动-联通手厅
   - MATCH,🌏 国外-手动-联通手厅

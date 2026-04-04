@@ -339,11 +339,11 @@ rules:
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
+  - AND,((NETWORK,TCP),(GEOSITE,tencent)),DIRECT
   # 腾讯会议udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),DIRECT
-  # 腾讯应用udp协议(如微信视频电话),优先国内节点
-  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
+  - AND,((NETWORK,UDP),(DST-PORT,8001-8009)),DIRECT
+  # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
+  - AND,((NETWORK,UDP),(DST-PORT,80/443/8000/8080/8443/8800/16285)),DIRECT
   # VPS域名
   - OR,((DOMAIN-KEYWORD,kramd),(DOMAIN-KEYWORD,krarm)),🇭🇰 腾讯HK1-80-TCP
   - OR,((DOMAIN-KEYWORD,scihub),(DOMAIN-KEYWORD,sci-hub)),🇭🇰 腾讯HK1-80-TCP

@@ -14,10 +14,10 @@ myVmessTCP: &myVmessTCP
       - /TS/recharge/tzUrl.html
     headers:
       Host:
-        - pull.free.video.10010.com   # 5G手厅
-        # - pgdt.gtimg.cn             # 腾讯混淆
-        # - tms.dingtalk.com          # 钉钉混淆
-
+        - pgdt.gtimg.cn                # 腾讯混淆
+        # - tms.dingtalk.com           # 联通钉钉
+        # - pull.free.video.10010.com  # 联通手厅
+        
 myVmessWS: &myVmessWS
   type: vmess
   port: 22005

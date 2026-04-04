@@ -27,7 +27,9 @@ mixed-port: 10100   # HTTP(S) 和 SOCKS 代理混合端口
 allow-lan: false     # 允许局域网连接
 bind-address: "*"   # 绑定IP地址，仅作用于 allow-lan 为 true，'*'表示所有地址
 # 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备耗电问题的临时措施
-keep-alive-interval: 24
+keep-alive-interval: 90
+# TCP Keep Alive 的最大空闲时间
+keep-alive-idle: 900
 #  find-process-mode has 3 values: always, strict, off
 #  - always, 开启，强制匹配所有进程
 #  - strict, 默认，由clash判断是否开启

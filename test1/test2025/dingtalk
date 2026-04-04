@@ -305,8 +305,6 @@ rules:
   - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-80-TCP
   - PROCESS-NAME,WXWork.exe,🇨🇳 腾讯成都-80-TCP
   - PROCESS-NAME,HipsDaemon.exe,🇨🇳 腾讯成都-80-TCP
-  # 端口规则
-  - DST-PORT,22/2021,🇨🇳 腾讯成都-80-TCP
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-80-TCP
   # SSH-RDP规则

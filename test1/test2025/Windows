@@ -336,6 +336,8 @@ rules:
   - GEOSITE,category-public-tracker,REJECT
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+  # SSH-RDP规则
+  - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-80-TCP
   # 一加系统相关应用
   - PROCESS-NAME-REGEX,com.oplus.*,DIRECT
   - PROCESS-NAME-REGEX,com.heytap.*,DIRECT

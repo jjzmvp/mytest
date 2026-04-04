@@ -315,7 +315,7 @@ rules:
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-80-TCP
   # 腾讯会议udp协议
   - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),🇭🇰 腾讯HK1-80-TCP
-  # 腾讯应用udp协议(如微信视频电话),优先国内节点
+  # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-80-TCP
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-80-TCP

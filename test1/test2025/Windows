@@ -338,6 +338,11 @@ rules:
   - DST-PORT,22/2021,🇨🇳 腾讯成都-80-TCP
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+  # 一加系统相关应用
+  - PROCESS-NAME-REGEX,com.oplus.*,DIRECT
+  - PROCESS-NAME-REGEX,com.heytap.*,DIRECT
+  - PROCESS-NAME-REGEX,com.coloros.*,DIRECT
+  - PROCESS-NAME-REGEX,android.uid.system,DIRECT
   # 腾讯应用tcp协议
   - AND,((NETWORK,TCP),(GEOSITE,tencent)),DIRECT
   # 腾讯会议udp协议

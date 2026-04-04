@@ -324,16 +324,16 @@ rules:
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
-  # Windows下的进程放行
-  - PROCESS-NAME,TIM.exe,DIRECT
-  - PROCESS-NAME,Weixin.exe,DIRECT
-  - PROCESS-NAME,WXWork.exe,DIRECT
-  - PROCESS-NAME,HipsDaemon.exe,DIRECT
   # 放行淘宝APP(包括udp和tcp协议)
   - PROCESS-NAME-REGEX,com.taobao.taobao,DIRECT
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
+  # Windows下的进程
+  - PROCESS-NAME,TIM.exe,DIRECT
+  - PROCESS-NAME,Weixin.exe,DIRECT
+  - PROCESS-NAME,WXWork.exe,DIRECT
+  - PROCESS-NAME,HipsDaemon.exe,DIRECT
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # SSH-RDP规则

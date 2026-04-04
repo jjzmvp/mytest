@@ -334,8 +334,6 @@ rules:
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
-  # 端口规则
-  - DST-PORT,22/2021,🇨🇳 腾讯成都-80-TCP
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # 一加系统相关应用

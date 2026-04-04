@@ -300,7 +300,7 @@ rules:
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
-  # Windows下的进程代理
+  # Windows下的进程
   - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-80-TCP
   - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-80-TCP
   - PROCESS-NAME,WXWork.exe,🇨🇳 腾讯成都-80-TCP

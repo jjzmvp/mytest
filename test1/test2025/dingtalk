@@ -290,7 +290,6 @@ proxy-providers:
 # End - 机场相关配置
 
 rules:
-
   # 域名规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # 私有放行

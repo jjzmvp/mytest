@@ -42,12 +42,13 @@ ipv6: false           # 开启IPv6总开关
 udp: true             # 开启udp
 tcp-concurrent: false # TCP并发连接所有IP, 将使用最快握手的TCP
 
-geodata-mode: true
+geodata-mode: true    # 使用dat格式的geo文件
+# Geo文件加载模式，standard/memconservative, memconservative模式专为内存受限 (小内存) 设备优化的加载器 (默认值)
+geodata-loader: memconservative  
 #自定义 geox-url
 geox-url:
-  geoip: 'https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat'
-  geosite: 'https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat'
-  mmdb: 'https://raw.githubusercontent.com/Loyalsoldier/geoip/release/Country.mmdb'
+  geoip:   "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+  geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 
 profile:
   store-selected: true  # 储存 API 对策略组的选择，以供下次启动时使用
@@ -150,6 +151,7 @@ rule-providers:
   fakeip-filter:
     <<: *RuleSet_domain
     format: mrs
+    path: "./RuleProviders/fakeip-filter.mrs"
     url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
 
 proxies:

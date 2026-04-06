@@ -142,21 +142,9 @@ dns:
   respect-rules: true # 让连接DNS服务器时能够遵循规则，也就是通过代理节点连接到上面设置的国外DNS，因为直连可能连接不上
 
 ### 规则配置
-RuleSet_classical: &RuleSet_classical
-  type: http
-  behavior: classical
-  interval: 86400
-  proxy: 🇭🇰 腾讯HK1-80-TCP
-
 RuleSet_domain: &RuleSet_domain
   type: http
   behavior: domain
-  interval: 86400
-  proxy: 🇭🇰 腾讯HK1-80-TCP
-
-RuleSet_ipcidr: &RuleSet_ipcidr
-  type: http
-  behavior: ipcidr
   interval: 86400
   proxy: 🇭🇰 腾讯HK1-80-TCP
 

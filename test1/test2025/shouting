@@ -283,7 +283,7 @@ proxy-providers:
     type: "http"
     path: "./ProxyProviders/quick.yaml"
     proxy: 🇭🇰 腾讯HK1-80-TCP
-    interval: 43210
+    interval: 86400
     health-check:
       enable: true
       interval: 1200

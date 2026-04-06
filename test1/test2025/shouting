@@ -52,7 +52,7 @@ geox-url:
 
 profile:
   store-selected: true  # 储存 API 对策略组的选择，以供下次启动时使用
-  store-fake-ip: true   # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射
+  store-fake-ip:  true  # 储存 fakeip 映射表，域名再次发生连接时，使用原有映射
   
 # 嗅探域名 可选配置
 sniffer:
@@ -110,14 +110,14 @@ tun:
   auto-route: true             # 配置路由表
   auto-detect-interface: true  # 自动识别出口网卡
   mtu: 1500                    # 最大传输单元
-  strict-route: false            # 将所有连接路由到tun来防止泄漏，但你的设备将无法通过其他设备被访问
+  strict-route: false          # 将所有连接路由到tun来防止泄漏，但你的设备将无法通过其他设备被访问
 
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
-  ipv6: false                   # false 将返回 AAAA 的空结果
+  ipv6: false                  # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
-  use-hosts: true             # 关闭hosts
+  use-hosts: true              # 关闭hosts
   use-system-hosts: true       # 开启系统hosts
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # fake-ip 池设置

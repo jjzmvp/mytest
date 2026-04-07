@@ -143,7 +143,7 @@ proxy-providers:
     url: https://sub1.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736
     type: "http"
     path: "./ProxyProviders/quick.yaml"
-    proxy: 🌏 国外-手动-Windows
+    proxy: 🇭🇰 腾讯HK1-TCP
     interval: 43210
     health-check:
       enable: true
@@ -155,7 +155,7 @@ proxy-providers:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
     type: "http"
     path: "./ProxyProviders/My_nodes.yaml"
-    proxy: 🌏 国外-手动-Windows
+    proxy: 🇭🇰 腾讯HK1-TCP
     interval: 43210
     health-check:
       enable: true

@@ -91,7 +91,7 @@ sniffer:
       
     # 自1.17版本开始支持quic协议
     QUIC:
-      ports: [443, 8443]
+      ports: [80, 443, 8443]
 
     # 默认嗅探 80
     HTTP:

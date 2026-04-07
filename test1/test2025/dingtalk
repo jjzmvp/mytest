@@ -156,7 +156,7 @@ proxy-providers:
     type: "http"
     path: "./ProxyProviders/My_nodes.yaml"
     proxy: 🇭🇰 腾讯HK1-TCP
-    interval: 43210
+    interval: 0
     health-check:
       enable: true
       interval: 600

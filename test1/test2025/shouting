@@ -234,6 +234,33 @@ proxy-groups:
     use:
       - ✈️ My_nodes
 
+  - name: "🇨🇳 腾讯成都-TCP"
+    type: url-test
+    url: *test_url1
+    interval: 333
+    lazy: true
+    filter: '腾讯成都'
+    use:
+      - ✈️ My_nodes
+
+  - name: "🇭🇰 腾讯HK1-TCP"
+    type: url-test
+    url: *test_url1
+    interval: 333
+    lazy: true
+    filter: '腾讯HK1'
+    use:
+      - ✈️ My_nodes
+
+  - name: "🇯🇵 腾讯JP1-TCP"
+    type: url-test
+    url: *test_url1
+    interval: 333
+    lazy: true
+    filter: '腾讯JP1'
+    use:
+      - ✈️ My_nodes
+
 rules:
   # 域名规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic

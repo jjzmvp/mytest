@@ -24,7 +24,7 @@ excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四
 ######################################################  锚点 end  ######################################################
 
 mixed-port: 10100   # HTTP(S) 和 SOCKS 代理混合端口
-allow-lan: false     # 允许局域网连接
+allow-lan: false    # 允许局域网连接
 bind-address: "*"   # 绑定IP地址，仅作用于 allow-lan 为 true，'*'表示所有地址
 # 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备耗电问题的临时措施
 keep-alive-interval: 90
@@ -73,7 +73,7 @@ sniffer:
 
     # 自1.17版本开始支持quic
     QUIC:
-      ports: [443, 8443]
+      ports: [80, 443, 8443]
 
     HTTP:
       # 需要嗅探的端口
@@ -116,9 +116,9 @@ tun:
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
-  ipv6: false                   # false 将返回 AAAA 的空结果
+  ipv6: false                  # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
-  use-hosts: true             # 关闭hosts
+  use-hosts: true              # 关闭hosts
   use-system-hosts: true       # 开启系统hosts
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # fake-ip 池设置

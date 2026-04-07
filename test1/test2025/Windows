@@ -411,6 +411,7 @@ rules:
   - GEOIP,PRIVATE,DIRECT,no-resolve
   # mosdns 规则
   - IP-CIDR,223.5.5.5/32,🇨🇳 腾讯成都-80-TCP,no-resolve
+  - IP-CIDR,223.6.6.6/32,🇨🇳 腾讯成都-80-TCP,no-resolve
   - IP-CIDR,119.29.29.29/32,🇨🇳 腾讯成都-80-TCP,no-resolve
   - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-80-TCP,no-resolve
   - IP-CIDR,43.154.96.128/32,🇨🇳 腾讯成都-80-TCP,no-resolve

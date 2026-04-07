@@ -1,27 +1,10 @@
-###################################################### 锚点 start ######################################################
-myVmessTCP: &myVmessTCP
-  type: vmess
-  port: 22001
-  uuid: 5dbd27f1-c8ea-4d9b-ac8a-9bb5348fffa1
-  alterId: 0
-  cipher: auto
-  skip-cert-verify: true
-  udp: true
-  network: http
-  http-opts:
-    method: GET
-    path:
-      - /TS/recharge/tzUrl.html
-    headers:
-      Host:
-        - pull.free.video.10010.com
-        
+##################################################################### 锚点 start #####################################################################
 test_url1: &test_url1 https://www.gstatic.com/generate_204
-includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信"
+includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|成都|移动|联通|电信"
 excludeNodes_CN: &excludeNodes_CN "非免流|中转|校园|配合|CDN|官网|客户|2x|3x|5x|10x|香港|所有"
-includeNodes_GN: &includeNodes_GN "免流|直连|WS|TCP"
-excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|非免流|校园|中转|配合|CDN|官网|客户|2x|3x|5x|10x|所有"
-######################################################  锚点 end  ######################################################
+includeNodes_GN: &includeNodes_GN "免流|直连|HK1|JP1|WS|TCP"
+excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|成都|移动|联通|电信|非免流|校园|中转|配合|CDN|官网|客户|2x|3x|5x|10x|所有"
+#####################################################################  锚点 end  #####################################################################
 
 mixed-port: 10100   # HTTP(S) 和 SOCKS 代理混合端口
 allow-lan: false    # 允许局域网连接
@@ -126,18 +109,18 @@ dns:
     - "geosite:private"
     - "geosite:category-public-tracker"
   default-nameserver: # 基础DNS服务器，必须先有它才能使用域名类型的DNS配置，因此必须为IP，此处使用阿里云DNS
-    - 'https://223.5.5.5/dns-query#🇨🇳 腾讯成都-80-TCP'
-    - 'https://223.6.6.6/dns-query#🇨🇳 腾讯成都-80-TCP'
-    - 'https://119.29.29.29/dns-query#🇨🇳 腾讯成都-80-TCP'
+    - 'https://223.5.5.5/dns-query#🇨🇳 腾讯成都-TCP'
+    - 'https://223.6.6.6/dns-query#🇨🇳 腾讯成都-TCP'
+    - 'https://119.29.29.29/dns-query#🇨🇳 腾讯成都-TCP'
   proxy-server-nameserver: # 解析代理节点时使用的DNS，为了使下面的respect-rules生效必须设置，最好设置为国内DNS，否则在代理的第一步就可能因为连接不上国外DNS而解析不出代理节点的IP，最终倒在起点
-    - 'https://dns.alidns.com/dns-query#🇨🇳 腾讯成都-80-TCP'
-    - 'https://doh.pub/dns-query#🇨🇳 腾讯成都-80-TCP'
+    - 'https://dns.alidns.com/dns-query#🇨🇳 腾讯成都-TCP'
+    - 'https://doh.pub/dns-query#🇨🇳 腾讯成都-TCP'
   direct-nameserver: # 规则匹配到直连时使用的DNS，既然是可以直连的，当然要用国内DNS
-    - 'https://dns.alidns.com/dns-query#🇨🇳 腾讯成都-80-TCP'
-    - 'https://doh.pub/dns-query#🇨🇳 腾讯成都-80-TCP'
+    - 'https://dns.alidns.com/dns-query#🇨🇳 腾讯成都-TCP'
+    - 'https://doh.pub/dns-query#🇨🇳 腾讯成都-TCP'
   nameserver: # 在访问的国外网站没有匹配到任何域名规则，最终走了MATCH兜底规则时使用的DNS，为了确保不发生DNS泄漏和DNS污染，必须使用国外DNS
-    - 'https://1.1.1.1/dns-query#🇭🇰 腾讯HK1-80-TCP'
-    - 'https://8.8.8.8/dns-query#🇭🇰 腾讯HK1-80-TCP'
+    - 'https://1.1.1.1/dns-query#🇭🇰 腾讯HK1-TCP'
+    - 'https://8.8.8.8/dns-query#🇭🇰 腾讯HK1-TCP'
   respect-rules: true # 让连接DNS服务器时能够遵循规则，也就是通过代理节点连接到上面设置的国外DNS，因为直连可能连接不上
 
 ### 规则配置
@@ -145,7 +128,7 @@ RuleSet_domain: &RuleSet_domain
   type: http
   behavior: domain
   interval: 86400
-  proxy: 🇭🇰 腾讯HK1-80-TCP
+  proxy: 🇭🇰 腾讯HK1-TCP
 
 rule-providers:
   fakeip-filter:
@@ -154,47 +137,44 @@ rule-providers:
     path: "./RuleProviders/fakeip-filter.mrs"
     url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
 
-proxies:
-  - name: '🇨🇳 腾讯成都-80-TCP'
-    server: 42.193.49.103
-    <<: *myVmessTCP
+# Start- 机场相关配置(关键词：Airport)
+proxy-providers:
+  ✈️ Airport_quick:
+    url: https://sub1.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736
+    type: "http"
+    path: "./ProxyProviders/quick.yaml"
+    proxy: 🌏 国外-手动-Windows
+    interval: 43210
+    health-check:
+      enable: true
+      interval: 600
+      lazy: false
+      url: *test_url1
 
-  - name: '🇭🇰 腾讯HK1-80-TCP'
-    server: 43.154.96.128
-    <<: *myVmessTCP
-
-  - name: '🇰🇷 春川AMD1-80-TCP'
-    server: 140.245.65.151
-    <<: *myVmessTCP
-    
-  - name: '🇰🇷 春川AMD2-80-TCP'
-    server: 158.179.162.197
-    <<: *myVmessTCP
-
-  - name: '🇰🇷 春川ARM1-80-TCP'
-    server: 158.180.72.173
-    <<: *myVmessTCP
-
-  - name: '🇰🇷 春川ARM2-80-TCP'
-    server: 146.56.107.38
-    <<: *myVmessTCP
-  
-  - name: '🇯🇵 腾讯JP1-80-TCP'
-    server: 43.163.220.86
-    <<: *myVmessTCP
-    
+  ✈️ My_nodes:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
+    type: "http"
+    path: "./ProxyProviders/My_nodes.yaml"
+    proxy: 🌏 国外-手动-Windows
+    interval: 43210
+    health-check:
+      enable: true
+      interval: 600
+      lazy: false
+      url: *test_url1
+# End - 机场相关配置
 
 proxy-groups:
   - name: "🎯 国内-手动-联通手厅"
     type: select
     proxies:
       - DIRECT
-      - 🇨🇳 腾讯成都-80-TCP
       - ⚡️ 国内-自动-最低延迟
     # 国内机场配置  
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
+      - ✈️ My_nodes
       - ✈️ Airport_quick
   
   - name: "🌏 国外-手动-联通手厅"
@@ -204,16 +184,11 @@ proxy-groups:
       - ♻ 国外-自动-故障转移
       - ⚙ 国外-负载均衡-机场
       - ⚖️ 国外-负载均衡-轮询
-      - 🇭🇰 腾讯HK1-80-TCP
-      - 🇰🇷 春川AMD1-80-TCP
-      - 🇰🇷 春川AMD2-80-TCP
-      - 🇰🇷 春川ARM1-80-TCP
-      - 🇰🇷 春川ARM2-80-TCP
-      - 🇯🇵 腾讯JP1-80-TCP
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
+      - ✈️ My_nodes
       - ✈️ Airport_quick
       
   - name: "⚡️ 国内-自动-最低延迟"
@@ -221,8 +196,6 @@ proxy-groups:
     url: *test_url1
     interval: 333
     lazy: true
-    proxies:
-      - 🇨🇳 腾讯成都-80-TCP
     # 国内机场配置  
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
@@ -256,27 +229,10 @@ proxy-groups:
     interval: 333
     lazy: true
     strategy: round-robin
-    proxies:
-      - 🇭🇰 腾讯HK1-80-TCP
-      - 🇰🇷 春川AMD1-80-TCP
-      - 🇰🇷 春川AMD2-80-TCP
-      - 🇰🇷 春川ARM1-80-TCP
-      - 🇰🇷 春川ARM2-80-TCP
-      - 🇯🇵 腾讯JP1-80-TCP
-
-# Start- 机场相关配置(关键词：Airport)
-proxy-providers:
-  ✈️ Airport_quick:
-    url: https://sub2.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736&sethost=pull.free.video.10010.com&domian2ip=1
-    type: "http"
-    path: "./ProxyProviders/quick.yaml"
-    proxy: 🇭🇰 腾讯HK1-80-TCP
-    interval: 86400
-    health-check:
-      enable: true
-      interval: 1200
-      url: *test_url1
-# End - 机场相关配置
+    filter: *includeNodes_GN
+    exclude-filter: *excludeNodes_GN
+    use:
+      - ✈️ My_nodes
 
 rules:
   # 域名规则
@@ -289,98 +245,98 @@ rules:
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
   # Windows下的进程
-  - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-80-TCP
-  - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-80-TCP
-  - PROCESS-NAME,WXWork.exe,🇨🇳 腾讯成都-80-TCP
-  - PROCESS-NAME,HipsDaemon.exe,🇨🇳 腾讯成都-80-TCP
+  - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,WXWork.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,HipsDaemon.exe,🇨🇳 腾讯成都-TCP
   # NTP服务udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-80-TCP
+  - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-TCP
   # SSH-RDP规则
-  - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-80-TCP
+  - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-TCP
   # 一加系统相关应用
-  - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-80-TCP
-  - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-80-TCP
-  - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-80-TCP
-  - PROCESS-NAME-REGEX,android.uid.system,🇭🇰 腾讯HK1-80-TCP
+  - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,android.uid.system,🇭🇰 腾讯HK1-TCP
   # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-80-TCP
+  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-TCP
   # 腾讯会议udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),🇭🇰 腾讯HK1-80-TCP
+  - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),🇭🇰 腾讯HK1-TCP
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
-  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-80-TCP
+  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-TCP
   # OK影视 + 1DM+ 相关应用
   - PROCESS-NAME-REGEX,com.fongmi.android.tv,🌏 国外-手动-联通手厅
   - PROCESS-NAME-REGEX,idm.internet.download.manager.plus,🌏 国外-手动-联通手厅
   # 域名后缀
-  - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,1hai.cn,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,xuexi.cn,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,12306.cn,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,ceair.com,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,1237125.cn,🇨🇳 腾讯成都-80-TCP #云岭先锋
-  - DOMAIN-SUFFIX,ovital.com,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,guancha.cn,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,1012345.xyz,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,gpticket.org,🇨🇳 腾讯成都-80-TCP
-  - DOMAIN-SUFFIX,umetrip.com,🇨🇳 腾讯成都-80-TCP
+  - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,1hai.cn,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,xuexi.cn,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,12306.cn,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,ceair.com,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,1237125.cn,🇨🇳 腾讯成都-TCP #云岭先锋
+  - DOMAIN-SUFFIX,ovital.com,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,guancha.cn,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,1012345.xyz,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,gpticket.org,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,umetrip.com,🇨🇳 腾讯成都-TCP
   # 关键词域名规则
-  - DOMAIN-KEYWORD,jianguoyun,🇭🇰 腾讯HK1-80-TCP
-  - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),🇭🇰 腾讯HK1-80-TCP
+  - DOMAIN-KEYWORD,jianguoyun,🇭🇰 腾讯HK1-TCP
+  - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),🇭🇰 腾讯HK1-TCP
   # GEOSITE 国内规则
   - GEOSITE,iqiyi,🎯 国内-手动-联通手厅
   - GEOSITE,baidu,🎯 国内-手动-联通手厅
   - GEOSITE,bilibili,🎯 国内-手动-联通手厅
   - GEOSITE,youku,🎯 国内-手动-联通手厅
   - GEOSITE,bytedance,🎯 国内-手动-联通手厅
-  - GEOSITE,jd,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,zhihu,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,alibaba,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,netease,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,meituan,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,shanbay,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,tencent,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,unionpay,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,chinamobile,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,chinaunicom,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,chinatelecom,🇨🇳 腾讯成都-80-TCP
-  - GEOSITE,category-bank-cn,🇨🇳 腾讯成都-80-TCP
+  - GEOSITE,jd,🇨🇳 腾讯成都-TCP
+  - GEOSITE,zhihu,🇨🇳 腾讯成都-TCP
+  - GEOSITE,alibaba,🇨🇳 腾讯成都-TCP
+  - GEOSITE,netease,🇨🇳 腾讯成都-TCP
+  - GEOSITE,meituan,🇨🇳 腾讯成都-TCP
+  - GEOSITE,shanbay,🇨🇳 腾讯成都-TCP
+  - GEOSITE,tencent,🇨🇳 腾讯成都-TCP
+  - GEOSITE,unionpay,🇨🇳 腾讯成都-TCP
+  - GEOSITE,chinamobile,🇨🇳 腾讯成都-TCP
+  - GEOSITE,chinaunicom,🇨🇳 腾讯成都-TCP
+  - GEOSITE,chinatelecom,🇨🇳 腾讯成都-TCP
+  - GEOSITE,category-bank-cn,🇨🇳 腾讯成都-TCP
   # 域名后缀
-  - GEOSITE,cctv,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,oppo,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,xiaomi,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,huawei,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,zaobao,🇭🇰 腾讯HK1-80-TCP
-  - GEOSITE,google-cn,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,nandu.buzz,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,qingzeyy.top,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,ghproxy.com,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,jie-quick.buzz,🇭🇰 腾讯HK1-80-TCP
-  - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-80-TCP      # Google voice
-  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-80-TCP  # Google voice
-  - DOMAIN-SUFFIX,ping.pe,🇯🇵 腾讯JP1-80-TCP
-  - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-80-TCP
-  - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-80-TCP
-  - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,cctv,🇭🇰 腾讯HK1-TCP
+  - GEOSITE,oppo,🇭🇰 腾讯HK1-TCP
+  - GEOSITE,xiaomi,🇭🇰 腾讯HK1-TCP
+  - GEOSITE,huawei,🇭🇰 腾讯HK1-TCP
+  - GEOSITE,zaobao,🇭🇰 腾讯HK1-TCP
+  - GEOSITE,google-cn,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,nandu.buzz,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,qingzeyy.top,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,ghproxy.com,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,jie-quick.buzz,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-TCP      # Google voice
+  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-TCP  # Google voice
+  - DOMAIN-SUFFIX,ping.pe,🇯🇵 腾讯JP1-TCP
+  - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-TCP
+  - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-TCP
+  - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-TCP
   # GEOSITE 国外规则
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通手厅
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-联通手厅
 
   # 移动网络下的配置，另OPENAI不支持HK节点
-  - GEOSITE,google,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,github,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,zaobao,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,openai,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,oracle,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,yandex,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,twitter,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,mozilla,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,onedrive,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,wikimedia,🇯🇵 腾讯JP1-80-TCP
-  - GEOSITE,cloudflare,🇯🇵 腾讯JP1-80-TCP
+  - GEOSITE,google,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,github,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,zaobao,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,openai,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,oracle,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,yandex,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,twitter,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,mozilla,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,onedrive,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,wikimedia,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,cloudflare,🇯🇵 腾讯JP1-TCP
   - GEOSITE,telegram,🌏 国外-手动-联通手厅
   - GEOSITE,microsoft,🎯 国内-手动-联通手厅
   # GEOSITE 国内兜底
@@ -391,15 +347,15 @@ rules:
   # 私有放行
   - GEOIP,PRIVATE,DIRECT,no-resolve
   # CIDR 规则
-  - IP-CIDR,223.5.5.5/32,🇨🇳 腾讯成都-80-TCP,no-resolve
-  - IP-CIDR,223.6.6.6/32,🇨🇳 腾讯成都-80-TCP,no-resolve
-  - IP-CIDR,119.29.29.29/32,🇨🇳 腾讯成都-80-TCP,no-resolve
-  - IP-CIDR,39.129.14.158/32,🇨🇳 腾讯成都-80-TCP,no-resolve  #VPN
-  - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-80-TCP,no-resolve
-  - IP-CIDR,43.154.96.128/32,🇨🇳 腾讯成都-80-TCP,no-resolve
-  - IP-CIDR,43.163.220.86/32,🇨🇳 腾讯成都-80-TCP,no-resolve
-  - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
-  - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-80-TCP,no-resolve
+  - IP-CIDR,223.5.5.5/32,🇨🇳 腾讯成都-TCP,no-resolve
+  - IP-CIDR,223.6.6.6/32,🇨🇳 腾讯成都-TCP,no-resolve
+  - IP-CIDR,119.29.29.29/32,🇨🇳 腾讯成都-TCP,no-resolve
+  - IP-CIDR,39.129.14.158/32,🇨🇳 腾讯成都-TCP,no-resolve  #VPN
+  - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-TCP,no-resolve
+  - IP-CIDR,43.154.96.128/32,🇨🇳 腾讯成都-TCP,no-resolve
+  - IP-CIDR,43.163.220.86/32,🇨🇳 腾讯成都-TCP,no-resolve
+  - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-TCP,no-resolve
+  - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-TCP,no-resolve
   # GEOIP 兜底
   - GEOIP,CN,🎯 国内-手动-联通手厅
   - MATCH,🌏 国外-手动-联通手厅

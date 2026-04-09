@@ -100,7 +100,7 @@ dns:
   enable: true                 # 关闭将使用系统 DNS
   ipv6: false                  # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
-  use-hosts: true              # 关闭hosts
+  use-hosts: false             # 关闭hosts
   use-system-hosts: true       # 开启系统hosts
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # fake-ip 池设置

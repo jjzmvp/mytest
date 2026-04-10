@@ -350,7 +350,7 @@ rules:
   - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-TCP
   - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-TCP
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-TCP
-  # GEOSITE 国外规则
+  # Youtube和谷歌学术(部分节点被google拉黑)
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通腾讯
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-联通腾讯
 

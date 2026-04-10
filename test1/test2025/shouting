@@ -311,7 +311,6 @@ rules:
   - DOMAIN-SUFFIX,gpticket.org,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,umetrip.com,🇨🇳 腾讯成都-TCP
   # 关键词域名规则
-  - DOMAIN-KEYWORD,jianguoyun,🇭🇰 腾讯HK1-TCP
   - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),🇭🇰 腾讯HK1-TCP
   # GEOSITE 国内规则
   - GEOSITE,iqiyi,🎯 国内-手动-联通手厅

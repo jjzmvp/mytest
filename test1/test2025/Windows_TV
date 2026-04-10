@@ -308,53 +308,69 @@ rules:
   - PROCESS-NAME-REGEX,com.coloros.*,DIRECT
   - PROCESS-NAME-REGEX,android.uid.system,DIRECT
   # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(GEOSITE,tencent)),DIRECT
+  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # 腾讯会议udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,8001-8009)),DIRECT
+  - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),DIRECT
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
-  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285)),DIRECT
-  # VPS域名
-  - OR,((DOMAIN-KEYWORD,kramd),(DOMAIN-KEYWORD,krarm)),🇭🇰 腾讯HK1-TCP
-  - OR,((DOMAIN-KEYWORD,scihub),(DOMAIN-KEYWORD,sci-hub)),🇭🇰 腾讯HK1-TCP
+  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
+  # OK影视 + 1DM+ 相关应用
+  - PROCESS-NAME-REGEX,com.fongmi.android.tv,🌏 国外-手动-Windows
+  - PROCESS-NAME-REGEX,idm.internet.download.manager.plus,🌏 国外-手动-Windows
+  # 域名后缀
+  - DOMAIN-SUFFIX,ac.cn,DIRECT
+  - DOMAIN-SUFFIX,gov.cn,DIRECT
+  - DOMAIN-SUFFIX,1hai.cn,DIRECT
   - DOMAIN-SUFFIX,xuexi.cn,DIRECT
-  - DOMAIN-SUFFIX,1012345.xyz,🇭🇰 腾讯HK1-TCP
-  - DOMAIN-KEYWORD,chatglm,DIRECT
+  - DOMAIN-SUFFIX,12306.cn,DIRECT
+  - DOMAIN-SUFFIX,ceair.com,DIRECT
+  - DOMAIN-SUFFIX,1237125.cn,DIRECT #云岭先锋
+  - DOMAIN-SUFFIX,ovital.com,DIRECT
+  - DOMAIN-SUFFIX,guancha.cn,DIRECT
+  - DOMAIN-SUFFIX,1012345.xyz,DIRECT
+  - DOMAIN-SUFFIX,gpticket.org,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
+  # 关键词域名规则
+  - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),DIRECT
   # GEOSITE 国内规则
-  - GEOSITE,iqiyi,DIRECT
-  - GEOSITE,baidu,DIRECT
-  - GEOSITE,youku,DIRECT
-  - GEOSITE,bilibili,DIRECT
-  - GEOSITE,bytedance,DIRECT
-  #
+  - GEOSITE,iqiyi,🎯 国内-手动-Windows
+  - GEOSITE,baidu,🎯 国内-手动-Windows
+  - GEOSITE,bilibili,🎯 国内-手动-Windows
+  - GEOSITE,youku,🎯 国内-手动-Windows
+  - GEOSITE,bytedance,🎯 国内-手动-Windows
   - GEOSITE,jd,DIRECT
-  - GEOSITE,cctv,DIRECT
+  - GEOSITE,zhihu,DIRECT
   - GEOSITE,alibaba,DIRECT
-  - GEOSITE,tencent,DIRECT
   - GEOSITE,netease,DIRECT
+  - GEOSITE,meituan,DIRECT
   - GEOSITE,shanbay,DIRECT
+  - GEOSITE,tencent,DIRECT
   - GEOSITE,unionpay,DIRECT
   - GEOSITE,chinamobile,DIRECT
   - GEOSITE,chinaunicom,DIRECT
   - GEOSITE,chinatelecom,DIRECT
   - GEOSITE,category-bank-cn,DIRECT
   # 域名后缀
-  - GEOSITE,oppo,🎯 国内-手动-Windows
-  - GEOSITE,xiaomi,🎯 国内-手动-Windows
-  - GEOSITE,huawei,🎯 国内-手动-Windows
-  #
+  - GEOSITE,cctv,DIRECT
+  - GEOSITE,oppo,DIRECT
+  - GEOSITE,xiaomi,DIRECT
+  - GEOSITE,huawei,DIRECT
+  # 国外域名
+  - GEOSITE,zaobao,🇭🇰 腾讯HK1-TCP
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,qingze-quick.top,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,nandu.buzz,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,qingzeyy.top,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,ghproxy.com,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,tsinghua.edu.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-TCP        # Google voice
-  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-TCP    # Google voice
-  - DOMAIN-SUFFIX,aje.com,🇯🇵 腾讯JP1-TCP
+  - DOMAIN-SUFFIX,jie-quick.buzz,🇭🇰 腾讯HK1-TCP
+  - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-TCP      # Google voice
+  - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-TCP  # Google voice
   - DOMAIN-SUFFIX,ping.pe,🇯🇵 腾讯JP1-TCP
   - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-TCP
   - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-TCP
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-TCP
-  # GEOSITE 国外规则
+  # Youtube和谷歌学术(部分节点被google拉黑)
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-Windows
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-Windows
 
@@ -372,21 +388,24 @@ rules:
   - GEOSITE,cloudflare,🇯🇵 腾讯JP1-TCP
   - GEOSITE,telegram,🌏 国外-手动-Windows
   - GEOSITE,microsoft,🎯 国内-手动-Windows
-  # 国内兜底
+  # GEOSITE 国内兜底
   - GEOSITE,CN,🎯 国内-手动-Windows
 
   # IP 规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
-  # mosdns 规则
+  # 私有放行
+  # - GEOIP,PRIVATE,DIRECT,no-resolve
+  # CIDR 规则
   - IP-CIDR,223.5.5.5/32,🇨🇳 腾讯成都-TCP,no-resolve
   - IP-CIDR,223.6.6.6/32,🇨🇳 腾讯成都-TCP,no-resolve
   - IP-CIDR,119.29.29.29/32,🇨🇳 腾讯成都-TCP,no-resolve
+  - IP-CIDR,39.129.14.158/32,🇨🇳 腾讯成都-TCP,no-resolve  #VPN
   - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-TCP,no-resolve
   - IP-CIDR,43.154.96.128/32,🇨🇳 腾讯成都-TCP,no-resolve
   - IP-CIDR,43.163.220.86/32,🇨🇳 腾讯成都-TCP,no-resolve
   - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-TCP,no-resolve
   - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-TCP,no-resolve
-  # 兜底规则
+  # GEOIP 兜底
   - GEOIP,CN,🎯 国内-手动-Windows
   - MATCH,🌏 国外-手动-Windows
   - MATCH,REJECT

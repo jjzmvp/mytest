@@ -297,6 +297,7 @@ rules:
   - PROCESS-NAME,Weixin.exe,DIRECT
   - PROCESS-NAME,WXWork.exe,DIRECT
   - PROCESS-NAME,HipsDaemon.exe,DIRECT
+  - PROCESS-NAME,NutstoreClient.exe,DIRECT
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # SSH-RDP规则
@@ -318,7 +319,6 @@ rules:
   - DOMAIN-SUFFIX,xuexi.cn,DIRECT
   - DOMAIN-SUFFIX,1012345.xyz,🇭🇰 腾讯HK1-TCP
   - DOMAIN-KEYWORD,chatglm,DIRECT
-  - DOMAIN-KEYWORD,jianguoyun,DIRECT
   # GEOSITE 国内规则
   - GEOSITE,iqiyi,DIRECT
   - GEOSITE,baidu,DIRECT

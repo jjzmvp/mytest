@@ -261,6 +261,7 @@ proxy-groups:
     use:
       - ✈️ My_nodes
 
+# 分流规则
 rules:
   # 域名规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic

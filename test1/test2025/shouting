@@ -278,6 +278,7 @@ rules:
   - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,WXWork.exe,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,HipsDaemon.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,NutstoreClient.exe,🇭🇰 腾讯HK1-TCP
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-TCP
   # SSH-RDP规则

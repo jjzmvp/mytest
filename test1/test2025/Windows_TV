@@ -109,7 +109,7 @@ dns:
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16 # fake-ip 池设置
   fake-ip-filter:
-    - rule-set:fakeip-filter
+    - 'rule-set:🚥 fakeip-filter'
     - 'geosite:private'
     - 'geosite:category-public-tracker'
   default-nameserver: # 基础DNS服务器，必须先有它才能使用域名类型的DNS配置，因此必须为IP，此处使用阿里云和腾讯DNS，优先使用DNS over HTTPS (DoH) (https://)方式加密
@@ -135,7 +135,7 @@ RuleSet_domain: &RuleSet_domain
   proxy: 🇭🇰 腾讯HK1-TCP
 
 rule-providers:
-  fakeip-filter:
+  🚥 fakeip-filter:
     <<: *RuleSet_domain
     format: mrs
     path: "./RuleProviders/fakeip-filter.mrs"
@@ -167,10 +167,10 @@ proxy-providers:
       lazy: false
       url: *test_url1
 
-  ✈️ My_nodes:
+  ✈️ Nodes_tencent22002:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/tencent22002
     type: "http"
-    path: "./ProxyProviders/My_nodes.yaml"
+    path: "./ProxyProviders/Nodes_tencent22002.yaml"
     proxy: 🇭🇰 腾讯HK1-TCP
     interval: 0
     health-check:
@@ -191,7 +191,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - ✈️ My_nodes
+      - ✈️ Nodes_tencent22002
       - ✈️ Airport_quick
 
   - name: "🌏 国外-手动-Windows"
@@ -205,7 +205,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - ✈️ My_nodes
+      - ✈️ Nodes_tencent22002
       - ✈️ Airport_shen7
 
   - name: "⚡️ 国内-机场-自动测速"
@@ -252,7 +252,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - ✈️ My_nodes
+      - ✈️ Nodes_tencent22002
 
   - name: "🇨🇳 腾讯成都-TCP"
     type: url-test
@@ -261,7 +261,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯成都'
     use:
-      - ✈️ My_nodes
+      - ✈️ Nodes_tencent22002
 
   - name: "🇭🇰 腾讯HK1-TCP"
     type: url-test
@@ -270,7 +270,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯HK1'
     use:
-      - ✈️ My_nodes
+      - ✈️ Nodes_tencent22002
 
   - name: "🇯🇵 腾讯JP1-TCP"
     type: url-test
@@ -279,7 +279,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯JP1'
     use:
-      - ✈️ My_nodes
+      - ✈️ Nodes_tencent22002
 
 # 分流规则
 rules:

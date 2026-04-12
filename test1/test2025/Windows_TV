@@ -151,7 +151,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 600
+      interval: 666
       lazy: false
       url: *test_url1
 
@@ -163,7 +163,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 600
+      interval: 666
       lazy: false
       url: *test_url1
 
@@ -175,7 +175,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 600
+      interval: 666
       lazy: false
       url: *test_url1
 # End - 机场相关配置
@@ -211,7 +211,7 @@ proxy-groups:
   - name: "⚡️ 国内-机场-自动测速"
     type: url-test
     url: *test_url1
-    interval: 333
+    interval: 666
     lazy: true
     # 国内继机场配置
     filter: *includeNodes_CN
@@ -222,7 +222,7 @@ proxy-groups:
   - name: "☄️ 国外-机场-自动测速"
     type: url-test
     url: *test_url1
-    interval: 333
+    interval: 666
     lazy: true
     # 国内继机场配置
     filter: *includeNodes_GN
@@ -233,7 +233,7 @@ proxy-groups:
   - name: "♻️ 国外-自动-故障转移"
     type: fallback
     url: *test_url1
-    interval: 333
+    interval: 666
     lazy: true
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -246,7 +246,7 @@ proxy-groups:
   - name: "⚖️ 国外-负载均衡-轮询"
     type: load-balance
     url: *test_url1
-    interval: 333
+    interval: 666
     lazy: true
     strategy: round-robin
     filter: *includeNodes_GN
@@ -257,7 +257,7 @@ proxy-groups:
   - name: "🇨🇳 腾讯成都-TCP"
     type: url-test
     url: *test_url1
-    interval: 333
+    interval: 666
     lazy: true
     filter: "腾讯成都"
     use:
@@ -266,7 +266,7 @@ proxy-groups:
   - name: "🇭🇰 腾讯HK1-TCP"
     type: url-test
     url: *test_url1
-    interval: 333
+    interval: 666
     lazy: true
     filter: "腾讯HK1"
     use:
@@ -275,7 +275,7 @@ proxy-groups:
   - name: "🇯🇵 腾讯JP1-TCP"
     type: url-test
     url: *test_url1
-    interval: 333
+    interval: 666
     lazy: true
     filter: "腾讯JP1"
     use:

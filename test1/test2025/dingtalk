@@ -272,7 +272,7 @@ rules:
   # 私有放行
   - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
   # 放行淘宝APP(包括udp和tcp协议)
-  - PROCESS-NAME-REGEX,com.taobao.taobao,DIRECT
+  - PROCESS-NAME,com.taobao.taobao,DIRECT
   # Windows下的进程
   - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP
@@ -285,10 +285,10 @@ rules:
   # SSH-RDP规则
   - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-TCP
   # 一加系统相关应用
+  - PROCESS-NAME,android.uid.system,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,android.uid.system,🇭🇰 腾讯HK1-TCP
   # 腾讯应用tcp协议
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-TCP
   # 腾讯会议udp协议
@@ -296,8 +296,8 @@ rules:
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-TCP
   # OK影视 + 1DM+ 相关应用
-  - PROCESS-NAME-REGEX,com.fongmi.android.tv,🌏 国外-手动-联通钉钉
-  - PROCESS-NAME-REGEX,idm.internet.download.manager.plus,🌏 国外-手动-联通钉钉
+  - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通钉钉
+  - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通钉钉
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-TCP

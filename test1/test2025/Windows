@@ -167,7 +167,7 @@ proxy-providers:
       lazy: false
       url: *test_url1
 
- 📡 Nodes_tencent22002:
+  📡 Nodes_tencent22002:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/tencent22002
     type: "http"
     path: "./ProxyProviders/Nodes_tencent22002.yaml"

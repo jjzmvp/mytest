@@ -151,7 +151,7 @@ proxy-providers:
       lazy: false
       url: *test_url1
 
-  ✈️ Nodes_dingtalk80:
+  📡 Nodes_dingtalk80:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/dingtalk80
     type: "http"
     path: "./ProxyProviders/Nodes_dingtalk80.yaml"
@@ -175,7 +175,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - ✈️ Nodes_dingtalk80
+      - 📡 Nodes_dingtalk80
       - ✈️ Airport_quick
   
   - name: "🌏 国外-手动-联通钉钉"
@@ -183,13 +183,13 @@ proxy-groups:
     proxies:
       - REJECT
       - ♻ 国外-自动-故障转移
-      - ⚙ 国外-负载均衡-机场
+      - ⚓️ 国外-负载均衡-机场
       - ⚖️ 国外-负载均衡-轮询
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - ✈️ Nodes_dingtalk80
+      - 📡 Nodes_dingtalk80
       - ✈️ Airport_quick
       
   - name: "⚡️ 国内-自动-最低延迟"
@@ -213,7 +213,7 @@ proxy-groups:
     use:
       - ✈️ Airport_quick
       
-  - name: "⚙ 国外-负载均衡-机场"
+  - name: "⚓️ 国外-负载均衡-机场"
     type: load-balance
     url: *test_url1
     interval: 333
@@ -233,7 +233,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - ✈️ Nodes_dingtalk80
+      - 📡 Nodes_dingtalk80
 
   - name: "🇨🇳 腾讯成都-TCP"
     type: url-test
@@ -242,7 +242,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯成都'
     use:
-      - ✈️ Nodes_dingtalk80
+      - 📡 Nodes_dingtalk80
 
   - name: "🇭🇰 腾讯HK1-TCP"
     type: url-test
@@ -251,7 +251,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯HK1'
     use:
-      - ✈️ Nodes_dingtalk80
+      - 📡 Nodes_dingtalk80
 
   - name: "🇯🇵 腾讯JP1-TCP"
     type: url-test
@@ -260,7 +260,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯JP1'
     use:
-      - ✈️ Nodes_dingtalk80
+      - 📡 Nodes_dingtalk80
 
 # 分流规则
 rules:

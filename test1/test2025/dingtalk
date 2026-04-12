@@ -266,13 +266,13 @@ proxy-groups:
 rules:
   # 域名规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
-  # 私有放行
-  - GEOSITE,PRIVATE,DIRECT
-  # 放行淘宝APP(包括udp和tcp协议)
-  - PROCESS-NAME-REGEX,com.taobao.taobao,DIRECT
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
+  # 私有放行
+  - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
+  # 放行淘宝APP(包括udp和tcp协议)
+  - PROCESS-NAME-REGEX,com.taobao.taobao,DIRECT
   # Windows下的进程
   - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP

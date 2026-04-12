@@ -316,6 +316,7 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # Android常用APP
   - PROCESS-NAME,com.unionpay,DIRECT
+  - PROCESS-NAME,com.autonavi.minimap,DIRECT
   - PROCESS-NAME,com.chinamworld.main,DIRECT
   # OK影视 + 1DM+ 相关应用
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-Windows

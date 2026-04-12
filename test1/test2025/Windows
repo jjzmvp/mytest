@@ -151,7 +151,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 600
+      interval: 666
       lazy: false
       url: *test_url1
 
@@ -163,7 +163,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 600
+      interval: 666
       lazy: false
       url: *test_url1
 
@@ -175,7 +175,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 600
+      interval: 666
       lazy: false
       url: *test_url1
 # End - 机场相关配置

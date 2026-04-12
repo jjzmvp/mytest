@@ -280,7 +280,6 @@ proxy-groups:
     filter: '腾讯JP1'
     use:
       - 📡 Nodes_tencent22002
-
 # 分流规则
 rules:
   # 域名规则

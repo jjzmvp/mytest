@@ -347,7 +347,6 @@ rules:
   - GEOSITE,meituan,DIRECT
   - GEOSITE,shanbay,DIRECT
   - GEOSITE,tencent,DIRECT
-  - GEOSITE,unionpay,DIRECT
   - GEOSITE,chinamobile,DIRECT
   - GEOSITE,chinaunicom,DIRECT
   - GEOSITE,chinatelecom,DIRECT

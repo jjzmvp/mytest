@@ -296,6 +296,7 @@ rules:
   - PROCESS-NAME,Weixin.exe,DIRECT
   - PROCESS-NAME,WXWork.exe,DIRECT
   - PROCESS-NAME,HipsDaemon.exe,DIRECT
+  - PROCESS-NAME,WeChatAppEx.exe,DIRECT
   - PROCESS-NAME,NutstoreClient.exe,DIRECT
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT

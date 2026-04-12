@@ -191,7 +191,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      -📡 Nodes_tencent22002
+      - 📡 Nodes_tencent22002
       - ✈️ Airport_quick
 
   - name: "🌏 国外-手动-Windows"
@@ -205,7 +205,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      -📡 Nodes_tencent22002
+      - 📡 Nodes_tencent22002
       - ✈️ Airport_shen7
 
   - name: "⚡️ 国内-机场-自动测速"
@@ -252,7 +252,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      -📡 Nodes_tencent22002
+      - 📡 Nodes_tencent22002
 
   - name: "🇨🇳 腾讯成都-TCP"
     type: url-test
@@ -261,7 +261,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯成都'
     use:
-      -📡 Nodes_tencent22002
+      - 📡 Nodes_tencent22002
 
   - name: "🇭🇰 腾讯HK1-TCP"
     type: url-test
@@ -270,7 +270,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯HK1'
     use:
-      -📡 Nodes_tencent22002
+      - 📡 Nodes_tencent22002
 
   - name: "🇯🇵 腾讯JP1-TCP"
     type: url-test
@@ -279,7 +279,7 @@ proxy-groups:
     lazy: true
     filter: '腾讯JP1'
     use:
-      -📡 Nodes_tencent22002
+      - 📡 Nodes_tencent22002
 
 # 分流规则
 rules:

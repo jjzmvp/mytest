@@ -273,6 +273,8 @@ rules:
   - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
   # 放行淘宝APP(包括udp和tcp协议)
   - PROCESS-NAME,com.taobao.taobao,DIRECT
+  # 部分微信小程序
+  - DOMAIN-SUFFIX,ceapfis.cn,🇨🇳 腾讯成都-TCP
   # Windows下的进程
   - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP
@@ -309,7 +311,6 @@ rules:
   - DOMAIN-SUFFIX,xuexi.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,12306.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,ceair.com,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,ceapfis.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,1237125.cn,🇨🇳 腾讯成都-TCP #云岭先锋
   - DOMAIN-SUFFIX,ovital.com,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,guancha.cn,🇨🇳 腾讯成都-TCP

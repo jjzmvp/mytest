@@ -273,8 +273,6 @@ rules:
   - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
   # 放行淘宝APP(包括udp和tcp协议)
   - PROCESS-NAME,com.taobao.taobao,DIRECT
-  # 部分微信小程序
-  - DOMAIN-SUFFIX,ceapfis.cn,🇨🇳 腾讯成都-TCP
   # Windows下的进程
   - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP
@@ -291,6 +289,8 @@ rules:
   - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
+  # 微信小程序应用
+  - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),DIRECT
   # 腾讯应用tcp协议
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-TCP
   # 腾讯会议udp协议

@@ -289,6 +289,8 @@ rules:
   - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
+  # 微信小程序应用
+  - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),🇨🇳 腾讯成都-TCP
   # 腾讯应用tcp协议
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),🇭🇰 腾讯HK1-TCP
   # 腾讯会议udp协议
@@ -309,6 +311,7 @@ rules:
   - DOMAIN-SUFFIX,xuexi.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,12306.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,ceair.com,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,ceapfis.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,1237125.cn,🇨🇳 腾讯成都-TCP #云岭先锋
   - DOMAIN-SUFFIX,ovital.com,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,guancha.cn,🇨🇳 腾讯成都-TCP

@@ -266,11 +266,11 @@ proxy-groups:
 rules:
   # 域名规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
+  # 私有放行
+  - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
-  # 私有放行
-  - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-TCP
   # SSH-RDP规则

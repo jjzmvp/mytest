@@ -309,6 +309,7 @@ rules:
   - DOMAIN-SUFFIX,xuexi.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,12306.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,ceair.com,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,ceapfis.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,1237125.cn,🇨🇳 腾讯成都-TCP #云岭先锋
   - DOMAIN-SUFFIX,ovital.com,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,guancha.cn,🇨🇳 腾讯成都-TCP

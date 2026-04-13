@@ -267,7 +267,7 @@ rules:
   # 域名规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # 私有放行
-  - GEOSITE,PRIVATE,DIRECT
+  - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
   # SSH-RDP规则
   - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/7500/13389/23389)),🇨🇳 腾讯成都-TCP
   # 广告拦截

@@ -271,24 +271,10 @@ rules:
   - GEOSITE,category-public-tracker,REJECT
   # 私有放行
   - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
-  # 放行淘宝APP(包括udp和tcp协议)
-  - PROCESS-NAME,com.taobao.taobao,DIRECT
-  # Windows下的进程
-  - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-TCP
-  - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP
-  - PROCESS-NAME,WXWork.exe,🇨🇳 腾讯成都-TCP
-  - PROCESS-NAME,HipsDaemon.exe,🇨🇳 腾讯成都-TCP
-  - PROCESS-NAME,WeChatAppEx.exe,🇨🇳 腾讯成都-TCP
-  - PROCESS-NAME,NutstoreClient.exe,🇭🇰 腾讯HK1-TCP
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-TCP
   # SSH-RDP规则
   - AND,((NETWORK,TCP),(DST-PORT,22/2021/3389/13389/23389)),🇨🇳 腾讯成都-TCP
-  # 一加系统相关应用
-  - PROCESS-NAME,android.uid.system,🇭🇰 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
   # 微信小程序应用
   - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),🇨🇳 腾讯成都-TCP
   # 腾讯应用tcp协议
@@ -297,14 +283,28 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),🇭🇰 腾讯HK1-TCP
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-TCP
+  # 一加系统Android相关应用
+  - PROCESS-NAME,android.uid.system,🇭🇰 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
   # Android常用APP
   - PROCESS-NAME,com.unionpay,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,com.autonavi.minimap,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,com.chinamworld.main,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,com.sinovatech.unicom.ui,🇨🇳 腾讯成都-TCP
+  # 放行淘宝APP(包括udp和tcp协议)
+  - PROCESS-NAME,com.taobao.taobao,DIRECT
   # OK影视 + 1DM+ 相关应用
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通腾讯
   - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通腾讯
+  # Windows下的进程
+  - PROCESS-NAME,TIM.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,Weixin.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,WXWork.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,HipsDaemon.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,WeChatAppEx.exe,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,NutstoreClient.exe,🇭🇰 腾讯HK1-TCP
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-TCP

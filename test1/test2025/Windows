@@ -308,6 +308,8 @@ rules:
   - PROCESS-NAME-REGEX,com.oplus.*,DIRECT
   - PROCESS-NAME-REGEX,com.heytap.*,DIRECT
   - PROCESS-NAME-REGEX,com.coloros.*,DIRECT
+  # 微信小程序应用
+  - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),DIRECT
   # 腾讯应用tcp协议
   - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # 腾讯会议udp协议
@@ -328,6 +330,7 @@ rules:
   - DOMAIN-SUFFIX,xuexi.cn,DIRECT
   - DOMAIN-SUFFIX,12306.cn,DIRECT
   - DOMAIN-SUFFIX,ceair.com,DIRECT
+  - DOMAIN-SUFFIX,ceapfis.cn,DIRECT
   - DOMAIN-SUFFIX,1237125.cn,DIRECT #云岭先锋
   - DOMAIN-SUFFIX,ovital.com,DIRECT
   - DOMAIN-SUFFIX,guancha.cn,DIRECT

@@ -288,7 +288,7 @@ rules:
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
   # SSH-RDP规则
-  - DST-PORT,7500/8888/9527/13389/23389,🇨🇳 腾讯成都-TCP
+  - DST-PORT,3389/7500/8888/9527/13389/23389/10181-10183,🇨🇳 腾讯成都-TCP
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT

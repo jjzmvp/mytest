@@ -319,6 +319,7 @@ rules:
   - PROCESS-NAME,com.unionpay,DIRECT
   - PROCESS-NAME,com.autonavi.minimap,DIRECT
   - PROCESS-NAME,com.chinamworld.main,DIRECT
+  - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT
   # OK影视 + 1DM+ 相关应用
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-Windows
   - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-Windows

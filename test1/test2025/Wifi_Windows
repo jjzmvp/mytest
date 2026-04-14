@@ -294,10 +294,6 @@ rules:
   - GEOSITE,category-public-tracker,REJECT
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
-  # 腾讯会议udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),DIRECT
-  # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
-  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # Windows下的进程
   - PROCESS-NAME,TIM.exe,DIRECT
   - PROCESS-NAME,Weixin.exe,DIRECT
@@ -348,17 +344,15 @@ rules:
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,nandu.buzz,🇭🇰 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,qingzeyy.top,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,ghproxy.com,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,jie-quick.buzz,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,voice.google.com,🇭🇰 腾讯HK1-TCP      # Google voice
   - DOMAIN-SUFFIX,voice.telephony.goog,🇭🇰 腾讯HK1-TCP  # Google voice
   - DOMAIN-SUFFIX,ping.pe,🇯🇵 腾讯JP1-TCP
   - DOMAIN-SUFFIX,lastpass.com,🇯🇵 腾讯JP1-TCP
   - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-TCP
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-TCP
+  - OR,((DOMAIN-KEYWORD,qingze),(DOMAIN-KEYWORD,kuxingseng)),🇯🇵 腾讯JP1-TCP
   # Youtube和谷歌学术(部分节点被google拉黑)
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-Windows
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-Windows
@@ -390,8 +384,6 @@ rules:
   - IP-CIDR,119.29.29.29/32,🇨🇳 腾讯成都-TCP,no-resolve
   - IP-CIDR,39.129.14.158/32,🇨🇳 腾讯成都-TCP,no-resolve  #VPN
   - IP-CIDR,42.193.49.103/32,🇨🇳 腾讯成都-TCP,no-resolve
-  - IP-CIDR,43.154.96.128/32,🇭🇰 腾讯HK1-TCP,no-resolve
-  - IP-CIDR,43.163.220.86/32,🇯🇵 腾讯JP1-TCP,no-resolve
   - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-TCP,no-resolve
   - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-TCP,no-resolve
   # GEOIP 兜底

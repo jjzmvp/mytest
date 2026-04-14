@@ -342,7 +342,6 @@ rules:
   # 国外域名
   - GEOSITE,zaobao,🇭🇰 腾讯HK1-TCP
   - GEOSITE,google-cn,🇭🇰 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,mlcat.tk,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,s.dic.cool,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,ghproxy.com,🇭🇰 腾讯HK1-TCP
   - DOMAIN-SUFFIX,racknerd.com,🇭🇰 腾讯HK1-TCP

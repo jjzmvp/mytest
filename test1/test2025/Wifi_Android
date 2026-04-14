@@ -207,6 +207,7 @@ proxy-groups:
     use:
       - 📡 Nodes_tencent22002
       - ✈️ Airport_shen7
+      - ✈️ Airport_quick
 
   - name: "⚡️ 国内-机场-自动测速"
     type: url-test
@@ -217,6 +218,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
+      - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
   - name: "☄️ 国外-机场-自动测速"
@@ -229,6 +231,7 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - ✈️ Airport_shen7
+      - ✈️ Airport_quick
 
   - name: "♻️ 国外-自动-故障转移"
     type: fallback

@@ -301,6 +301,8 @@ rules:
   - PROCESS-NAME,HipsDaemon.exe,DIRECT
   - PROCESS-NAME,WeChatAppEx.exe,DIRECT
   - PROCESS-NAME,NutstoreClient.exe,DIRECT
+
+  ## 以下规则不同系统可配置相同
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,DIRECT
   - DOMAIN-SUFFIX,gov.cn,DIRECT

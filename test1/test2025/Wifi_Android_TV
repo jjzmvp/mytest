@@ -393,7 +393,7 @@ rules:
   # IP 规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
   # 私有放行
-  - GEOIP,PRIVATE,DIRECT,no-resolve
+  #- GEOIP,PRIVATE,DIRECT,no-resolve
   # CIDR 规则
   - IP-CIDR,223.5.5.5/32,🇨🇳 腾讯成都-TCP,no-resolve
   - IP-CIDR,223.6.6.6/32,🇨🇳 腾讯成都-TCP,no-resolve

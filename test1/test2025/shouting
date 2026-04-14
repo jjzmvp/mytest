@@ -297,6 +297,8 @@ rules:
   # OK影视 + 1DM+ 相关应用
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通手厅
   - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通手厅
+
+  ## 以下规则不同系统可配置相同
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-TCP

@@ -300,6 +300,7 @@ rules:
   - PROCESS-NAME,TIM.exe,DIRECT
   - PROCESS-NAME,Weixin.exe,DIRECT
   - PROCESS-NAME,WXWork.exe,DIRECT
+  - PROCESS-NAME,wemeetapp.exe,DIRECT
   - PROCESS-NAME,HipsDaemon.exe,DIRECT
   - PROCESS-NAME,WeChatAppEx.exe,DIRECT
   - PROCESS-NAME,NutstoreClient.exe,DIRECT

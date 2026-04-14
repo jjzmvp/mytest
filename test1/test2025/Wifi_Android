@@ -198,6 +198,7 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
+      - DIRECT
       - ☄️ 国外-机场-自动测速
       - ♻️ 国外-自动-故障转移
       - ⚖️ 国外-负载均衡-轮询

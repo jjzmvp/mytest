@@ -218,7 +218,6 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
   - name: "☄️ 国外-机场-自动测速"

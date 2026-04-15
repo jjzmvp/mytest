@@ -184,7 +184,7 @@ proxy-groups:
       - REJECT
       - ♻ 国外-自动-故障转移
       - ⚓️ 国外-负载均衡-机场
-      - ⚖️ 国外-负载均衡-轮询
+      - ⚖️ 国外-负载均衡-VPS
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -224,7 +224,7 @@ proxy-groups:
     use:
       - ✈️ Airport_quick
       
-  - name: "⚖️ 国外-负载均衡-轮询"
+  - name: "⚖️ 国外-负载均衡-VPS
     type: load-balance
     url: *test_url1
     interval: 666

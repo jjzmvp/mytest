@@ -240,8 +240,6 @@ proxy-groups:
     lazy: true
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
-    #proxies:
-    #  - ⚖️ 国外-负载均衡-轮询
     use:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick

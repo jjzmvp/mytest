@@ -224,7 +224,7 @@ proxy-groups:
     use:
       - ✈️ Airport_quick
       
-  - name: "⚖️ 国外-负载均衡-VPS
+  - name: "⚖️ 国外-负载均衡-VPS"
     type: load-balance
     url: *test_url1
     interval: 666

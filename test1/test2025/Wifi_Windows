@@ -89,7 +89,7 @@ hosts:
 # Tun配置
 tun:
   enable: true
-  device: MetaTun-Wifi
+  device: MetaTun-Windows
   stack: mixed                 # system / gvisor / mixed / lwip
   dns-hijack:
     - any:53

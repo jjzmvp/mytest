@@ -284,6 +284,16 @@ proxy-groups:
 
 # 分流规则
 rules:
+  # Windows下的进程
+  - PROCESS-NAME,TIM.exe,DIRECT
+  - PROCESS-NAME,Weixin.exe,DIRECT
+  - PROCESS-NAME,WXWork.exe,DIRECT
+  - PROCESS-NAME,wemeetapp.exe,DIRECT
+  - PROCESS-NAME,HipsDaemon.exe,DIRECT
+  - PROCESS-NAME,WeChatAppEx.exe,DIRECT
+  - PROCESS-NAME,NutstoreClient.exe,DIRECT
+
+  ## 以下规则不同操作系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
   # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
@@ -295,16 +305,6 @@ rules:
   - GEOSITE,category-public-tracker,REJECT
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
-  # Windows下的进程
-  - PROCESS-NAME,TIM.exe,DIRECT
-  - PROCESS-NAME,Weixin.exe,DIRECT
-  - PROCESS-NAME,WXWork.exe,DIRECT
-  - PROCESS-NAME,wemeetapp.exe,DIRECT
-  - PROCESS-NAME,HipsDaemon.exe,DIRECT
-  - PROCESS-NAME,WeChatAppEx.exe,DIRECT
-  - PROCESS-NAME,NutstoreClient.exe,DIRECT
-
-  ## 以下规则不同系统可配置相同
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,DIRECT
   - DOMAIN-SUFFIX,gov.cn,DIRECT

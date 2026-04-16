@@ -284,7 +284,7 @@ proxy-groups:
 
 # 分流规则
 rules:
-  # Windows下的进程
+  # Windows下的进程规则
   - PROCESS-NAME,TIM.exe,DIRECT
   - PROCESS-NAME,Weixin.exe,DIRECT
   - PROCESS-NAME,WXWork.exe,DIRECT

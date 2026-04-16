@@ -264,17 +264,7 @@ proxy-groups:
 
 # 分流规则
 rules:
-  # 私有放行
-  - GEOSITE,PRIVATE,DIRECT
-  # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
-  - AND,((NETWORK,TCP),(DST-PORT,3389/7500/8888/9527/13389/23389/10181-10183)),🇨🇳 腾讯成都-TCP
-  # 禁用QUIC
-  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
-  # 广告拦截
-  - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,category-public-tracker,REJECT
-  # NTP服务udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-TCP
+  ## Android系统相关规则
   # 微信小程序应用
   - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),🇨🇳 腾讯成都-TCP
   # 腾讯应用tcp协议
@@ -298,7 +288,18 @@ rules:
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通腾讯
   - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通腾讯
 
-  ## 以下规则不同系统可配置相同
+  ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
+  # 私有放行
+  - GEOSITE,PRIVATE,DIRECT
+  # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
+  - AND,((NETWORK,TCP),(DST-PORT,3389/7500/8888/9527/13389/23389/10181-10183)),🇨🇳 腾讯成都-TCP
+  # 禁用QUIC
+  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
+  # 广告拦截
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,category-public-tracker,REJECT
+  # NTP服务udp协议
+  - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-TCP
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-TCP
   - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-TCP

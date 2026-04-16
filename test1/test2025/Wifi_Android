@@ -284,17 +284,7 @@ proxy-groups:
 
 # 分流规则
 rules:
-  # 私有放行
-  - GEOSITE,PRIVATE,DIRECT
-  # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
-  - AND,((NETWORK,TCP),(DST-PORT,3389/7500/8888/9527/13389/23389/10181-10183)),🇨🇳 腾讯成都-TCP
-  # 禁用QUIC
-  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
-  # 广告拦截
-  - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,category-public-tracker,REJECT
-  # NTP服务udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
+  ## Android系统相关规则
   # 微信小程序应用
   - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),DIRECT
   # 腾讯应用tcp协议
@@ -319,6 +309,17 @@ rules:
   - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-Windows
 
   ## 以下规则不同系统可配置相同
+  # 私有放行
+  - GEOSITE,PRIVATE,DIRECT
+  # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
+  - AND,((NETWORK,TCP),(DST-PORT,3389/7500/8888/9527/13389/23389/10181-10183)),🇨🇳 腾讯成都-TCP
+  # 禁用QUIC
+  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
+  # 广告拦截
+  - GEOSITE,category-ads-all,REJECT
+  - GEOSITE,category-public-tracker,REJECT
+  # NTP服务udp协议
+  - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,DIRECT
   - DOMAIN-SUFFIX,gov.cn,DIRECT

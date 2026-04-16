@@ -350,7 +350,7 @@ rules:
   - DOMAIN-SUFFIX,namesilo.com,🇯🇵 腾讯JP1-TCP
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-TCP
   - OR,((DOMAIN-KEYWORD,qingze),(DOMAIN-KEYWORD,kuxingseng)),🇯🇵 腾讯JP1-TCP
-  # Youtube和谷歌学术(部分节点被google拉黑)
+  # Youtube和谷歌学术(注意：部分节点可能被google拉黑，导致无法使用谷歌学术!!!)
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通手厅
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-联通手厅
 

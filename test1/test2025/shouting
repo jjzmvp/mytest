@@ -7,8 +7,14 @@ excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四
 #####################################################################  锚点 end  #####################################################################
 
 mixed-port: 10100   # HTTP(S) 和 SOCKS 代理混合端口
-allow-lan: false    # 允许局域网连接
 bind-address: "*"   # 绑定IP地址，仅作用于 allow-lan 为 true，"*"表示所有地址
+allow-lan: false    # 允许局域网连接
+lan-allowed-ips:    # 允许局域网连接IP范围
+  - 127.0.0.1/8
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  - 192.168.0.0/16
+  - fe80::/10
 # 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备耗电问题的临时措施
 keep-alive-interval: 90
 # TCP Keep Alive 的最大空闲时间

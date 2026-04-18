@@ -10,8 +10,6 @@ mixed-port: 10100                 # HTTP(S) 和 SOCKS 代理混合端口
 bind-address: "*"   # 绑定IP地址，仅作用于 allow-lan 为 true，"*"表示所有地址
 allow-lan: false    # 允许局域网连接
 lan-allowed-ips:    # 允许局域网连接IP范围
-  - 127.0.0.1/8
-  - 10.0.0.0/8
   - 192.168.0.0/16
   - fe80::/10
 authentication:

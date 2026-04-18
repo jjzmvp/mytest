@@ -91,7 +91,7 @@ hosts:
 # Tun配置
 tun:
   enable: true
-  device: MetaTun-联通手厅
+  device: MetaTun-联通钉钉
   stack: mixed                 # system / gvisor / mixed / lwip
   dns-hijack:
     - any:53

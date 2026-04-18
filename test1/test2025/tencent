@@ -291,10 +291,9 @@ rules:
   - PROCESS-NAME,com.jingdong.app.mall,🇨🇳 腾讯成都-TCP        # 亰东商城
   - PROCESS-NAME,com.sinovatech.unicom.ui,🇨🇳 腾讯成都-TCP     # 中国联通
   - PROCESS-NAME,com.eg.android.AlipayGphone,🇨🇳 腾讯成都-TCP  # 支付宝
-  - PROCESS-NAME,com.taobao.taobao,DIRECT                    # 淘宝
-  # OK影视 + 1DM+ 相关应用
-  - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通腾讯
-  - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通腾讯
+  - PROCESS-NAME,com.taobao.taobao,DIRECT                     # 淘宝
+  - PROCESS-NAME,com.fongmi.android.tv,🇭🇰 腾讯HK1-TCP         # OK影视
+  - PROCESS-NAME,idm.internet.download.manager.plus,🇭🇰 腾讯HK1-TCP # 1DM+下载
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行

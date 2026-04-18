@@ -288,6 +288,7 @@ rules:
   - PROCESS-NAME,com.unionpay,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,com.autonavi.minimap,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,com.chinamworld.main,🇨🇳 腾讯成都-TCP
+  - PROCESS-NAME,com.jingdong.app.mall,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,com.sinovatech.unicom.ui,🇨🇳 腾讯成都-TCP
   - PROCESS-NAME,com.taobao.taobao,DIRECT    # 放行淘宝APP(包括udp和tcp协议)
   # OK影视 + 1DM+ 相关应用

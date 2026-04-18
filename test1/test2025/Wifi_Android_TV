@@ -289,7 +289,7 @@ proxy-groups:
 rules:
   ## Android系统相关规则
   # OK影视 + 1DM+ 相关应用
-  - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-WIFI
+  - PROCESS-NAME,com.fongmi.android.tv,DIRECT
 
   ## 以下规则不同系统可配置相同
   # 私有放行

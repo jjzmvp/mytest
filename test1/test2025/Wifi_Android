@@ -311,7 +311,7 @@ rules:
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT          # 支付宝
   - PROCESS-NAME,com.taobao.taobao,DIRECT                    # 淘宝
   - PROCESS-NAME,com.fongmi.android.tv,DIRECT                # OK影视
-  - PROCESS-NAME,idm.internet.download.manager.plus,DIRECT   # 1DM+下载器
+  - PROCESS-NAME,idm.internet.download.manager.plus,DIRECT   # 1DM+下载
 
   ## 以下规则不同系统可配置相同
   # 私有放行

@@ -291,28 +291,8 @@ proxy-groups:
 # 分流规则
 rules:
   ## Android系统相关规则
-  # 微信小程序应用
-  - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),DIRECT
-  # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
-  # 腾讯会议udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),DIRECT
-  # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
-  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
-  # 一加Android系统相关应用
-  - PROCESS-NAME,android.uid.system,DIRECT
-  - PROCESS-NAME-REGEX,com.oplus.*,DIRECT
-  - PROCESS-NAME-REGEX,com.heytap.*,DIRECT
-  - PROCESS-NAME-REGEX,com.coloros.*,DIRECT
-  # Android常用APP
-  - PROCESS-NAME,com.unionpay,DIRECT
-  - PROCESS-NAME,com.autonavi.minimap,DIRECT
-  - PROCESS-NAME,com.chinamworld.main,DIRECT
-  - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT
-  - PROCESS-NAME,com.taobao.taobao,DIRECT  # 放行淘宝APP(包括udp和tcp协议)
   # OK影视 + 1DM+ 相关应用
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-Windows
-  - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-Windows
 
   ## 以下规则不同系统可配置相同
   # 私有放行

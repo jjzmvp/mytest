@@ -185,7 +185,7 @@ proxy-providers:
 
 # 节点配置
 proxy-groups:
-  - name: "🎯 国内-手动-WIFI"
+  - name: "🎯 国内-手动-WIFI-Android"
     type: select
     proxies:
       - DIRECT
@@ -197,7 +197,7 @@ proxy-groups:
       - 📡 Nodes_tencent22002
       - ✈️ Airport_quick
 
-  - name: "🌏 国外-手动-WIFI"
+  - name: "🌏 国外-手动-WIFI-Android"
     type: select
     proxies:
       - REJECT
@@ -342,11 +342,11 @@ rules:
   # 关键词域名规则
   - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),DIRECT
   # GEOSITE 国内规则
-  - GEOSITE,iqiyi,🎯 国内-手动-WIFI
-  - GEOSITE,baidu,🎯 国内-手动-WIFI
-  - GEOSITE,bilibili,🎯 国内-手动-WIFI
-  - GEOSITE,youku,🎯 国内-手动-WIFI
-  - GEOSITE,bytedance,🎯 国内-手动-WIFI
+  - GEOSITE,iqiyi,🎯 国内-手动-WIFI-Android
+  - GEOSITE,baidu,🎯 国内-手动-WIFI-Android
+  - GEOSITE,bilibili,🎯 国内-手动-WIFI-Android
+  - GEOSITE,youku,🎯 国内-手动-WIFI-Android
+  - GEOSITE,bytedance,🎯 国内-手动-WIFI-Android
   - GEOSITE,jd,DIRECT
   - GEOSITE,zhihu,DIRECT
   - GEOSITE,alibaba,DIRECT
@@ -377,8 +377,8 @@ rules:
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-TCP
   - OR,((DOMAIN-KEYWORD,qingze),(DOMAIN-KEYWORD,kuxingseng)),🇯🇵 腾讯JP1-TCP
   # Youtube和谷歌学术(注意：部分节点可能被google拉黑，导致无法使用谷歌学术!!!)
-  - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-WIFI
-  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-WIFI
+  - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-WIFI-Android
+  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-WIFI-Android
 
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,google,🇯🇵 腾讯JP1-TCP
@@ -392,10 +392,10 @@ rules:
   - GEOSITE,onedrive,🇯🇵 腾讯JP1-TCP
   - GEOSITE,wikimedia,🇯🇵 腾讯JP1-TCP
   - GEOSITE,cloudflare,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,telegram,🌏 国外-手动-WIFI
-  - GEOSITE,microsoft,🎯 国内-手动-WIFI
+  - GEOSITE,telegram,🌏 国外-手动-WIFI-Android
+  - GEOSITE,microsoft,🎯 国内-手动-WIFI-Android
   # GEOSITE 国内兜底
-  - GEOSITE,CN,🎯 国内-手动-WIFI
+  - GEOSITE,CN,🎯 国内-手动-WIFI-Android
 
   # IP 规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
@@ -410,6 +410,6 @@ rules:
   - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-TCP,no-resolve
   - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-TCP,no-resolve
   # GEOIP 兜底
-  - GEOIP,CN,🎯 国内-手动-WIFI
-  - MATCH,🌏 国外-手动-WIFI
+  - GEOIP,CN,🎯 国内-手动-WIFI-Android
+  - MATCH,🌏 国外-手动-WIFI-Android
   - MATCH,REJECT

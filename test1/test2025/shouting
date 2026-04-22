@@ -300,7 +300,7 @@ rules:
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行
-  - GEOSITE,PRIVATE,🇨🇳 腾讯成都-TCP
+  - GEOSITE,PRIVATE,DIRECT
   # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
   - AND,((NETWORK,TCP),(DST-PORT,2021/3389/7500/8888/9527/13389/23389/10181-10183)),🇨🇳 腾讯成都-TCP
   # 禁用QUIC

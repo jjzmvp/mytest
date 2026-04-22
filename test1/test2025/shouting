@@ -279,7 +279,8 @@ rules:
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),🇨🇳 腾讯成都-TCP
   # 一加Android系统相关应用
-  - PROCESS-NAME,android.uid.system,🇭🇰 腾讯HK1-TCP
+  - PROCESS-NAME,android.uid.system,🇯🇵 腾讯JP1-TCP
+  - PROCESS-NAME,com.google.uid.shared,🇯🇵 腾讯JP1-TCP
   - PROCESS-NAME-REGEX,com.oplus.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP

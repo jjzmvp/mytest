@@ -104,7 +104,7 @@ tun:
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
-  prefer-h3: false             # false将禁止DOH优先使用http/3
+  prefer-h3: false             # false 将禁止DOH优先使用http/3
   ipv6: false                  # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
   use-hosts: false             # 关闭配置hosts

@@ -103,11 +103,12 @@ tun:
 # DNS配置
 dns:
   enable: true                 # 关闭将使用系统 DNS
+  prefer-h3: false             # false将禁止DOH优先使用http/3
   ipv6: false                  # false 将返回 AAAA 的空结果
   listen: 0.0.0.0:1053         # 开启 DNS 服务器监听
-  use-hosts: false             # 关闭hosts
+  use-hosts: false             # 关闭配置hosts
   use-system-hosts: true       # 开启系统hosts
-  enhanced-mode: fake-ip
+  enhanced-mode: fake-ip       # DNS处理模式: fake-ip/redir-host(默认)
   fake-ip-range: 198.18.0.1/16 # fake-ip 池设置
   fake-ip-filter:
     - "rule-set:🚥 fakeip-filter"

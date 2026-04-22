@@ -291,6 +291,7 @@ rules:
   - PROCESS-NAME,TIM.exe,DIRECT                      # 腾讯TIM
   - PROCESS-NAME,Weixin.exe,DIRECT                   # 腾讯微信
   - PROCESS-NAME,WXWork.exe,DIRECT                   # 企业微信
+  - PROCESS-NAME,WXWorkWeb.exe,DIRECT                # 企业微信小程序
   - PROCESS-NAME,wemeetapp.exe,DIRECT                # 腾讯会议
   - PROCESS-NAME,HipsDaemon.exe,DIRECT               # 火绒软件
   - PROCESS-NAME,WeChatAppEx.exe,DIRECT              # 微信小程序

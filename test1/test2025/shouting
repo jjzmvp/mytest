@@ -176,7 +176,6 @@ proxy-groups:
   - name: "🎯 国内-手动-联通手厅"
     type: select
     proxies:
-      - DIRECT
       - ⚡️ 国内-自动-最低延迟
     # 国内机场配置  
     filter: *includeNodes_CN

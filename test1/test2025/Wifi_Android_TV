@@ -78,6 +78,7 @@ sniffer:
     - "+.jd.com"
     - "+.baidu.com"
 
+# 外部控制器
 external-controller: "127.0.0.1:9876"
 secret: "$jjzmvp@123"
 external-ui: "ui/metacubexd"

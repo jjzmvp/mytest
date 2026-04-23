@@ -369,15 +369,14 @@ rules:
 
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,github,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,zaobao,🇯🇵 腾讯JP1-TCP
   - GEOSITE,openai,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,oracle,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,yandex,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,twitter,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,mozilla,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,onedrive,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,wikimedia,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,cloudflare,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,zaobao,🌏 国外-手动-WIFI
+  - GEOSITE,oracle,🌏 国外-手动-WIFI
+  - GEOSITE,yandex,🌏 国外-手动-WIFI
+  - GEOSITE,twitter,🌏 国外-手动-WIFI
+  - GEOSITE,mozilla,🌏 国外-手动-WIFI
+  - GEOSITE,wikimedia,🌏 国外-手动-WIFI
+  - GEOSITE,cloudflare,🌏 国外-手动-WIFI
   - GEOSITE,google,🌏 国外-手动-WIFI-Windows
   - GEOSITE,telegram,🌏 国外-手动-WIFI-Windows
   - GEOSITE,microsoft,🎯 国内-手动-WIFI-Windows

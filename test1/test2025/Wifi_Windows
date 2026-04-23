@@ -368,7 +368,6 @@ rules:
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-WIFI-Windows
 
   # 移动网络下的配置，另OPENAI不支持HK节点
-  - GEOSITE,google,🇯🇵 腾讯JP1-TCP
   - GEOSITE,github,🇯🇵 腾讯JP1-TCP
   - GEOSITE,zaobao,🇯🇵 腾讯JP1-TCP
   - GEOSITE,openai,🇯🇵 腾讯JP1-TCP
@@ -379,6 +378,7 @@ rules:
   - GEOSITE,onedrive,🇯🇵 腾讯JP1-TCP
   - GEOSITE,wikimedia,🇯🇵 腾讯JP1-TCP
   - GEOSITE,cloudflare,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,google,🌏 国外-手动-WIFI-Windows
   - GEOSITE,telegram,🌏 国外-手动-WIFI-Windows
   - GEOSITE,microsoft,🎯 国内-手动-WIFI-Windows
   # GEOSITE 国内兜底

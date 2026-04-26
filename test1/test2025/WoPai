@@ -233,8 +233,6 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - ♻ 国外-自动-故障转移
-      - ⚓️ 国外-负载均衡-机场
       - ⚖️ 国外-负载均衡-手厅
     # 国外机场配置
     filter: *includeNodes_GN

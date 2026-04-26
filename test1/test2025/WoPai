@@ -235,6 +235,7 @@ proxy-groups:
       - REJECT
       - DIRECT
       - ⚖️ 国外-负载均衡-手厅
+      - ⚓️ 国外-负载均衡-钉钉
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -256,7 +257,7 @@ proxy-groups:
     use:
       - 📡 Nodes_shouting22001
 
-  - name: "⚖️ 国外-负载均衡-钉钉"
+  - name: "⚓️ 国外-负载均衡-钉钉"
     type: load-balance
     url: *test_url1
     interval: 666

@@ -191,7 +191,6 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - ⚡️ 国内-机场-自动测速
     # 国内继机场配置
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
@@ -213,17 +212,6 @@ proxy-groups:
     use:
       - 📡 Nodes_tencent22002
       - ✈️ Airport_shen7
-      - ✈️ Airport_quick
-
-  - name: "⚡️ 国内-机场-自动测速"
-    type: url-test
-    url: *test_url1
-    interval: 666
-    lazy: true
-    # 国内继机场配置
-    filter: *includeNodes_CN
-    exclude-filter: *excludeNodes_CN
-    use:
       - ✈️ Airport_quick
 
   - name: "☄️ 国外-机场-自动测速"

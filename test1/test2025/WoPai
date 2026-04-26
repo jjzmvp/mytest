@@ -316,7 +316,7 @@ rules:
   - PROCESS-NAME,com.unionpay,DIRECT                                     # 云闪付
   - PROCESS-NAME,com.sankuai.meituan,DIRECT                              # 美团
   - PROCESS-NAME,com.autonavi.minimap,DIRECT                             # 高德地图
-  - PROCESS-NAME,com.chinamworld.main,DIRECT                             # 中国移动
+  - PROCESS-NAME,com.chinamworld.main,DIRECT                             # 建设银行
   - PROCESS-NAME,com.jingdong.app.mall,DIRECT                            # 亰东商城
   - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT                         # 中国联通
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                      # 支付宝

@@ -255,7 +255,7 @@ proxy-groups:
     type: load-balance
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -266,7 +266,7 @@ proxy-groups:
     type: load-balance
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -277,7 +277,7 @@ proxy-groups:
     type: load-balance
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -288,7 +288,7 @@ proxy-groups:
     type: load-balance
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN

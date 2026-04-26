@@ -236,6 +236,8 @@ proxy-groups:
       - REJECT
       - DIRECT
       - ⚖️ 国外-负载均衡-手厅
+      - 🔰 国外-负载均衡-头条
+      - ♻️ 国外-负载均衡-哔哩
       - ⚓️ 国外-负载均衡-钉钉
       - 🇭🇰 腾讯HK1-TCP
       - 🇯🇵 腾讯JP1-TCP
@@ -259,6 +261,28 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_shouting22001
+
+  - name: "🔰 国外-负载均衡-头条"
+    type: load-balance
+    url: *test_url1
+    interval: 666
+    lazy: true
+    strategy: round-robin
+    filter: *includeNodes_GN
+    exclude-filter: *excludeNodes_GN
+    use:
+      - 📡 Nodes_toutiao22003
+
+  - name: "♻️ 国外-负载均衡-哔哩"
+    type: load-balance
+    url: *test_url1
+    interval: 666
+    lazy: true
+    strategy: round-robin
+    filter: *includeNodes_GN
+    exclude-filter: *excludeNodes_GN
+    use:
+      - 📡 Nodes_bili22004
 
   - name: "⚓️ 国外-负载均衡-钉钉"
     type: load-balance

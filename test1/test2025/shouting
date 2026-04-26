@@ -202,7 +202,7 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     # 国内机场配置  
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
@@ -213,7 +213,7 @@ proxy-groups:
     type: fallback
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
@@ -223,7 +223,7 @@ proxy-groups:
     type: load-balance
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     strategy: consistent-hashing
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -234,7 +234,7 @@ proxy-groups:
     type: load-balance
     url: *test_url1
     interval: 666
-    lazy: true
+    lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN

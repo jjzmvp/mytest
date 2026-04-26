@@ -175,8 +175,6 @@ proxy-providers:
 proxy-groups:
   - name: "🎯 国内-手动-联通手厅"
     type: select
-    proxies:
-      - ⚡️ 国内-自动-最低延迟
     # 国内机场配置  
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
@@ -196,17 +194,6 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_shouting22001
-      - ✈️ Airport_quick
-      
-  - name: "⚡️ 国内-自动-最低延迟"
-    type: url-test
-    url: *test_url1
-    interval: 666
-    lazy: false
-    # 国内机场配置  
-    filter: *includeNodes_CN
-    exclude-filter: *excludeNodes_CN
-    use:
       - ✈️ Airport_quick
    
   - name: "♻ 国外-自动-故障转移"

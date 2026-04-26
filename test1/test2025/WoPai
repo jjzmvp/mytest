@@ -146,18 +146,20 @@ rule-providers:
 
 # Start- 机场相关配置(关键词：Airport)
 proxy-providers:
-  ✈️ Airport_quick:
-    url: https://sub1.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736
+  # 阿里系
+  📡 Nodes_dingtalk80:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/dingtalk80
     type: "http"
-    path: "./ProxyProviders/quick.yaml"
+    path: "./ProxyProviders/Nodes_dingtalk80.yaml"
     proxy: 🇭🇰 腾讯HK1-TCP
-    interval: 43210
+    interval: 0
     health-check:
       enable: true
       interval: 666
       lazy: false
       url: *test_url1
 
+  # 联通手厅
   📡 Nodes_shouting22001:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
     type: "http"
@@ -169,6 +171,46 @@ proxy-providers:
       interval: 666
       lazy: false
       url: *test_url1
+
+  # 腾讯系
+  📡 Nodes_tencent22002:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/tencent22002
+    type: "http"
+    path: "./ProxyProviders/Nodes_tencent22002.yaml"
+    proxy: 🇭🇰 腾讯HK1-TCP
+    interval: 0
+    health-check:
+      enable: true
+      interval: 666
+      lazy: false
+      url: *test_url1
+
+  # 头条系
+  📡 Nodes_toutiao22003:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/toutiao22003
+    type: "http"
+    path: "./ProxyProviders/Nodes_toutiao22003.yaml"
+    proxy: 🇭🇰 腾讯HK1-TCP
+    interval: 0
+    health-check:
+      enable: true
+      interval: 666
+      lazy: false
+      url: *test_url1
+
+  # 哔哩系
+  📡 Nodes_bili22004:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/bili22004
+    type: "http"
+    path: "./ProxyProviders/Nodes_bili22004.yaml"
+    proxy: 🇭🇰 腾讯HK1-TCP
+    interval: 0
+    health-check:
+      enable: true
+      interval: 666
+      lazy: false
+      url: *test_url1
+
 # End - 机场相关配置
 
 # 节点配置
@@ -182,7 +224,10 @@ proxy-groups:
     exclude-filter: *excludeNodes_CN
     use:
       - 📡 Nodes_shouting22001
-      - ✈️ Airport_quick
+      - 📡 Nodes_tencent22002
+      - 📡 Nodes_toutiao22003
+      - 📡 Nodes_bili22004
+      - 📡 Nodes_dingtalk80
   
   - name: "🌏 国外-手动-联通沃派"
     type: select
@@ -190,47 +235,18 @@ proxy-groups:
       - REJECT
       - ♻ 国外-自动-故障转移
       - ⚓️ 国外-负载均衡-机场
-      - ⚖️ 国外-负载均衡-VPS
+      - ⚖️ 国外-负载均衡-手厅
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_shouting22001
-      - ✈️ Airport_quick
+      - 📡 Nodes_tencent22002
+      - 📡 Nodes_toutiao22003
+      - 📡 Nodes_bili22004
+      - 📡 Nodes_dingtalk80
       
-  - name: "⚡️ 国内-自动-最低延迟"
-    type: url-test
-    url: *test_url1
-    interval: 666
-    lazy: true
-    # 国内机场配置  
-    filter: *includeNodes_CN
-    exclude-filter: *excludeNodes_CN
-    use:
-      - ✈️ Airport_quick
-   
-  - name: "♻ 国外-自动-故障转移"
-    type: fallback
-    url: *test_url1
-    interval: 666
-    lazy: true
-    filter: *includeNodes_GN
-    exclude-filter: *excludeNodes_GN
-    use:
-      - ✈️ Airport_quick
-      
-  - name: "⚓️ 国外-负载均衡-机场"
-    type: load-balance
-    url: *test_url1
-    interval: 666
-    lazy: true
-    strategy: consistent-hashing
-    filter: *includeNodes_GN
-    exclude-filter: *excludeNodes_GN
-    use:
-      - ✈️ Airport_quick
-      
-  - name: "⚖️ 国外-负载均衡-VPS"
+  - name: "⚖️ 国外-负载均衡-手厅"
     type: load-balance
     url: *test_url1
     interval: 666
@@ -249,6 +265,10 @@ proxy-groups:
     filter: "腾讯成都"
     use:
       - 📡 Nodes_shouting22001
+      - 📡 Nodes_tencent22002
+      - 📡 Nodes_toutiao22003
+      - 📡 Nodes_bili22004
+      - 📡 Nodes_dingtalk80
 
   - name: "🇭🇰 腾讯HK1-TCP"
     type: url-test
@@ -258,6 +278,10 @@ proxy-groups:
     filter: "腾讯HK1"
     use:
       - 📡 Nodes_shouting22001
+      - 📡 Nodes_tencent22002
+      - 📡 Nodes_toutiao22003
+      - 📡 Nodes_bili22004
+      - 📡 Nodes_dingtalk80
 
   - name: "🇯🇵 腾讯JP1-TCP"
     type: url-test
@@ -267,6 +291,10 @@ proxy-groups:
     filter: "腾讯JP1"
     use:
       - 📡 Nodes_shouting22001
+      - 📡 Nodes_tencent22002
+      - 📡 Nodes_toutiao22003
+      - 📡 Nodes_bili22004
+      - 📡 Nodes_dingtalk80
 
 # 分流规则
 rules:

@@ -175,6 +175,8 @@ proxy-providers:
 proxy-groups:
   - name: "🎯 国内-手动-联通手厅"
     type: select
+    proxies:
+      - 🇨🇳 腾讯成都-TCP
     # 国内机场配置  
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN

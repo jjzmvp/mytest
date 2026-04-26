@@ -306,6 +306,7 @@ rules:
   - PROCESS-NAME-REGEX,com.coloros.*,DIRECT
   # Android常用APP
   - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付
+  - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包
   - PROCESS-NAME,com.sankuai.meituan,DIRECT                               # 美团
   - PROCESS-NAME,com.autonavi.minimap,DIRECT                              # 高德地图
   - PROCESS-NAME,com.chinamworld.main,DIRECT                              # 建设银行

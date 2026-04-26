@@ -256,6 +256,17 @@ proxy-groups:
     use:
       - 📡 Nodes_shouting22001
 
+  - name: "⚖️ 国外-负载均衡-钉钉"
+    type: load-balance
+    url: *test_url1
+    interval: 666
+    lazy: true
+    strategy: round-robin
+    filter: *includeNodes_GN
+    exclude-filter: *excludeNodes_GN
+    use:
+      - 📡 Nodes_dingtalk80
+
   - name: "🇨🇳 腾讯成都-TCP"
     type: url-test
     url: *test_url1

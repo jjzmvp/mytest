@@ -237,6 +237,8 @@ proxy-groups:
       - DIRECT
       - ⚖️ 国外-负载均衡-手厅
       - ⚓️ 国外-负载均衡-钉钉
+      - 🇭🇰 腾讯HK1-TCP
+      - 🇯🇵 腾讯JP1-TCP
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN

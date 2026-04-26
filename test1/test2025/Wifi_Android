@@ -264,8 +264,8 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 666
-    lazy: true
-    filter: "腾讯成都"
+    lazy: false
+    filter: "腾讯成都-"
     use:
       - 📡 Nodes_tencent22002
 
@@ -273,8 +273,8 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 666
-    lazy: true
-    filter: "腾讯HK1"
+    lazy: false
+    filter: "腾讯HK1-"
     use:
       - 📡 Nodes_tencent22002
 
@@ -282,8 +282,8 @@ proxy-groups:
     type: url-test
     url: *test_url1
     interval: 666
-    lazy: true
-    filter: "腾讯JP1"
+    lazy: false
+    filter: "腾讯JP1-"
     use:
       - 📡 Nodes_tencent22002
 

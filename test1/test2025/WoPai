@@ -312,16 +312,16 @@ rules:
   - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
   # Android常用APP
-  - PROCESS-NAME,com.unionpay,DIRECT                         # 云闪付
-  - PROCESS-NAME,com.sankuai.meituan,DIRECT                  # 美团
-  - PROCESS-NAME,com.autonavi.minimap,DIRECT                 # 高德地图
-  - PROCESS-NAME,com.chinamworld.main,DIRECT                 # 中国移动
-  - PROCESS-NAME,com.jingdong.app.mall,DIRECT                # 亰东商城
-  - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT             # 中国联通
-  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT          # 支付宝
-  - PROCESS-NAME,com.taobao.taobao,DIRECT                    # 淘宝
-  - PROCESS-NAME,com.fongmi.android.tv,🇭🇰 腾讯HK1-TCP        # OK影视
-  - PROCESS-NAME,idm.internet.download.manager.plus,🇭🇰 腾讯HK1-TCP # 1DM+下载
+  - PROCESS-NAME,com.unionpay,DIRECT                                     # 云闪付
+  - PROCESS-NAME,com.sankuai.meituan,DIRECT                              # 美团
+  - PROCESS-NAME,com.autonavi.minimap,DIRECT                             # 高德地图
+  - PROCESS-NAME,com.chinamworld.main,DIRECT                             # 中国移动
+  - PROCESS-NAME,com.jingdong.app.mall,DIRECT                            # 亰东商城
+  - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT                         # 中国联通
+  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                      # 支付宝
+  - PROCESS-NAME,com.taobao.taobao,DIRECT                                # 淘宝
+  - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通沃派              # OK影视
+  - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通沃派 # 1DM+下载
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行
@@ -390,17 +390,17 @@ rules:
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-联通沃派
 
   # 移动网络下的配置，另OPENAI不支持HK节点
-  - GEOSITE,google,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,github,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,zaobao,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,openai,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,oracle,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,yandex,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,twitter,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,mozilla,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,onedrive,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,wikimedia,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,cloudflare,🇯🇵 腾讯JP1-TCP
+  - GEOSITE,google,🌏 国外-手动-联通沃派
+  - GEOSITE,github,🌏 国外-手动-联通沃派
+  - GEOSITE,zaobao,🌏 国外-手动-联通沃派
+  - GEOSITE,openai,🌏 国外-手动-联通沃派
+  - GEOSITE,oracle,🌏 国外-手动-联通沃派
+  - GEOSITE,yandex,🌏 国外-手动-联通沃派
+  - GEOSITE,twitter,🌏 国外-手动-联通沃派
+  - GEOSITE,mozilla,🌏 国外-手动-联通沃派
+  - GEOSITE,onedrive,🌏 国外-手动-联通沃派
+  - GEOSITE,wikimedia,🌏 国外-手动-联通沃派
+  - GEOSITE,cloudflare,🌏 国外-手动-联通沃派
   - GEOSITE,telegram,🌏 国外-手动-联通沃派
   - GEOSITE,microsoft,🎯 国内-手动-联通沃派
   # GEOSITE 国内兜底

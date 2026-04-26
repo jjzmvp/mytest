@@ -173,7 +173,7 @@ proxy-providers:
 
 # 节点配置
 proxy-groups:
-  - name: "🎯 国内-手动-联通手厅"
+  - name: "🎯 国内-手动-联通沃派"
     type: select
     proxies:
       - ⚡️ 国内-自动-最低延迟
@@ -184,7 +184,7 @@ proxy-groups:
       - 📡 Nodes_shouting22001
       - ✈️ Airport_quick
   
-  - name: "🌏 国外-手动-联通手厅"
+  - name: "🌏 国外-手动-联通沃派"
     type: select
     proxies:
       - REJECT
@@ -286,15 +286,15 @@ rules:
   - PROCESS-NAME-REGEX,com.heytap.*,🇭🇰 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
   # Android常用APP
-  - PROCESS-NAME,com.unionpay,🇨🇳 腾讯成都-TCP                 # 云闪付
-  - PROCESS-NAME,com.sankuai.meituan,🇨🇳 腾讯成都-TCP          # 美团
-  - PROCESS-NAME,com.autonavi.minimap,🇨🇳 腾讯成都-TCP         # 高德地图
-  - PROCESS-NAME,com.chinamworld.main,🇨🇳 腾讯成都-TCP         # 中国移动
-  - PROCESS-NAME,com.jingdong.app.mall,🇨🇳 腾讯成都-TCP        # 亰东商城
-  - PROCESS-NAME,com.sinovatech.unicom.ui,🇨🇳 腾讯成都-TCP     # 中国联通
-  - PROCESS-NAME,com.eg.android.AlipayGphone,🇨🇳 腾讯成都-TCP  # 支付宝
-  - PROCESS-NAME,com.taobao.taobao,DIRECT                     # 淘宝
-  - PROCESS-NAME,com.fongmi.android.tv,🇭🇰 腾讯HK1-TCP         # OK影视
+  - PROCESS-NAME,com.unionpay,DIRECT                         # 云闪付
+  - PROCESS-NAME,com.sankuai.meituan,DIRECT                  # 美团
+  - PROCESS-NAME,com.autonavi.minimap,DIRECT                 # 高德地图
+  - PROCESS-NAME,com.chinamworld.main,DIRECT                 # 中国移动
+  - PROCESS-NAME,com.jingdong.app.mall,DIRECT                # 亰东商城
+  - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT             # 中国联通
+  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT          # 支付宝
+  - PROCESS-NAME,com.taobao.taobao,DIRECT                    # 淘宝
+  - PROCESS-NAME,com.fongmi.android.tv,🇭🇰 腾讯HK1-TCP        # OK影视
   - PROCESS-NAME,idm.internet.download.manager.plus,🇭🇰 腾讯HK1-TCP # 1DM+下载
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
@@ -310,38 +310,38 @@ rules:
   # NTP服务udp协议
   - AND,((NETWORK,UDP),(DST-PORT,123)),🇨🇳 腾讯成都-TCP
   # 域名后缀
-  - DOMAIN-SUFFIX,ac.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,gov.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,1hai.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,xuexi.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,12306.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,ceair.com,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,ceapfis.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,1237125.cn,🇨🇳 腾讯成都-TCP #云岭先锋
-  - DOMAIN-SUFFIX,ovital.com,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,guancha.cn,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,1012345.xyz,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,gpticket.org,🇨🇳 腾讯成都-TCP
-  - DOMAIN-SUFFIX,umetrip.com,🇨🇳 腾讯成都-TCP
+  - DOMAIN-SUFFIX,ac.cn,DIRECT
+  - DOMAIN-SUFFIX,gov.cn,DIRECT
+  - DOMAIN-SUFFIX,1hai.cn,DIRECT
+  - DOMAIN-SUFFIX,xuexi.cn,DIRECT
+  - DOMAIN-SUFFIX,12306.cn,DIRECT
+  - DOMAIN-SUFFIX,ceair.com,DIRECT
+  - DOMAIN-SUFFIX,ceapfis.cn,DIRECT
+  - DOMAIN-SUFFIX,1237125.cn,DIRECT #云岭先锋
+  - DOMAIN-SUFFIX,ovital.com,DIRECT
+  - DOMAIN-SUFFIX,guancha.cn,DIRECT
+  - DOMAIN-SUFFIX,1012345.xyz,DIRECT
+  - DOMAIN-SUFFIX,gpticket.org,DIRECT
+  - DOMAIN-SUFFIX,umetrip.com,DIRECT
   # 关键词域名规则
-  - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),🇭🇰 腾讯HK1-TCP
+  - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),DIRECT
   # GEOSITE 国内规则
-  - GEOSITE,iqiyi,🎯 国内-手动-联通手厅
-  - GEOSITE,baidu,🎯 国内-手动-联通手厅
-  - GEOSITE,bilibili,🎯 国内-手动-联通手厅
-  - GEOSITE,youku,🎯 国内-手动-联通手厅
-  - GEOSITE,bytedance,🎯 国内-手动-联通手厅
-  - GEOSITE,jd,🇨🇳 腾讯成都-TCP
-  - GEOSITE,zhihu,🇨🇳 腾讯成都-TCP
-  - GEOSITE,alibaba,🇨🇳 腾讯成都-TCP
-  - GEOSITE,netease,🇨🇳 腾讯成都-TCP
-  - GEOSITE,meituan,🇨🇳 腾讯成都-TCP
-  - GEOSITE,shanbay,🇨🇳 腾讯成都-TCP
-  - GEOSITE,tencent,🇨🇳 腾讯成都-TCP
-  - GEOSITE,chinamobile,🇨🇳 腾讯成都-TCP
-  - GEOSITE,chinaunicom,🇨🇳 腾讯成都-TCP
-  - GEOSITE,chinatelecom,🇨🇳 腾讯成都-TCP
-  - GEOSITE,category-bank-cn,🇨🇳 腾讯成都-TCP
+  - GEOSITE,iqiyi,DIRECT
+  - GEOSITE,baidu,DIRECT
+  - GEOSITE,bilibili,DIRECT
+  - GEOSITE,youku,DIRECT
+  - GEOSITE,bytedance,DIRECT
+  - GEOSITE,jd,DIRECT
+  - GEOSITE,zhihu,DIRECT
+  - GEOSITE,alibaba,DIRECT
+  - GEOSITE,netease,DIRECT
+  - GEOSITE,meituan,DIRECT
+  - GEOSITE,shanbay,DIRECT
+  - GEOSITE,tencent,DIRECT
+  - GEOSITE,chinamobile,DIRECT
+  - GEOSITE,chinaunicom,DIRECT
+  - GEOSITE,chinatelecom,DIRECT
+  - GEOSITE,category-bank-cn,DIRECT
   # 域名后缀
   - GEOSITE,cctv,🇭🇰 腾讯HK1-TCP
   - GEOSITE,oppo,🇭🇰 腾讯HK1-TCP
@@ -360,8 +360,8 @@ rules:
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🇯🇵 腾讯JP1-TCP
   - OR,((DOMAIN-KEYWORD,qingze),(DOMAIN-KEYWORD,kuxingseng)),🇯🇵 腾讯JP1-TCP
   # Youtube和谷歌学术(注意：部分节点可能被google拉黑，导致无法使用谷歌学术!!!)
-  - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通手厅
-  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-联通手厅
+  - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-联通沃派
+  - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-联通沃派
 
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,google,🇯🇵 腾讯JP1-TCP
@@ -375,10 +375,10 @@ rules:
   - GEOSITE,onedrive,🇯🇵 腾讯JP1-TCP
   - GEOSITE,wikimedia,🇯🇵 腾讯JP1-TCP
   - GEOSITE,cloudflare,🇯🇵 腾讯JP1-TCP
-  - GEOSITE,telegram,🌏 国外-手动-联通手厅
-  - GEOSITE,microsoft,🎯 国内-手动-联通手厅
+  - GEOSITE,telegram,🌏 国外-手动-联通沃派
+  - GEOSITE,microsoft,🎯 国内-手动-联通沃派
   # GEOSITE 国内兜底
-  - GEOSITE,CN,🎯 国内-手动-联通手厅
+  - GEOSITE,CN,🎯 国内-手动-联通沃派
 
   # IP 规则
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
@@ -393,6 +393,6 @@ rules:
   - IP-CIDR,8.8.8.8/32,🇭🇰 腾讯HK1-TCP,no-resolve
   - IP-CIDR,1.1.1.1/32,🇭🇰 腾讯HK1-TCP,no-resolve
   # GEOIP 兜底
-  - GEOIP,CN,🎯 国内-手动-联通手厅
-  - MATCH,🌏 国外-手动-联通手厅
+  - GEOIP,CN,🎯 国内-手动-联通沃派
+  - MATCH,🌏 国外-手动-联通沃派
   - MATCH,REJECT

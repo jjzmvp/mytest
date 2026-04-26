@@ -287,6 +287,7 @@ rules:
   - PROCESS-NAME-REGEX,com.coloros.*,🇭🇰 腾讯HK1-TCP
   # Android常用APP
   - PROCESS-NAME,com.unionpay,🇨🇳 腾讯成都-TCP                             # 云闪付
+  - PROCESS-NAME,com.larus.nova,🇨🇳 腾讯成都-TCP                           # 豆包
   - PROCESS-NAME,com.sankuai.meituan,🇨🇳 腾讯成都-TCP                      # 美团
   - PROCESS-NAME,com.autonavi.minimap,🇨🇳 腾讯成都-TCP                     # 高德地图
   - PROCESS-NAME,com.chinamworld.main,🇨🇳 腾讯成都-TCP                     # 建设银行

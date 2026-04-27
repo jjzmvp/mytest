@@ -337,14 +337,8 @@ proxy-groups:
 # 分流规则
 rules:
   ## Android系统相关规则
-  # 微信小程序应用
-  - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),DIRECT
-  # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
-  # 腾讯会议udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),DIRECT
-  # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
-  - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
+  # 腾讯系应用
+  - PROCESS-NAME-REGEX,com.tencent.*,DIRECT
   # 一加Android系统相关应用
   - PROCESS-NAME,android.uid.system,⚡️ 腾讯JP1-TCP
   - PROCESS-NAME,com.google.uid.shared,⚡️ 腾讯JP1-TCP

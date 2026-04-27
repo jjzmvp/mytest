@@ -297,6 +297,7 @@ rules:
   - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包
   - PROCESS-NAME,com.bilibili.app.in,DIRECT                               # B站
   - PROCESS-NAME,com.sankuai.meituan,DIRECT                               # 美团
+  - PROCESS-NAME,com.alicloud.databox,DIRECT                              # 阿里云盘
   - PROCESS-NAME,com.autonavi.minimap,DIRECT                              # 高德地图
   - PROCESS-NAME,com.chinamworld.main,DIRECT                              # 建设银行
   - PROCESS-NAME,com.jingdong.app.mall,DIRECT                             # 亰东商城

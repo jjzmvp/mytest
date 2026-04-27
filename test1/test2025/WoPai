@@ -155,7 +155,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 2222
+      interval: 3333
       lazy: false
       url: *test_url1
 
@@ -168,7 +168,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 2222
+      interval: 3333
       lazy: false
       url: *test_url1
 
@@ -181,7 +181,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 2222
+      interval: 3333
       lazy: false
       url: *test_url1
 
@@ -194,7 +194,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 2222
+      interval: 3333
       lazy: false
       url: *test_url1
 
@@ -207,7 +207,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 2222
+      interval: 3333
       lazy: false
       url: *test_url1
 
@@ -254,7 +254,7 @@ proxy-groups:
   - name: "⚖️ 国外-负载均衡-手厅"
     type: load-balance
     url: *test_url1
-    interval: 2222
+    interval: 3333
     lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
@@ -265,7 +265,7 @@ proxy-groups:
   - name: "🔰 国外-负载均衡-头条"
     type: load-balance
     url: *test_url1
-    interval: 2222
+    interval: 3333
     lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
@@ -276,7 +276,7 @@ proxy-groups:
   - name: "♻️ 国外-负载均衡-哔哩"
     type: load-balance
     url: *test_url1
-    interval: 2222
+    interval: 3333
     lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
@@ -287,7 +287,7 @@ proxy-groups:
   - name: "⚓️ 国外-负载均衡-钉钉"
     type: load-balance
     url: *test_url1
-    interval: 2222
+    interval: 3333
     lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
@@ -298,7 +298,7 @@ proxy-groups:
   - name: "⚡️ 腾讯成都-TCP"
     type: url-test
     url: *test_url1
-    interval: 2222
+    interval: 3333
     lazy: false
     filter: "腾讯成都-"
     use:
@@ -311,7 +311,7 @@ proxy-groups:
   - name: "⚡️ 腾讯HK1-TCP"
     type: url-test
     url: *test_url1
-    interval: 2222
+    interval: 3333
     lazy: false
     filter: "腾讯HK1-"
     use:
@@ -324,7 +324,7 @@ proxy-groups:
   - name: "⚡️ 腾讯JP1-TCP"
     type: url-test
     url: *test_url1
-    interval: 2222
+    interval: 3333
     lazy: false
     filter: "腾讯JP1-"
     use:

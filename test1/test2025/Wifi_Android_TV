@@ -180,7 +180,7 @@ proxy-providers:
     interval: 0
     health-check:
       enable: true
-      interval: 666
+      interval: 3333
       lazy: false
       url: *test_url1
 # End - 机场相关配置
@@ -240,7 +240,7 @@ proxy-groups:
   - name: "⚖️ 国外-负载均衡-VPS"
     type: load-balance
     url: *test_url1
-    interval: 666
+    interval: 3333
     lazy: false
     strategy: round-robin
     filter: *includeNodes_GN
@@ -251,7 +251,7 @@ proxy-groups:
   - name: "⚡️ 腾讯成都-TCP"
     type: url-test
     url: *test_url1
-    interval: 666
+    interval: 3333
     lazy: false
     filter: "腾讯成都"
     use:
@@ -260,7 +260,7 @@ proxy-groups:
   - name: "⚡️ 腾讯HK1-TCP"
     type: url-test
     url: *test_url1
-    interval: 666
+    interval: 3333
     lazy: false
     filter: "腾讯HK1"
     use:
@@ -269,7 +269,7 @@ proxy-groups:
   - name: "⚡️ 腾讯JP1-TCP"
     type: url-test
     url: *test_url1
-    interval: 666
+    interval: 3333
     lazy: false
     filter: "腾讯JP1"
     use:

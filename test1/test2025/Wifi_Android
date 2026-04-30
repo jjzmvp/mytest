@@ -311,9 +311,9 @@ rules:
   # 1DM+下载 (国内IP)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),DIRECT
   # OK影视 (国外IP)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,(GEOIP,cn))),⚡️ 腾讯HK1-TCP
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),⚡️ 腾讯HK1-TCP
   # 1DM+下载 (国外IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,(GEOIP,cn))),⚡️ 腾讯HK1-TCP
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),⚡️ 腾讯HK1-TCP
 
   ## 以下规则不同系统可配置相同
   # 私有放行
@@ -321,7 +321,7 @@ rules:
   # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
   - AND,((NETWORK,TCP),(DST-PORT,2021/3389/7500/8888/9527/13389/23389/10181-10183)),⚡️ 腾讯成都-TCP
   # 禁用QUIC
-  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,(GEOSITE,cn)),REJECT # quic
+  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
@@ -400,7 +400,7 @@ rules:
   - GEOSITE,CN,🎯 国内-手动-WIFI-安卓
 
   # IP 规则
-  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,(GEOIP,CN)),REJECT # quic
+  - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
   # 私有放行
   - GEOIP,PRIVATE,DIRECT,no-resolve
   # CIDR 规则

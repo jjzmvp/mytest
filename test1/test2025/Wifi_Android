@@ -295,6 +295,7 @@ rules:
   # Android常用APP
   - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付
   - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包
+  - PROCESS-NAME,com.xdiarys.www,DIRECT                                   # 日历清单
   - PROCESS-NAME,com.bilibili.app.in,DIRECT                               # B站
   - PROCESS-NAME,com.sankuai.meituan,DIRECT                               # 美团
   - PROCESS-NAME,com.alicloud.databox,DIRECT                              # 阿里云盘

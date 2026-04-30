@@ -283,6 +283,7 @@ rules:
   - PROCESS-NAME,WXWork.exe,DIRECT                   # 企业微信
   - PROCESS-NAME,WXWorkWeb.exe,DIRECT                # 企业微信程序
   - PROCESS-NAME,wemeetapp.exe,DIRECT                # 腾讯会议
+  - PROCESS-NAME,desktopcal.exe,DIRECT               # 日历清单
   - PROCESS-NAME,HipsDaemon.exe,DIRECT               # 火绒软件
   - PROCESS-NAME,WeChatAppEx.exe,DIRECT              # 微信程序
   - PROCESS-NAME,NutstoreClient.exe,DIRECT           # 坚果云

@@ -250,10 +250,11 @@ proxy-groups:
       - REJECT
       - DIRECT
       - ⚖️ 国外-负载均衡-手厅
+      - Ⓜ️ 国外-负载均衡-云盘
       - 🔰 国外-负载均衡-头条
       - ♻️ 国外-负载均衡-哔哩
       - ⚓️ 国外-负载均衡-钉钉
-      - Ⓜ️ 国外-负载均衡-云盘
+      - 🐧 国外-负载均衡-腾讯
       - ⚡️ 腾讯HK1-TCP
       - ⚡️ 腾讯JP1-TCP
     # 国外机场配置
@@ -277,6 +278,17 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_shouting22001
+
+  - name: "🐧 国外-负载均衡-腾讯"
+    type: load-balance
+    url: *test_url1
+    interval: 3333
+    lazy: false
+    strategy: round-robin
+    filter: *includeNodes_GN
+    exclude-filter: *excludeNodes_GN
+    use:
+      - 📡 Nodes_tencent22002
 
   - name: "🔰 国外-负载均衡-头条"
     type: load-balance

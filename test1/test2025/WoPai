@@ -219,10 +219,10 @@ proxies:
     type: http
     server: 157.0.146.158
     port: 443
+    skip-cert-verify: true
     headers:
+      Host: dm.toutiao.com:443
       X-T5-Auth: "482857715"
-      Host: dm.toutiao.com
-      User-Agent: "okhttp/3.11.0 Dalvik/2.1.0 (Linux; U; Android 11; Redmi K30 5G Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)"
 
 proxy-groups:
   - name: "🎯 国内-手动-联通沃派"

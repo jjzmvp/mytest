@@ -225,19 +225,19 @@ proxy-groups:
     exclude-filter: *excludeNodes_CN
     use:
       - 📡 Nodes_shouting22001
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_dingtalk80
       - 📡 Nodes_toutiao22003
       - 📡 Nodes_bili22004
-      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_tencent22002
   
   - name: "🌏 国外-手动-联通沃派"
     type: select
     proxies:
       - DIRECT
       - ⚖️ 国外-负载均衡-手厅
+      - ⚓️ 国外-负载均衡-钉钉
       - 🔰 国外-负载均衡-头条
       - ♻️ 国外-负载均衡-哔哩
-      - ⚓️ 国外-负载均衡-钉钉
       - 🐧 国外-负载均衡-腾讯
       - ⚡️ 腾讯HK1-TCP
       - ⚡️ 腾讯JP1-TCP
@@ -246,10 +246,10 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_shouting22001
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_dingtalk80
       - 📡 Nodes_toutiao22003
       - 📡 Nodes_bili22004
-      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_tencent22002
       
   - name: "⚖️ 国外-负载均衡-手厅"
     type: load-balance
@@ -262,7 +262,7 @@ proxy-groups:
     use:
       - 📡 Nodes_shouting22001
 
-  - name: "🐧 国外-负载均衡-腾讯"
+  - name: "⚓️ 国外-负载均衡-钉钉"
     type: load-balance
     url: *test_url1
     interval: 3333
@@ -271,7 +271,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_dingtalk80
 
   - name: "🔰 国外-负载均衡-头条"
     type: load-balance
@@ -295,7 +295,7 @@ proxy-groups:
     use:
       - 📡 Nodes_bili22004
 
-  - name: "⚓️ 国外-负载均衡-钉钉"
+  - name: "🐧 国外-负载均衡-腾讯"
     type: load-balance
     url: *test_url1
     interval: 3333
@@ -304,7 +304,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_tencent22002
 
   - name: "⚡️ 腾讯成都-TCP"
     type: url-test
@@ -314,10 +314,10 @@ proxy-groups:
     filter: "腾讯成都-"
     use:
       - 📡 Nodes_shouting22001
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_dingtalk80
       - 📡 Nodes_toutiao22003
       - 📡 Nodes_bili22004
-      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_tencent22002
 
   - name: "⚡️ 腾讯HK1-TCP"
     type: url-test
@@ -327,10 +327,10 @@ proxy-groups:
     filter: "腾讯HK1-"
     use:
       - 📡 Nodes_shouting22001
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_dingtalk80
       - 📡 Nodes_toutiao22003
       - 📡 Nodes_bili22004
-      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_tencent22002
 
   - name: "⚡️ 腾讯JP1-TCP"
     type: url-test
@@ -340,10 +340,10 @@ proxy-groups:
     filter: "腾讯JP1-"
     use:
       - 📡 Nodes_shouting22001
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_dingtalk80
       - 📡 Nodes_toutiao22003
       - 📡 Nodes_bili22004
-      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_tencent22002
 
 # 分流规则
 rules:

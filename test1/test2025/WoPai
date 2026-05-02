@@ -159,19 +159,6 @@ proxy-providers:
       lazy: false
       url: *test_url1
 
-  # 联通云盘
-  📡 Nodes_woyunpan80:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/woyunpan80
-    type: "http"
-    path: "./ProxyProviders/Nodes_woyunpan80.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
-    interval: 0
-    health-check:
-      enable: true
-      interval: 3333
-      lazy: false
-      url: *test_url1
-
   # 联通手厅
   📡 Nodes_shouting22001:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
@@ -248,7 +235,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - ⚖️ 国外-负载均衡-手厅
-      - Ⓜ️ 国外-负载均衡-云盘
       - 🔰 国外-负载均衡-头条
       - ♻️ 国外-负载均衡-哔哩
       - ⚓️ 国外-负载均衡-钉钉
@@ -319,17 +305,6 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_dingtalk80
-
-  - name: "Ⓜ️ 国外-负载均衡-云盘"
-    type: load-balance
-    url: *test_url1
-    interval: 3333
-    lazy: false
-    strategy: round-robin
-    filter: *includeNodes_GN
-    exclude-filter: *excludeNodes_GN
-    use:
-      - 📡 Nodes_woyunpan80
 
   - name: "⚡️ 腾讯成都-TCP"
     type: url-test

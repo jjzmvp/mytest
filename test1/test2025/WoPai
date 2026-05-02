@@ -284,7 +284,7 @@ proxy-groups:
     use:
       - 📡 Nodes_toutiao22003
 
-  - name: "♻️ 国外-负载均衡-哔哩"
+  - name: "📺 国外-负载均衡-哔哩"
     type: load-balance
     url: *test_url1
     interval: 3333

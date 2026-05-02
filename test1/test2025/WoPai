@@ -373,7 +373,6 @@ rules:
   - PROCESS-NAME,com.chinamworld.main,DIRECT                              # 建设银行
   - PROCESS-NAME,com.jingdong.app.mall,DIRECT                             # 亰东商城
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
-  - PROCESS-NAME,com.yitong.mbank.psbc.creditcard,DIRECT                  # 邮储银行
   - PROCESS-NAME,com.xdiarys.www,⚡️ 腾讯成都-TCP                          # 日历清单
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯成都-TCP                     # 高德地图
   - PROCESS-NAME,com.sinovatech.unicom.ui,⚡️ 腾讯成都-TCP                 # 中国联通

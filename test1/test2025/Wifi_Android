@@ -304,7 +304,6 @@ rules:
   - PROCESS-NAME,com.jingdong.app.mall,DIRECT                             # 亰东商城
   - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT                          # 中国联通
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
-  - PROCESS-NAME,com.yitong.mbank.psbc.creditcard,DIRECT                  # 邮储银行
   - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
   # OK影视 (国内IP)

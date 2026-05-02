@@ -219,6 +219,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 🦜 头条直连
       - ⚡️ 腾讯成都-TCP
     # 国内机场配置  
     filter: *includeNodes_CN
@@ -344,6 +345,15 @@ proxy-groups:
       - 📡 Nodes_toutiao22003
       - 📡 Nodes_bili22004
       - 📡 Nodes_tencent22002
+
+  - name: "🦜 头条直连"
+    type: http
+    server: 157.0.146.158
+    port: 443
+    headers:
+      X-T5-Auth: "482857715"
+      Host: dm.toutiao.com
+      User-Agent: "okhttp/3.11.0 Dalvik/2.1.0 (Linux; U; Android 11; Redmi K30 5G Build/RKQ1.200826.002) baiduboxapp/11.0.5.12 (Baidu; P1 11)"
 
 # 分流规则
 rules:

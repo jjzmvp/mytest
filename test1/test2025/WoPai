@@ -222,7 +222,7 @@ proxies:
     skip-cert-verify: true
     headers:
       Host: dm.toutiao.com:443
-      # X-T5-Auth: "482857715"
+      X-T5-Auth: 1465707949
 
 proxy-groups:
   - name: "🎯 国内-手动-联通沃派"

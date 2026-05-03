@@ -214,22 +214,10 @@ proxy-providers:
 # End - 机场相关配置
 
 # 节点配置
-proxies:
-  - name: "🦜 头条直连"
-    type: http
-    server: 157.0.146.158
-    port: 443
-    skip-cert-verify: true
-    headers:
-      Host: dm.toutiao.com:443
-      X-T5-Auth: "683556433"
-
 proxy-groups:
   - name: "🎯 国内-手动-联通沃派"
     type: select
     proxies:
-      - DIRECT
-      - 🦜 头条直连
       - ⚡️ 腾讯成都-TCP
     # 国内机场配置  
     filter: *includeNodes_CN
@@ -389,17 +377,9 @@ rules:
   - PROCESS-NAME,com.xdiarys.www,⚡️ 腾讯成都-TCP                          # 日历清单
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯成都-TCP                     # 高德地图
   - PROCESS-NAME,com.sinovatech.unicom.ui,⚡️ 腾讯成都-TCP                 # 中国联通
-  #- PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通沃派               # OK影视
-  #- PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通沃派  # 1DM+下载
+  - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通沃派               # OK影视
+  - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通沃派  # 1DM+下载
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
-  # OK影视 (国内IP)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),🎯 国内-手动-联通沃派
-  # 1DM+下载 (国内IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),🎯 国内-手动-联通沃派
-  # OK影视 (国外IP)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
-  # 1DM+下载 (国外IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行

@@ -342,9 +342,7 @@ proxy-groups:
       - 📡 Nodes_dingtalk80
       - 📡 Nodes_toutiao22003
       - 📡 Nodes_bili22004
-      - 📡 Nodes_tencent22002
-
-  
+      - 📡 Nodes_tencent22002  
 
 # 分流规则
 rules:

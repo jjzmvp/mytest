@@ -281,6 +281,7 @@ rules:
   - PROCESS-NAME,com.bilibili.app.in,⚡️ 腾讯成都-TCP                      # B站
   - PROCESS-NAME,com.sankuai.meituan,⚡️ 腾讯成都-TCP                      # 美团
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯成都-TCP                     # 高德地图
+  - PROCESS-NAME,cn.toside.music.mobile,⚡️ 腾讯成都-TCP                   # LX music
   - PROCESS-NAME,com.chinamworld.main,⚡️ 腾讯成都-TCP                     # 建设银行
   - PROCESS-NAME,com.jingdong.app.mall,⚡️ 腾讯成都-TCP                    # 亰东商城
   - PROCESS-NAME,com.sinovatech.unicom.ui,⚡️ 腾讯成都-TCP                 # 中国联通

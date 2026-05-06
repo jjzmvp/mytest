@@ -374,6 +374,7 @@ rules:
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
   - PROCESS-NAME,com.xdiarys.www,⚡️ 腾讯成都-TCP                          # 日历清单
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯成都-TCP                     # 高德地图
+  - PROCESS-NAME,cn.toside.music.mobile,⚡️ 腾讯成都-TCP                   # 日历清单
   - PROCESS-NAME,com.sinovatech.unicom.ui,⚡️ 腾讯成都-TCP                 # 中国联通
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通沃派               # OK影视
   - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通沃派  # 1DM+下载

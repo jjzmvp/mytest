@@ -377,7 +377,7 @@ rules:
   - PROCESS-NAME,com.sinovatech.unicom.ui,⚡️ 腾讯成都-TCP                 # 中国联通
   - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通沃派               # OK影视
   - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通沃派  # 1DM+下载
-  - PROCESS-NAME,com.autonavi.minimap,,⚡️ 腾讯HK1-TCP                     # 高德地图
+  - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯HK1-TCP                     # 高德地图
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）

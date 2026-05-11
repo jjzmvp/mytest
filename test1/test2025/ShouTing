@@ -275,6 +275,7 @@ rules:
   - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-TCP
   # Android常用APP
+  - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
   - PROCESS-NAME,com.unionpay,⚡️ 腾讯成都-TCP                             # 云闪付
   - PROCESS-NAME,com.larus.nova,⚡️ 腾讯成都-TCP                           # 豆包
   - PROCESS-NAME,com.xdiarys.www,⚡️ 腾讯成都-TCP                          # 日历清单
@@ -287,7 +288,6 @@ rules:
   - PROCESS-NAME,com.sinovatech.unicom.ui,⚡️ 腾讯成都-TCP                 # 中国联通
   - PROCESS-NAME,com.eg.android.AlipayGphone,⚡️ 腾讯成都-TCP              # 支付宝
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,⚡️ 腾讯成都-TCP         # 央视频
-  - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
   - PROCESS-NAME,com.alicloud.databox,⚡️ 腾讯HK1-TCP                      # 阿里云盘
   - PROCESS-NAME,com.fongmi.android.tv,⚡️ 腾讯HK1-TCP                     # OK影视
   - PROCESS-NAME,idm.internet.download.manager.plus,⚡️ 腾讯HK1-TCP        # 1DM+下载

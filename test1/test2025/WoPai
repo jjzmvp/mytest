@@ -475,8 +475,8 @@ rules:
   - IP-CIDR,223.6.6.6/32,⚡️ 腾讯成都-TCP,no-resolve
   - IP-CIDR,119.29.29.29/32,⚡️ 腾讯成都-TCP,no-resolve
   - IP-CIDR,39.129.14.158/32,⚡️ 腾讯成都-TCP,no-resolve  #VPN
-  - IP-CIDR,42.193.49.103/32,⚡️ 腾讯成都-TCP,no-resolve
-  - IP-CIDR,43.154.96.128/32,⚡️ 腾讯HK1-TCP,no-resolve
+  - IP-CIDR,42.193.0.0/16,⚡️ 腾讯成都-TCP,no-resolve
+  - IP-CIDR,43.154.0.0/16,⚡️ 腾讯HK1-TCP,no-resolve
   - IP-CIDR,8.8.8.8/32,⚡️ 腾讯HK1-TCP,no-resolve
   - IP-CIDR,1.1.1.1/32,⚡️ 腾讯HK1-TCP,no-resolve
   # GEOIP 兜底

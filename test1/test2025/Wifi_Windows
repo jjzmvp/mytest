@@ -287,6 +287,7 @@ rules:
   - PROCESS-NAME,HipsDaemon.exe,DIRECT               # 火绒软件
   - PROCESS-NAME,WeChatAppEx.exe,DIRECT              # 微信程序
   - PROCESS-NAME,NutstoreClient.exe,DIRECT           # 坚果云
+
   - PROCESS-NAME,HPPrinterHealthMonitor.exe,REJECT   # HP打印机监测
 
   ## 以下规则不同操作系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）

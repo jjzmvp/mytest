@@ -433,7 +433,6 @@ rules:
   - GEOSITE,chinatelecom,DIRECT
   - GEOSITE,category-bank-cn,DIRECT
   # 域名后缀
-  - GEOSITE,cctv,⚡️ 腾讯HK1-TCP
   - GEOSITE,oppo,⚡️ 腾讯HK1-TCP
   - GEOSITE,xiaomi,⚡️ 腾讯HK1-TCP
   - GEOSITE,huawei,⚡️ 腾讯HK1-TCP

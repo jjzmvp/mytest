@@ -341,7 +341,6 @@ rules:
   - GEOSITE,chinatelecom,⚡️ 腾讯成都-TCP
   - GEOSITE,category-bank-cn,⚡️ 腾讯成都-TCP
   # 域名后缀
-  - GEOSITE,cctv,⚡️ 腾讯HK1-TCP
   - GEOSITE,oppo,⚡️ 腾讯HK1-TCP
   - GEOSITE,xiaomi,⚡️ 腾讯HK1-TCP
   - GEOSITE,huawei,⚡️ 腾讯HK1-TCP

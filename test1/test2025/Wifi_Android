@@ -367,7 +367,6 @@ rules:
   - GEOSITE,chinatelecom,DIRECT
   - GEOSITE,category-bank-cn,DIRECT
   # 域名后缀
-  - GEOSITE,cctv,DIRECT
   - GEOSITE,oppo,DIRECT
   - GEOSITE,xiaomi,DIRECT
   - GEOSITE,huawei,DIRECT

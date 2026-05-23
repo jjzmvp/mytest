@@ -266,15 +266,6 @@ proxy-groups:
     use:
       - 📡 Nodes_tencent22002
 
-  - name: "⚡️ 腾讯JP1-TCP"
-    type: url-test
-    url: *test_url1
-    interval: 3600
-    lazy: false
-    filter: "腾讯JP1"
-    use:
-      - 📡 Nodes_tencent22002
-
 # 分流规则
 rules:
   ## Android系统相关规则
@@ -338,27 +329,27 @@ rules:
   - DOMAIN-SUFFIX,racknerd.com,⚡️ 腾讯HK1-TCP
   - DOMAIN-SUFFIX,voice.google.com,⚡️ 腾讯HK1-TCP      # Google voice
   - DOMAIN-SUFFIX,voice.telephony.goog,⚡️ 腾讯HK1-TCP  # Google voice
-  - DOMAIN-SUFFIX,ping.pe,⚡️ 腾讯JP1-TCP
-  - DOMAIN-SUFFIX,lastpass.com,⚡️ 腾讯JP1-TCP
-  - DOMAIN-SUFFIX,namesilo.com,⚡️ 腾讯JP1-TCP
-  - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),⚡️ 腾讯JP1-TCP
-  - OR,((DOMAIN-KEYWORD,qingze),(DOMAIN-KEYWORD,kuxingseng)),⚡️ 腾讯JP1-TCP
+  - DOMAIN-SUFFIX,ping.pe,🌏 国外-手动-WIFI-安卓
+  - DOMAIN-SUFFIX,lastpass.com,🌏 国外-手动-WIFI-安卓
+  - DOMAIN-SUFFIX,namesilo.com,🌏 国外-手动-WIFI-安卓
+  - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🌏 国外-手动-WIFI-安卓
+  - OR,((DOMAIN-KEYWORD,qingze),(DOMAIN-KEYWORD,kuxingseng)),🌏 国外-手动-WIFI-安卓
   # Youtube和谷歌学术(注意：部分节点可能被google拉黑，导致无法使用谷歌学术!!!)
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-WIFI-安卓
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-WIFI-安卓
 
   # 移动网络下的配置，另OPENAI不支持HK节点
-  - GEOSITE,google,⚡️ 腾讯JP1-TCP
-  - GEOSITE,github,⚡️ 腾讯JP1-TCP
-  - GEOSITE,zaobao,⚡️ 腾讯JP1-TCP
-  - GEOSITE,openai,⚡️ 腾讯JP1-TCP
-  - GEOSITE,oracle,⚡️ 腾讯JP1-TCP
-  - GEOSITE,yandex,⚡️ 腾讯JP1-TCP
-  - GEOSITE,twitter,⚡️ 腾讯JP1-TCP
-  - GEOSITE,mozilla,⚡️ 腾讯JP1-TCP
-  - GEOSITE,onedrive,⚡️ 腾讯JP1-TCP
-  - GEOSITE,wikimedia,⚡️ 腾讯JP1-TCP
-  - GEOSITE,cloudflare,⚡️ 腾讯JP1-TCP
+  - GEOSITE,google,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,github,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,zaobao,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,openai,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,oracle,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,yandex,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,twitter,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,mozilla,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,onedrive,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,wikimedia,🌏 国外-手动-WIFI-安卓
+  - GEOSITE,cloudflare,🌏 国外-手动-WIFI-安卓
   - GEOSITE,telegram,🌏 国外-手动-WIFI-安卓
   - GEOSITE,microsoft,🎯 国内-手动-WIFI-安卓
   # GEOSITE 国内兜底

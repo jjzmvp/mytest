@@ -156,7 +156,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 666
+      interval: 600
       lazy: false
       url: *test_url1
 
@@ -168,7 +168,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 666
+      interval: 600
       lazy: false
       url: *test_url1
 
@@ -217,7 +217,7 @@ proxy-groups:
   - name: "☄️ 国外-机场-自动测速"
     type: url-test
     url: *test_url1
-    interval: 666
+    interval: 600
     lazy: false
     # 国内继机场配置
     filter: *includeNodes_GN
@@ -229,7 +229,7 @@ proxy-groups:
   - name: "♻️ 国外-自动-故障转移"
     type: fallback
     url: *test_url1
-    interval: 666
+    interval: 600
     lazy: false
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN

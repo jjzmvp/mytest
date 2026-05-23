@@ -154,7 +154,7 @@ proxy-providers:
     interval: 43210
     health-check:
       enable: true
-      interval: 666
+      interval: 600
       lazy: false
       url: *test_url1
 
@@ -201,7 +201,7 @@ proxy-groups:
   - name: "♻ 国外-自动-故障转移"
     type: fallback
     url: *test_url1
-    interval: 666
+    interval: 600
     lazy: false
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -211,7 +211,7 @@ proxy-groups:
   - name: "⚓️ 国外-负载均衡-机场"
     type: load-balance
     url: *test_url1
-    interval: 666
+    interval: 600
     lazy: false
     strategy: consistent-hashing
     filter: *includeNodes_GN

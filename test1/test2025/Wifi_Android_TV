@@ -203,9 +203,9 @@ proxy-groups:
     proxies:
       - REJECT
       - DIRECT
-      - ☄️ 国外-机场-自动测速
-      - ♻️ 国外-自动-故障转移
-      - ⚖️ 国外-负载均衡-VPS
+      - ☄️ 国外-自动测速
+      - ♻️ 国外-故障转移
+      - ⚖️ 国外-负载均衡
     #国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -214,7 +214,7 @@ proxy-groups:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
-  - name: "☄️ 国外-机场-自动测速"
+  - name: "☄️ 国外-自动测速"
     type: url-test
     url: *test_url1
     interval: 600
@@ -226,7 +226,7 @@ proxy-groups:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
-  - name: "♻️ 国外-自动-故障转移"
+  - name: "♻️ 国外-故障转移"
     type: fallback
     url: *test_url1
     interval: 600
@@ -237,7 +237,7 @@ proxy-groups:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
-  - name: "⚖️ 国外-负载均衡-VPS"
+  - name: "⚖️ 国外-负载均衡"
     type: load-balance
     url: *test_url1
     interval: 3600

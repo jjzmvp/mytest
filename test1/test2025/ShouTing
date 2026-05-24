@@ -188,9 +188,8 @@ proxy-groups:
     type: select
     proxies:
       - REJECT
-      - ♻ 国外-自动-故障转移
-      - ⚓️ 国外-负载均衡-机场
-      - ⚖️ 国外-负载均衡-VPS
+      - ♻️ 国外-故障转移
+      - ⚖️ 国外-负载均衡
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -198,7 +197,7 @@ proxy-groups:
       - 📡 Nodes_shouting22001
       - ✈️ Airport_quick
    
-  - name: "♻ 国外-自动-故障转移"
+  - name: "♻️ 国外-故障转移"
     type: fallback
     url: *test_url1
     interval: 600
@@ -208,18 +207,7 @@ proxy-groups:
     use:
       - ✈️ Airport_quick
       
-  - name: "⚓️ 国外-负载均衡-机场"
-    type: load-balance
-    url: *test_url1
-    interval: 600
-    lazy: false
-    strategy: consistent-hashing
-    filter: *includeNodes_GN
-    exclude-filter: *excludeNodes_GN
-    use:
-      - ✈️ Airport_quick
-      
-  - name: "⚖️ 国外-负载均衡-VPS"
+  - name: "⚖️ 国外-负载均衡"
     type: load-balance
     url: *test_url1
     interval: 3600

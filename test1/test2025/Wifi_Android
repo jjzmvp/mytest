@@ -172,10 +172,11 @@ proxy-providers:
       lazy: false
       url: *test_url1
 
-  📡 Nodes_tencent22002:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/tencent22002
+  # 联通手厅
+  📡 Nodes_shouting22001:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
     type: "http"
-    path: "./ProxyProviders/Nodes_tencent22002.yaml"
+    path: "./ProxyProviders/Nodes_shouting22001.yaml"
     proxy: ⚡️ 腾讯HK1-TCP
     interval: 0
     health-check:
@@ -195,7 +196,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_shouting22001
       - ✈️ Airport_quick
 
   - name: "🌏 国外-手动-WIFI-安卓"
@@ -210,7 +211,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_shouting22001
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
@@ -246,7 +247,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_shouting22001
 
   - name: "⚡️ 腾讯成都-TCP"
     type: url-test
@@ -255,7 +256,7 @@ proxy-groups:
     lazy: false
     filter: "腾讯成都-"
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_shouting22001
 
   - name: "⚡️ 腾讯HK1-TCP"
     type: url-test
@@ -264,7 +265,7 @@ proxy-groups:
     lazy: false
     filter: "腾讯HK1-"
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_shouting22001
 
 # 分流规则
 rules:

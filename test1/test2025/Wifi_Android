@@ -280,10 +280,9 @@ rules:
   # 一加Android系统相关应用
   - PROCESS-NAME,android.uid.system,⚡️ 腾讯HK1-TCP
   - PROCESS-NAME,com.google.uid.shared,⚡️ 腾讯HK1-TCP
-
-  - PROCESS-NAME-REGEX,com.oplus.*,DIRECT
-  - PROCESS-NAME-REGEX,com.heytap.*,DIRECT
-  - PROCESS-NAME-REGEX,com.coloros.*,DIRECT
+  - PROCESS-NAME-REGEX,com.oplus.*,⚡️ 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-TCP
   # Android常用APP
   - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付
   - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包

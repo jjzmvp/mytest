@@ -339,7 +339,7 @@ rules:
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-WIFI-安卓
 
   # IP检测
-  - DOMAIN-SUFFIX,ipip.net,🌏 国外-手动-WIFI-安卓
+  - DOMAIN-SUFFIX,ipip.net,🎯 国内-手动-WIFI-安卓
   - OR,((DOMAIN-SUFFIX,ip.sb),(DOMAIN-SUFFIX,ipwho.is),(DOMAIN-SUFFIX,ipapi.is),),🌏 国外-手动-WIFI-安卓
 
   # 移动网络下的配置，另OPENAI不支持HK节点

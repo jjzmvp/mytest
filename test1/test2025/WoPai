@@ -354,6 +354,7 @@ rules:
   - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付
   - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包
   - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
+  - PROCESS-NAME,com.ccb.longjiLife,DIRECT                                # 建行生活
   - PROCESS-NAME,com.bilibili.app.in,DIRECT                               # B站
   - PROCESS-NAME,com.sankuai.meituan,DIRECT                               # 美团
   - PROCESS-NAME,com.alicloud.databox,DIRECT                              # 阿里云盘

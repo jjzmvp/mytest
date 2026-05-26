@@ -338,6 +338,9 @@ rules:
   - AND,((GEOSITE,youtube),(NETWORK,TCP)),🌏 国外-手动-WIFI-安卓
   - AND,((GEOSITE,google-scholar),(NETWORK,TCP)),🌏 国外-手动-WIFI-安卓
 
+  # 国外IP检测
+  - OR,((DOMAIN-SUFFIX,ip.sb),(DOMAIN-SUFFIX,ipwho.is),(DOMAIN-SUFFIX,ipapi.is),),🌏 国外-手动-WIFI-安卓
+
   # 移动网络下的配置，另OPENAI不支持HK节点
   - GEOSITE,google,🌏 国外-手动-WIFI-安卓
   - GEOSITE,github,🌏 国外-手动-WIFI-安卓

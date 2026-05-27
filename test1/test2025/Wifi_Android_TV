@@ -219,7 +219,7 @@ proxy-groups:
     url: *test_url1
     interval: 600
     lazy: false
-    tolerance: 50
+    tolerance: 30
     # 国内继机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN

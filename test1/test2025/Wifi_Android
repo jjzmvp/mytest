@@ -281,9 +281,9 @@ rules:
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # 一加Android系统相关应用
   - PROCESS-NAME,android.uid.system,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME,com.google.uid.shared,⚡️ 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.oplus.*,⚡️ 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.google.*,⚡️ 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-TCP
   # Android常用APP
   - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付

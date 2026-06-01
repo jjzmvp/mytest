@@ -271,6 +271,7 @@ rules:
   - PROCESS-NAME,com.sinovatech.unicom.ui,⚡️ 腾讯成都-TCP                 # 中国联通
   - PROCESS-NAME,com.eg.android.AlipayGphone,⚡️ 腾讯成都-TCP              # 支付宝
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,⚡️ 腾讯成都-TCP         # 央视频
+
   - PROCESS-NAME,com.alicloud.databox,⚡️ 腾讯HK1-TCP                      # 阿里云盘
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
 

@@ -272,9 +272,10 @@ rules:
   - PROCESS-NAME,com.eg.android.AlipayGphone,⚡️ 腾讯成都-TCP              # 支付宝
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,⚡️ 腾讯成都-TCP         # 央视频
   - PROCESS-NAME,com.alicloud.databox,⚡️ 腾讯HK1-TCP                      # 阿里云盘
-  - PROCESS-NAME,com.fongmi.android.tv,⚡️ 腾讯HK1-TCP                     # OK影视
-  - PROCESS-NAME,idm.internet.download.manager.plus,⚡️ 腾讯HK1-TCP        # 1DM+下载
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
+
+  - PROCESS-NAME,com.fongmi.android.tv,🌏 国外-手动-联通手厅               # OK影视
+  - PROCESS-NAME,idm.internet.download.manager.plus,🌏 国外-手动-联通手厅  # 1DM+下载
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行

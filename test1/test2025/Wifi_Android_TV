@@ -270,7 +270,10 @@ proxy-groups:
 # 分流规则
 rules:
   ## Android系统相关规则
-  - PROCESS-NAME,com.fongmi.android.tv,DIRECT        # OK影视
+  # OK影视 (国内IP)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT
+  # OK影视 (国外IP)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI
 
   ## 以下规则不同系统可配置相同
   # 私有放行

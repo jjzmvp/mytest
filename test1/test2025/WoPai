@@ -219,7 +219,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
-      - ⚡️ 腾讯成都-TCP
+      # - ⚡️ 腾讯成都-TCP
     # 国内机场配置  
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN

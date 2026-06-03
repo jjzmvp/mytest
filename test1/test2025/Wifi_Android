@@ -300,6 +300,7 @@ rules:
   - PROCESS-NAME,com.chinamworld.main,DIRECT                              # 建设银行
   - PROCESS-NAME,com.jingdong.app.mall,DIRECT                             # 亰东商城
   - PROCESS-NAME,cn.toside.music.mobile,DIRECT                            # LX music
+  - PROCESS-NAME,com.whmapp.wuyang.honda,DIRECT                           # 五羊本田
   - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT                          # 中国联通
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,DIRECT                  # 央视频

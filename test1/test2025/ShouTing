@@ -290,7 +290,7 @@ rules:
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通手厅
 
   # nnngram
-  PROCESS-NAME,xyz.nextalone.nnngram,🌏 国外-手动-联通手厅
+  - PROCESS-NAME,xyz.nextalone.nnngram,🌏 国外-手动-联通手厅
 
   ## 以下规则不同系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行

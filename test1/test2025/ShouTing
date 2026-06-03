@@ -256,6 +256,7 @@ rules:
   - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.google.*,⚡️ 腾讯HK1-TCP
   - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-TCP
+  - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-TCP
   # Android常用APP
   - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
 

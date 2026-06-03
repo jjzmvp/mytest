@@ -373,6 +373,7 @@ rules:
 
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯HK1-TCP                      # 高德地图
   - PROCESS-NAME,com.bilingify.readest,⚡️ 腾讯HK1-TCP                     # Readest
+  - PROCESS-NAME,com.whmapp.wuyang.honda,⚡️ 腾讯HK1-TCP                   # 五羊本田
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
 
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),⚡️ 腾讯HK1-TCP         # VsTV直播 (国内IP)

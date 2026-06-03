@@ -300,7 +300,7 @@ rules:
   - AND,((IP-CIDR,42.193.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),⚡️ 腾讯成都-TCP
   # 禁用QUIC
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
-    # 广告拦截
+  # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
   # NTP服务udp协议

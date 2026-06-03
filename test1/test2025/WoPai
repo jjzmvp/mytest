@@ -375,12 +375,16 @@ rules:
   - PROCESS-NAME,com.bilingify.readest,⚡️ 腾讯HK1-TCP                     # Readest
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
 
-  # OK影视 (国内IP)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),⚡️ 腾讯HK1-TCP
-  # 1DM+下载 (国内IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),⚡️ 腾讯HK1-TCP
+  - AND,((PROCESS-NAME,com.vessa.mytv),(GEOIP,cn)),⚡️ 腾讯HK1-TCP         # VsTV直播 (国内IP)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),⚡️ 腾讯HK1-TCP  # OK影视 (国内IP)
+
+  # VsTV直播 (国外IP)
+  - AND,((PROCESS-NAME,com.vessa.mytv),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
   # OK影视 (国外IP)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
+
+  # 1DM+下载 (国内IP)
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),⚡️ 腾讯HK1-TCP
   # 1DM+下载 (国外IP)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
 

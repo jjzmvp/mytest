@@ -320,7 +320,7 @@ rules:
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI
 
   # nnngram
-  PROCESS-NAME,xyz.nextalone.nnngram,🌏 国外-手动-WIFI
+  - PROCESS-NAME,xyz.nextalone.nnngram,🌏 国外-手动-WIFI
 
   ## 以下规则不同系统可配置相同
   # 私有放行

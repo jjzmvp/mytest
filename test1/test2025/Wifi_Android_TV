@@ -272,11 +272,14 @@ rules:
   ## Android系统相关规则
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),DIRECT                 # VsTV直播 (国内IP)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT          # OK影视 (国内IP)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),DIRECT        # 电视直播 (国内IP)
 
   # VsTV直播 (国外IP)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI
   # OK影视 (国外IP)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI
+  # 电视直播 (国外IP)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI
 
   ## 以下规则不同系统可配置相同
   # 私有放行

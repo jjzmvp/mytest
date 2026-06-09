@@ -120,8 +120,8 @@ dns:
     - "https://223.6.6.6/dns-query#🎯 国内-手动-联通沃派"
     - "https://119.29.29.29/dns-query#🎯 国内-手动-联通沃派"
   nameserver: # 在访问的国外网站没有匹配到任何域名规则，最终走了MATCH兜底规则时使用的DNS，为了确保不发生DNS泄漏和DNS污染，必须使用国外DNS
-    - "https://1.1.1.1/dns-query#⚡️ 腾讯HK1-TCP"
-    - "https://8.8.8.8/dns-query#⚡️ 腾讯HK1-TCP"
+    - "https://1.1.1.1/dns-query#⚡️ 腾讯HK1-自动测速"
+    - "https://8.8.8.8/dns-query#⚡️ 腾讯HK1-自动测速"
   proxy-server-nameserver: # 解析代理节点时使用的DNS，为了使下面的respect-rules生效必须设置，最好设置为国内DNS，否则在代理的第一步就可能因为连接不上国外DNS而解析不出代理节点的IP，最终倒在起点
     - "https://doh.pub/dns-query#🎯 国内-手动-联通沃派"
     - "https://dns.alidns.com/dns-query#🎯 国内-手动-联通沃派"
@@ -135,7 +135,7 @@ RuleSet_domain: &RuleSet_domain
   type: http
   behavior: domain
   interval: 86400
-  proxy: ⚡️ 腾讯HK1-TCP
+  proxy: ⚡️ 腾讯HK1-自动测速
 
 rule-providers:
   🚥 fakeip-filter:
@@ -151,7 +151,7 @@ proxy-providers:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/dingtalk80
     type: "http"
     path: "./ProxyProviders/Nodes_dingtalk80.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
       enable: true
@@ -164,7 +164,7 @@ proxy-providers:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
     type: "http"
     path: "./ProxyProviders/Nodes_shouting22001.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
       enable: true
@@ -177,7 +177,7 @@ proxy-providers:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/tencent22002
     type: "http"
     path: "./ProxyProviders/Nodes_tencent22002.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
       enable: true
@@ -190,7 +190,7 @@ proxy-providers:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/toutiao22003
     type: "http"
     path: "./ProxyProviders/Nodes_toutiao22003.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
       enable: true
@@ -203,7 +203,7 @@ proxy-providers:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/bili22004
     type: "http"
     path: "./ProxyProviders/Nodes_bili22004.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
       enable: true
@@ -303,7 +303,7 @@ proxy-groups:
     use:
       - 📡 Nodes_tencent22002
 
-  - name: "⚡️ 腾讯HK1-TCP"
+  - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
     url: *test_url1
     interval: 3600
@@ -330,13 +330,13 @@ rules:
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点(或直连)以保证稳定性
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # 一加Android系统相关应用
-  - PROCESS-NAME,android.uid.system,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME,com.finshell.wallet,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.oplus.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.google.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-TCP
+  - PROCESS-NAME,android.uid.system,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME,com.finshell.wallet,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.oplus.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.google.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-自动测速
   # Android常用APP
   - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付
   - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包
@@ -354,14 +354,14 @@ rules:
   - PROCESS-NAME,com.sinovatech.unicom.ui,🎯 国内-手动-联通沃派            # 中国联通
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,🎯 国内-手动-联通沃派    # 央视频
 
-  - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯HK1-TCP                      # 高德地图
-  - PROCESS-NAME,com.bilingify.readest,⚡️ 腾讯HK1-TCP                     # Readest
-  - PROCESS-NAME,com.whmapp.wuyang.honda,⚡️ 腾讯HK1-TCP                   # 五羊本田
-  - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
+  - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯HK1-自动测速                      # 高德地图
+  - PROCESS-NAME,com.bilingify.readest,⚡️ 腾讯HK1-自动测速                     # Readest
+  - PROCESS-NAME,com.whmapp.wuyang.honda,⚡️ 腾讯HK1-自动测速                   # 五羊本田
+  - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速       # Google Voice
 
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),⚡️ 腾讯HK1-TCP          # VsTV直播 (国内IP)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),⚡️ 腾讯HK1-TCP   # OK影视 (国内IP)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),⚡️ 腾讯HK1-TCP # 电视直播 (国内IP)
+  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速          # VsTV直播 (国内IP)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速   # OK影视 (国内IP)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速 # 电视直播 (国内IP)
 
   # VsTV直播 (国外IP)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
@@ -371,7 +371,7 @@ rules:
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
 
   # 1DM+下载 (国内IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),⚡️ 腾讯HK1-TCP
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速
   # 1DM+下载 (国外IP)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
 
@@ -382,7 +382,7 @@ rules:
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
   # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
-  - AND,((IP-CIDR,43.154.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),⚡️ 腾讯HK1-TCP
+  - AND,((IP-CIDR,43.154.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),⚡️ 腾讯HK1-自动测速
   - AND,((IP-CIDR,42.193.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),🎯 国内-手动-联通沃派
   # 禁用QUIC
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
@@ -425,16 +425,16 @@ rules:
   - GEOSITE,chinatelecom,DIRECT
   - GEOSITE,category-bank-cn,DIRECT
   # 域名后缀
-  - GEOSITE,oppo,⚡️ 腾讯HK1-TCP
-  - GEOSITE,xiaomi,⚡️ 腾讯HK1-TCP
-  - GEOSITE,huawei,⚡️ 腾讯HK1-TCP
-  - GEOSITE,zaobao,⚡️ 腾讯HK1-TCP
-  - GEOSITE,google-cn,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,s.dic.cool,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,ghproxy.com,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,racknerd.com,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,voice.google.com,⚡️ 腾讯HK1-TCP      # Google voice
-  - DOMAIN-SUFFIX,voice.telephony.goog,⚡️ 腾讯HK1-TCP  # Google voice
+  - GEOSITE,oppo,⚡️ 腾讯HK1-自动测速
+  - GEOSITE,xiaomi,⚡️ 腾讯HK1-自动测速
+  - GEOSITE,huawei,⚡️ 腾讯HK1-自动测速
+  - GEOSITE,zaobao,⚡️ 腾讯HK1-自动测速
+  - GEOSITE,google-cn,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,s.dic.cool,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,ghproxy.com,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,racknerd.com,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,voice.google.com,⚡️ 腾讯HK1-自动测速      # Google voice
+  - DOMAIN-SUFFIX,voice.telephony.goog,⚡️ 腾讯HK1-自动测速  # Google voice
   - DOMAIN-SUFFIX,ping.pe,🌏 国外-手动-联通沃派
   - DOMAIN-SUFFIX,lastpass.com,🌏 国外-手动-联通沃派
   - DOMAIN-SUFFIX,namesilo.com,🌏 国外-手动-联通沃派
@@ -473,9 +473,9 @@ rules:
   - IP-CIDR,223.5.5.5/32,🎯 国内-手动-联通沃派,no-resolve
   - IP-CIDR,119.29.29.29/32,🎯 国内-手动-联通沃派,no-resolve
   - IP-CIDR,42.193.0.0/16,🎯 国内-手动-联通沃派,no-resolve
-  - IP-CIDR,43.154.0.0/16,⚡️ 腾讯HK1-TCP,no-resolve
-  - IP-CIDR,8.8.8.8/32,⚡️ 腾讯HK1-TCP,no-resolve
-  - IP-CIDR,1.1.1.1/32,⚡️ 腾讯HK1-TCP,no-resolve
+  - IP-CIDR,43.154.0.0/16,⚡️ 腾讯HK1-自动测速,no-resolve
+  - IP-CIDR,8.8.8.8/32,⚡️ 腾讯HK1-自动测速,no-resolve
+  - IP-CIDR,1.1.1.1/32,⚡️ 腾讯HK1-自动测速,no-resolve
   # GEOIP 兜底
   - GEOIP,CN,🎯 国内-手动-联通沃派
   - MATCH,🌏 国外-手动-联通沃派

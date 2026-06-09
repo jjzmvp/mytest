@@ -118,18 +118,18 @@ dns:
     - "geosite:private"
     - "geosite:category-public-tracker"
   default-nameserver: # 基础DNS服务器，必须先有它才能使用域名类型的DNS配置，因此必须为IP，此处使用阿里云和腾讯DNS，优先使用DNS over HTTPS (DoH) (https://)方式加密
-    - "https://223.5.5.5/dns-query#⚡️ 腾讯成都-TCP"
-    - "https://223.6.6.6/dns-query#⚡️ 腾讯成都-TCP"
-    - "https://119.29.29.29/dns-query#⚡️ 腾讯成都-TCP"
+    - "https://223.5.5.5/dns-query#⚡️ 腾讯成都-自动测速"
+    - "https://223.6.6.6/dns-query#⚡️ 腾讯成都-自动测速"
+    - "https://119.29.29.29/dns-query#⚡️ 腾讯成都-自动测速"
   nameserver: # 在访问的国外网站没有匹配到任何域名规则，最终走了MATCH兜底规则时使用的DNS，为了确保不发生DNS泄漏和DNS污染，必须使用国外DNS
-    - "https://1.1.1.1/dns-query#⚡️ 腾讯HK1-TCP"
-    - "https://8.8.8.8/dns-query#⚡️ 腾讯HK1-TCP"
+    - "https://1.1.1.1/dns-query#⚡️ 腾讯HK1-自动测速"
+    - "https://8.8.8.8/dns-query#⚡️ 腾讯HK1-自动测速"
   proxy-server-nameserver: # 解析代理节点时使用的DNS，为了使下面的respect-rules生效必须设置，最好设置为国内DNS，否则在代理的第一步就可能因为连接不上国外DNS而解析不出代理节点的IP，最终倒在起点
-    - "https://doh.pub/dns-query#⚡️ 腾讯成都-TCP"
-    - "https://dns.alidns.com/dns-query#⚡️ 腾讯成都-TCP"
+    - "https://doh.pub/dns-query#⚡️ 腾讯成都-自动测速"
+    - "https://dns.alidns.com/dns-query#⚡️ 腾讯成都-自动测速"
   direct-nameserver: # 规则匹配到直连时使用的DNS，既然是可以直连的，当然要用国内DNS
-    - "https://doh.pub/dns-query#⚡️ 腾讯成都-TCP"
-    - "https://dns.alidns.com/dns-query#⚡️ 腾讯成都-TCP"
+    - "https://doh.pub/dns-query#⚡️ 腾讯成都-自动测速"
+    - "https://dns.alidns.com/dns-query#⚡️ 腾讯成都-自动测速"
   respect-rules: true # 让连接DNS服务器时能够遵循规则，也就是通过代理节点连接到上面设置的国外DNS，因为直连可能连接不上
 
 ### 规则配置
@@ -137,7 +137,7 @@ RuleSet_domain: &RuleSet_domain
   type: http
   behavior: domain
   interval: 86400
-  proxy: ⚡️ 腾讯HK1-TCP
+  proxy: ⚡️ 腾讯HK1-自动测速
 
 rule-providers:
   🚥 fakeip-filter:
@@ -152,7 +152,7 @@ proxy-providers:
     url: https://sub1.qingze-quick.top/api/v1/client/subscribe?token=9e4224e1aaaa7c464ac49dd20a88b736
     type: "http"
     path: "./ProxyProviders/quick.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 43210
     health-check:
       enable: true
@@ -164,7 +164,7 @@ proxy-providers:
     url: https://sub.imtp.eu.org/api/v1/client/subscribe?token=8ddeb620daafb4cd03a1284e01252b11
     type: "http"
     path: "./ProxyProviders/shen7.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 43210
     health-check:
       enable: true
@@ -177,7 +177,7 @@ proxy-providers:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
     type: "http"
     path: "./ProxyProviders/Nodes_shouting22001.yaml"
-    proxy: ⚡️ 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
       enable: true
@@ -250,7 +250,7 @@ proxy-groups:
     use:
       - 📡 Nodes_shouting22001
 
-  - name: "⚡️ 腾讯成都-TCP"
+  - name: "⚡️ 腾讯成都-自动测速"
     type: url-test
     url: *test_url1
     interval: 3600
@@ -259,7 +259,7 @@ proxy-groups:
     use:
       - 📡 Nodes_shouting22001
 
-  - name: "⚡️ 腾讯HK1-TCP"
+  - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
     url: *test_url1
     interval: 3600
@@ -280,13 +280,13 @@ rules:
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性
   - AND,((NETWORK,UDP),(DST-PORT,80/443/843/8000/8080/8800/16285),(PROCESS-NAME-REGEX,com.tencent.*)),DIRECT
   # 一加Android系统相关应用
-  - PROCESS-NAME,android.uid.system,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME,com.finshell.wallet,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.oplus.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.google.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-TCP
-  - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-TCP
+  - PROCESS-NAME,android.uid.system,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME,com.finshell.wallet,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.oplus.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.heytap.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.google.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-自动测速
+  - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-自动测速
   # Android常用APP
   - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付
   - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包
@@ -305,7 +305,7 @@ rules:
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,DIRECT                  # 央视频
 
-  - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-TCP       # Google Voice
+  - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速       # Google Voice
 
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),DIRECT                 # VsTV直播 (国内IP)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT          # OK影视 (国内IP)
@@ -330,8 +330,8 @@ rules:
   # 私有放行
   - GEOSITE,PRIVATE,DIRECT
   # SSH-RDP规则（注意：在操作系统端设置静态IP相比在路由器端设置静态IP远程连接更加稳定!!!）
-  - AND,((IP-CIDR,43.154.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),⚡️ 腾讯HK1-TCP
-  - AND,((IP-CIDR,42.193.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),⚡️ 腾讯成都-TCP
+  - AND,((IP-CIDR,43.154.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),⚡️ 腾讯HK1-自动测速
+  - AND,((IP-CIDR,42.193.0.0/16),(DST-PORT,2021/7500/8888/9527/10181-10183/33891-33893)),⚡️ 腾讯成都-自动测速
   # 禁用QUIC
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOSITE,cn))),REJECT # quic
   # 广告拦截
@@ -377,13 +377,13 @@ rules:
   - GEOSITE,xiaomi,DIRECT
   - GEOSITE,huawei,DIRECT
   # 国外域名
-  - GEOSITE,zaobao,⚡️ 腾讯HK1-TCP
-  - GEOSITE,google-cn,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,s.dic.cool,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,ghproxy.com,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,racknerd.com,⚡️ 腾讯HK1-TCP
-  - DOMAIN-SUFFIX,voice.google.com,⚡️ 腾讯HK1-TCP      # Google voice
-  - DOMAIN-SUFFIX,voice.telephony.goog,⚡️ 腾讯HK1-TCP  # Google voice
+  - GEOSITE,zaobao,⚡️ 腾讯HK1-自动测速
+  - GEOSITE,google-cn,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,s.dic.cool,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,ghproxy.com,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,racknerd.com,⚡️ 腾讯HK1-自动测速
+  - DOMAIN-SUFFIX,voice.google.com,⚡️ 腾讯HK1-自动测速      # Google voice
+  - DOMAIN-SUFFIX,voice.telephony.goog,⚡️ 腾讯HK1-自动测速  # Google voice
   - DOMAIN-SUFFIX,ping.pe,🌏 国外-手动-WIFI
   - DOMAIN-SUFFIX,lastpass.com,🌏 国外-手动-WIFI
   - DOMAIN-SUFFIX,namesilo.com,🌏 国外-手动-WIFI
@@ -419,12 +419,12 @@ rules:
   # 私有放行
   - GEOIP,PRIVATE,DIRECT,no-resolve
   # CIDR 规则
-  - IP-CIDR,223.5.5.5/32,⚡️ 腾讯成都-TCP,no-resolve
-  - IP-CIDR,119.29.29.29/32,⚡️ 腾讯成都-TCP,no-resolve
-  - IP-CIDR,42.193.0.0/16,⚡️ 腾讯成都-TCP,no-resolve
-  - IP-CIDR,43.154.0.0/16,⚡️ 腾讯HK1-TCP,no-resolve
-  - IP-CIDR,8.8.8.8/32,⚡️ 腾讯HK1-TCP,no-resolve
-  - IP-CIDR,1.1.1.1/32,⚡️ 腾讯HK1-TCP,no-resolve
+  - IP-CIDR,223.5.5.5/32,⚡️ 腾讯成都-自动测速,no-resolve
+  - IP-CIDR,119.29.29.29/32,⚡️ 腾讯成都-自动测速,no-resolve
+  - IP-CIDR,42.193.0.0/16,⚡️ 腾讯成都-自动测速,no-resolve
+  - IP-CIDR,43.154.0.0/16,⚡️ 腾讯HK1-自动测速,no-resolve
+  - IP-CIDR,8.8.8.8/32,⚡️ 腾讯HK1-自动测速,no-resolve
+  - IP-CIDR,1.1.1.1/32,⚡️ 腾讯HK1-自动测速,no-resolve
   # GEOIP 兜底
   - GEOIP,CN,🎯 国内-手动-WIFI
   - MATCH,🌏 国外-手动-WIFI

@@ -280,17 +280,16 @@ proxy-groups:
 rules:
   # Windows下的进程规则
   - PROCESS-NAME,TIM.exe,DIRECT                      # 腾讯TIM
+  - PROCESS-NAME,Weixin.exe,DIRECT                   # 腾讯微信
   - PROCESS-NAME,WXWork.exe,DIRECT                   # 企业微信
   - PROCESS-NAME,mpc-hc64.exe,DIRECT                 # MPC播放器
   - PROCESS-NAME,WXWorkWeb.exe,DIRECT                # 企业微信程序
   - PROCESS-NAME,wemeetapp.exe,DIRECT                # 腾讯会议
   - PROCESS-NAME,desktopcal.exe,DIRECT               # 日历清单
   - PROCESS-NAME,HipsDaemon.exe,DIRECT               # 火绒软件
+  - PROCESS-NAME,WeChatAppEx.exe,DIRECT              # 微信程序
   - PROCESS-NAME,NutstoreClient.exe,DIRECT           # 坚果云
   - PROCESS-NAME,lx-music-desktop.exe,DIRECT         # LX music
-
-  - PROCESS-NAME,Weixin.exe,⚡️ 腾讯成都-自动测速          # 腾讯微信
-  - PROCESS-NAME,WeChatAppEx.exe,⚡️ 腾讯成都-自动测速     # 微信程序
 
   - PROCESS-NAME,HPPrinterHealthMonitor.exe,REJECT   # HP打印机监测
 

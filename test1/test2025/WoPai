@@ -227,7 +227,7 @@ proxy-groups:
   - name: "🎯 国内-手动-联通沃派"
     type: select
     proxies:
-      - DIRECT
+    #  - DIRECT
     # 国内机场配置  
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN

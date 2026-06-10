@@ -94,7 +94,7 @@ ntp:
   write-to-system: false
   server: "npt.aliyun.com"
   port: 123
-  interval: 60
+  interval: 300
   dialer-proxy: 🎯 国内-手动-联通沃派
 
 # Tun配置

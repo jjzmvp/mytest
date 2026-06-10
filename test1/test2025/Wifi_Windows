@@ -97,7 +97,7 @@ ntp:
   server: "ntp.aliyun.com"
   port: 123
   interval: 300
-  dialer-proxy: ⚡️ 腾讯成都-自动测速
+  dialer-proxy: ⚡️ 腾讯HK1-自动测速
 
 # Tun配置
 tun:

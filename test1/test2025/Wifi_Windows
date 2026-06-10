@@ -281,6 +281,7 @@ rules:
   # Windows下的进程规则
   - PROCESS-NAME,TIM.exe,DIRECT                      # 腾讯TIM
   - PROCESS-NAME,WXWork.exe,DIRECT                   # 企业微信
+  - PROCESS-NAME,mpc-hc64.exe,DIRECT                 # MPC播放器
   - PROCESS-NAME,WXWorkWeb.exe,DIRECT                # 企业微信程序
   - PROCESS-NAME,wemeetapp.exe,DIRECT                # 腾讯会议
   - PROCESS-NAME,desktopcal.exe,DIRECT               # 日历清单

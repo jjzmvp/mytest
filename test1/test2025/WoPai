@@ -92,7 +92,7 @@ hosts:
 ntp:
   enable: true
   write-to-system: false
-  server: "npt.aliyun.com"
+  server: "ntp.aliyun.com"
   port: 123
   interval: 300
   dialer-proxy: 🎯 国内-手动-联通沃派

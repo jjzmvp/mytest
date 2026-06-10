@@ -81,8 +81,8 @@ sniffer:
 # 外部控制器
 external-controller: "127.0.0.1:9876"
 secret: "$jjzmvp@123"
-external-ui: "ui/metacubexd"
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+external-ui: "ui/zashboard"
+external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
 # 类似于 /etc/hosts, 仅支持配置单个 IP
 hosts:

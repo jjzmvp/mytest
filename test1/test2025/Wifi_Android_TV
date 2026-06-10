@@ -301,8 +301,6 @@ rules:
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
-  # NTP服务udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,DIRECT
   - DOMAIN-SUFFIX,gov.cn,DIRECT

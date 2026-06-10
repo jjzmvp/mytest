@@ -90,6 +90,15 @@ hosts:
   "dns.google": 8.8.8.8
   "*.clash.dev": 127.0.0.1
 
+# NTP配置
+ntp:
+  enable: true
+  write-to-system: false
+  server: "npt.aliyun.com"
+  port: 123
+  interval: 300
+  dialer-proxy: ⚡️ 腾讯成都-自动测速
+
 # Tun配置
 tun:
   enable: true
@@ -295,8 +304,6 @@ rules:
   # 广告拦截
   - GEOSITE,category-ads-all,REJECT
   - GEOSITE,category-public-tracker,REJECT
-  # NTP服务udp协议
-  - AND,((NETWORK,UDP),(DST-PORT,123)),DIRECT
   # 域名后缀
   - DOMAIN-SUFFIX,ac.cn,DIRECT
   - DOMAIN-SUFFIX,gov.cn,DIRECT

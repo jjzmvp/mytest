@@ -363,6 +363,7 @@ rules:
   - PROCESS-NAME,com.sinovatech.unicom.ui,🎯 国内-手动-联通沃派            # 中国联通
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,🎯 国内-手动-联通沃派    # 央视频
 
+  - PROCESS-NAME,github.mytv.android,⚡️ 腾讯HK1-自动测速                       # mytv电视直播
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯HK1-自动测速                      # 高德地图
   - PROCESS-NAME,com.bilingify.readest,⚡️ 腾讯HK1-自动测速                     # Readest
   - PROCESS-NAME,com.whmapp.wuyang.honda,⚡️ 腾讯HK1-自动测速                   # 五羊本田
@@ -370,14 +371,11 @@ rules:
 
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速          # VsTV直播 (国内IP)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速   # OK影视 (国内IP)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速 # 电视直播 (国内IP)
 
   # VsTV直播 (国外IP)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
   # OK影视 (国外IP)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
-  # 电视直播 (国外IP)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOIP,cn)))),🌏 国外-手动-联通沃派
 
   # 1DM+下载 (国内IP)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速

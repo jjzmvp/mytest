@@ -363,10 +363,10 @@ rules:
   - PROCESS-NAME,com.sinovatech.unicom.ui,🎯 国内-手动-联通沃派            # 中国联通
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,🎯 国内-手动-联通沃派    # 央视频
 
-  - PROCESS-NAME,github.mytv.android,⚡️ 腾讯HK1-自动测速                       # mytv电视直播
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯HK1-自动测速                      # 高德地图
   - PROCESS-NAME,com.bilingify.readest,⚡️ 腾讯HK1-自动测速                     # Readest
   - PROCESS-NAME,com.whmapp.wuyang.honda,⚡️ 腾讯HK1-自动测速                   # 五羊本田
+  - PROCESS-NAME,com.github.mytv.android,⚡️ 腾讯HK1-自动测速                   # mytv电视直播
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速       # Google Voice
 
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速          # VsTV直播 (国内IP)

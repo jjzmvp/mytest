@@ -360,7 +360,6 @@ rules:
 
   - PROCESS-NAME,com.xdiarys.www,🎯 国内-手动-联通沃派                     # 日历清单
   - PROCESS-NAME,cn.toside.music.mobile,🎯 国内-手动-联通沃派              # LX music
-  # - PROCESS-NAME,com.github.mytv.android,🎯 国内-手动-联通沃派             # mytv电视直播
   - PROCESS-NAME,com.sinovatech.unicom.ui,🎯 国内-手动-联通沃派            # 中国联通
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,🎯 国内-手动-联通沃派    # 央视频
 

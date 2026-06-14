@@ -292,8 +292,8 @@ rules:
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),🎯 国内-手动-联通手厅                    # VsTV直播 (CN)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅            # VsTV直播 (非CN)
 
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cctv)),🎯 国内-手动-联通手厅         # 电视直播 (CN)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cctv)))),🌏 国外-手动-联通手厅 # 电视直播 (非CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),🎯 国内-手动-联通手厅           # 电视直播 (CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅   # 电视直播 (非CN)
 
   # 1DM+下载 (国内IP)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),⚡️ 腾讯HK1-自动测速

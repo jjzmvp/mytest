@@ -346,18 +346,18 @@ rules:
   - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-自动测速
   - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-自动测速
   # Android常用APP
-  - PROCESS-NAME,com.unionpay,DIRECT                                      # 云闪付
-  - PROCESS-NAME,com.larus.nova,DIRECT                                    # 豆包
   - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
   - PROCESS-NAME,com.ccb.longjiLife,DIRECT                                # 建行生活
   - PROCESS-NAME,com.bilibili.app.in,DIRECT                               # B站
-  - PROCESS-NAME,com.sankuai.meituan,DIRECT                               # 美团
   - PROCESS-NAME,com.alicloud.databox,DIRECT                              # 阿里云盘
   - PROCESS-NAME,com.chinamworld.main,DIRECT                              # 建设银行
-  - PROCESS-NAME,com.jingdong.app.mall,DIRECT                             # 亰东商城
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
 
+  - PROCESS-NAME,com.unionpay,🎯 国内-手动-联通沃派                        # 云闪付
+  - PROCESS-NAME,com.larus.nova,🎯 国内-手动-联通沃派                      # 豆包
   - PROCESS-NAME,com.xdiarys.www,🎯 国内-手动-联通沃派                     # 日历清单
+  - PROCESS-NAME,com.sankuai.meituan,🎯 国内-手动-联通沃派                 # 美团
+  - PROCESS-NAME,com.jingdong.app.mall,🎯 国内-手动-联通沃派               # 亰东商城
   - PROCESS-NAME,cn.toside.music.mobile,🎯 国内-手动-联通沃派              # LX music
   - PROCESS-NAME,com.sinovatech.unicom.ui,🎯 国内-手动-联通沃派            # 中国联通
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,🎯 国内-手动-联通沃派    # 央视频

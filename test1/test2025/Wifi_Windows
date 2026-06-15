@@ -144,7 +144,7 @@ dns:
 RuleSet_domain: &RuleSet_domain
   type: http
   behavior: domain
-  interval: 86400
+  interval: 172800
   proxy: ⚡️ 腾讯HK1-自动测速
 
 rule-providers:

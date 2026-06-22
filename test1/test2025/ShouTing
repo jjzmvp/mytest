@@ -152,7 +152,7 @@ rule-providers:
     type: http
     behavior: domain
     interval: 172800
-    proxy: 🇭🇰 腾讯HK1-TCP
+    proxy: ⚡️ 腾讯HK1-自动测速
     format: mrs
     path: "./RuleProviders/fakeip-filter.mrs"
     url: "https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"

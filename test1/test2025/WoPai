@@ -1,8 +1,8 @@
 ##################################################################### 锚点 start #####################################################################
 test_url1: &test_url1 https://www.gstatic.com/generate_204
-includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|成都|移动|联通|电信"
-excludeNodes_CN: &excludeNodes_CN "非免流|中转|校园|配合|CDN|官网|客户|2x|3x|5x|10x|香港|所有"
-includeNodes_GN: &includeNodes_GN "免流|直连|腾讯HK1|腾讯JP1|春川AMD|春川ARM|WS|TCP"
+includeNodes_CN: &includeNodes_CN "国内|北京|上海|江苏|浙江|广东|四川|成都|移动|联通|电信|80"
+excludeNodes_CN: &excludeNodes_CN "非免流|中转|校园|配合|CDN|官网|客户|2x|3x|5x|10x|AZ|香港|台湾|日本|新加坡|美国|泰国"
+includeNodes_GN: &includeNodes_GN "免流|直连|腾讯HK1|腾讯JP1|春川AMD|春川ARM|WS|TCP|80"
 excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|成都|移动|联通|电信|非免流|校园|中转|配合|CDN|官网|客户|2x|3x|5x|10x|所有"
 #####################################################################  锚点 end  #####################################################################
 

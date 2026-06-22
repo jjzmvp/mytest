@@ -379,10 +379,10 @@ rules:
   - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),🎯 国内-手动-联通沃派           # 电视直播 (CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派   # 电视直播 (非CN)
 
-  # 1DM+下载 (CN)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),🎯 国内-手动-联通沃派
-  # 1DM+下载 (非CN)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派
+  # 1DM+下载 (中国IP)
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),🎯 国内-手动-联通沃派
+  # 1DM+下载 (国外IP)
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),,⚡️ 腾讯HK1-自动测速
 
   # nnngram
   - PROCESS-NAME,xyz.nextalone.nnngram,🌏 国外-手动-联通沃派

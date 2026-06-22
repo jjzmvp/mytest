@@ -298,7 +298,7 @@ rules:
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅   # 电视直播 (非CN)
 
   # 1DM+下载 (国内IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),⚡️ 腾讯HK1-自动测速
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),🎯 国内-手动-联通手厅
   # 1DM+下载 (国外IP)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅
 

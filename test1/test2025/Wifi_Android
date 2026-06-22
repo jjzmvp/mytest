@@ -6,13 +6,13 @@ includeNodes_GN: &includeNodes_GN "春川|HK|JP|443|Kcp|Reality|HY2|anytls|中�
 excludeNodes_GN: &excludeNodes_GN "国内|北京|上海|江苏|浙江|广东|四川|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰"
 #####################################################################  锚点 end  #####################################################################
 
-mixed-port: 10100     # HTTP(S) 和 SOCKS 代理混合端口
-bind-address: "*"     # 绑定IP地址，仅作用于 allow-lan 为 true，"*"表示所有地址
-allow-lan: false      # 允许局域网连接
-lan-allowed-ips:      # 允许局域网连接IP地址段
+mixed-port: 10100       # HTTP(S) 和 SOCKS 代理混合端口
+bind-address: "*"       # 绑定IP地址，仅作用于 allow-lan 为 true，"*"表示所有地址
+allow-lan: false        # 允许局域网连接
+lan-allowed-ips:        # 允许局域网连接IP地址段
   - 192.168.0.0/16
   - fe80::/10
-authentication:       # http(s)/socks/mixed代理的用户验证
+authentication:         # http(s)/socks/mixed代理的用户验证
 - "jjzmvp:$jjzmvp@123"
 # 控制 Clash 发出 TCP Keep Alive 包的间隔，减少移动设备耗电问题的临时措施
 keep-alive-interval: 90

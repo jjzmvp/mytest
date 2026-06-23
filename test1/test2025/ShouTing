@@ -109,7 +109,7 @@ tun:
     - tcp://any:53
   auto-route: true               # 配置路由表
   auto-detect-interface: true    # 自动识别出口网卡
-  mtu: 1500                      # 最大传输单元
+  mtu: 4064                      # 最大传输单元
   strict-route: false            # 将所有连接路由到tun来防止泄漏，但你的设备将无法通过其他设备被访问
 
 # DNS配置

@@ -401,6 +401,7 @@ rules:
   - IP-CIDR,162.14.0.0/16,⚡️ 腾讯成都-自动测速,no-resolve
   - IP-CIDR,42.193.0.0/16,⚡️ 腾讯成都-自动测速,no-resolve
   - IP-CIDR,43.154.0.0/16,⚡️ 腾讯HK1-自动测速,no-resolve
+  - IP-CIDR,43.163.0.0/16,⚡️ 腾讯HK1-自动测速,no-resolve
   - IP-CIDR,8.8.8.8/32,⚡️ 腾讯HK1-自动测速,no-resolve
   - IP-CIDR,1.1.1.1/32,⚡️ 腾讯HK1-自动测速,no-resolve
   # GEOIP 兜底

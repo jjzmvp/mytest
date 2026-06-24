@@ -398,18 +398,18 @@ rules:
   # 关键词域名规则
   - OR,((DOMAIN-KEYWORD,aliyuncs),(DOMAIN-KEYWORD,aliyundrive)),DIRECT
   # GEOSITE 国内规则
-  - GEOSITE,iqiyi,DIRECT
-  - GEOSITE,baidu,DIRECT
-  - GEOSITE,bilibili,DIRECT
-  - GEOSITE,youku,DIRECT
-  - GEOSITE,bytedance,DIRECT
+  - GEOSITE,iqiyi,🎯 国内-手动-联通沃派
+  - GEOSITE,baidu,🎯 国内-手动-联通沃派
+  - GEOSITE,youku,🎯 国内-手动-联通沃派
+  - GEOSITE,tencent,🎯 国内-手动-联通沃派
+  - GEOSITE,bilibili,🎯 国内-手动-联通沃派
+  - GEOSITE,bytedance,🎯 国内-手动-联通沃派
   - GEOSITE,jd,DIRECT
   - GEOSITE,zhihu,DIRECT
   - GEOSITE,alibaba,DIRECT
   - GEOSITE,netease,DIRECT
   - GEOSITE,meituan,DIRECT
   - GEOSITE,shanbay,DIRECT
-  - GEOSITE,tencent,DIRECT
   - GEOSITE,chinamobile,DIRECT
   - GEOSITE,chinaunicom,DIRECT
   - GEOSITE,chinatelecom,DIRECT

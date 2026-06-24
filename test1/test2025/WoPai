@@ -358,6 +358,7 @@ rules:
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),🎯 国内-手动-联通沃派                    # VsTV直播 (CN)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派            # VsTV直播 (非CN)
 
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),🎯 国内-手动-联通沃派             # 电视直播 (CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),🎯 国内-手动-联通沃派           # 电视直播 (CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派   # 电视直播 (非CN)
 

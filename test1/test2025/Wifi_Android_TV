@@ -302,8 +302,9 @@ rules:
   # GEOSITE 国内规则
   - GEOSITE,iqiyi,🎯 国内-手动-WIFI
   - GEOSITE,baidu,🎯 国内-手动-WIFI
-  - GEOSITE,bilibili,🎯 国内-手动-WIFI
   - GEOSITE,youku,🎯 国内-手动-WIFI
+  - GEOSITE,tencent,🎯 国内-手动-WIFI
+  - GEOSITE,bilibili,🎯 国内-手动-WIFI
   - GEOSITE,bytedance,🎯 国内-手动-WIFI
   - GEOSITE,jd,DIRECT
   - GEOSITE,zhihu,DIRECT

@@ -270,20 +270,21 @@ rules:
   - PROCESS-NAME,com.alicloud.databox,⚡️ 腾讯HK1-自动测速                      # 阿里云盘
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速       # Google Voice
 
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOSITE,cn)),🎯 国内-手动-联通手厅             # OK影视 (CN)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅     # OK影视 (非CN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),🎯 国内-手动-联通手厅               # OK影视 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOSITE,cn)),🎯 国内-手动-联通手厅             # OK影视 (GEOSITECN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅     # OK影视 (GEOSITE_非CN)
 
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),🎯 国内-手动-联通手厅                    # VsTV直播 (CN)
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅            # VsTV直播 (非CN)
+  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),🎯 国内-手动-联通手厅                      # VsTV直播 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),🎯 国内-手动-联通手厅                    # VsTV直播 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅            # VsTV直播 (GEOSITE_非CN)
 
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),🎯 国内-手动-联通手厅           # 电视直播 (CN)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅   # 电视直播 (非CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),🎯 国内-手动-联通手厅             # 电视直播 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),🎯 国内-手动-联通手厅           # 电视直播 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通手厅   # 电视直播 (GEOSITE_非CN)
 
-  # 1DM+下载 (中国IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),🎯 国内-手动-联通手厅
-  # 1DM+下载 (国外IP)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),⚡️ 腾讯HK1-自动测速
-
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),🎯 国内-手动-联通手厅        # 1DM+下载 (GEOIP_CN)
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),🎯 国内-手动-联通手厅      # 1DM+下载 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),⚡️ 腾讯HK1-自动测速  # 1DM+下载 (GEOIP_非CN)
   # nnngram
   - PROCESS-NAME,xyz.nextalone.nnngram,🌏 国外-手动-联通手厅
 

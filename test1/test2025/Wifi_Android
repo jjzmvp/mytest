@@ -305,8 +305,9 @@ rules:
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),DIRECT                              # VsTV直播 (CN)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI           # VsTV直播 (非CN)
 
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),DIRECT                     # 电视直播 (CN)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI  # 电视直播 (非CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),DIRECT                       # 电视直播 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),DIRECT                     # 电视直播 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI  # 电视直播 (GEOSITE_非CN)
 
   # 1DM+下载 (国内IP)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),DIRECT

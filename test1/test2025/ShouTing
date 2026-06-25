@@ -285,6 +285,7 @@ rules:
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),🎯 国内-手动-联通手厅        # 1DM+下载 (GEOIP_CN)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),🎯 国内-手动-联通手厅      # 1DM+下载 (GEOSITE_CN)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),⚡️ 腾讯HK1-自动测速  # 1DM+下载 (GEOIP_非CN)
+
   # nnngram
   - PROCESS-NAME,xyz.nextalone.nnngram,🌏 国外-手动-联通手厅
 

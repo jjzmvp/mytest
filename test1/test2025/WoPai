@@ -360,6 +360,10 @@ rules:
   - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),🎯 国内-手动-联通沃派                          # VsTV直播 (GEOSITE_CN)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派                  # VsTV直播 (GEOSITE_非CN)
 
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,cn)),🎯 国内-手动-联通沃派                       # 云影空蒙 (GEOIP_CN)
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOSITE,cn)),🎯 国内-手动-联通沃派                     # 云影空蒙 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派             # 云影空蒙 (GEOSITE_非CN)
+
   - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),🎯 国内-手动-联通沃派                   # 电视直播 (GEOIP_CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),🎯 国内-手动-联通沃派                 # 电视直播 (GEOSITE_CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派         # 电视直播 (GEOSITE_非CN)

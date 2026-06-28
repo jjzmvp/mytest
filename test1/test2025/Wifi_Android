@@ -299,20 +299,24 @@ rules:
 
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速   # Google Voice
 
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT                                 # OK影视 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOSITE,cn)),DIRECT                               # OK影视 (GEOSITECN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT                                  # OK影视 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOSITE,cn)),DIRECT                                # OK影视 (GEOSITECN)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI             # OK影视 (GEOSITE_非CN)
 
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),DIRECT                                        # VsTV直播 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),DIRECT                                      # VsTV直播 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),DIRECT                                         # VsTV直播 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),DIRECT                                       # VsTV直播 (GEOSITE_CN)
   - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI                    # VsTV直播 (GEOSITE_非CN)
 
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),DIRECT                               # 电视直播 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),DIRECT                             # 电视直播 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,cn)),DIRECT                                    # 云影空蒙 (GEOIP_CN)
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOSITE,cn)),DIRECT                                  # 云影空蒙 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI               # 云影空蒙 (GEOSITE_非CN)
+
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),DIRECT                                # 电视直播 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),DIRECT                              # 电视直播 (GEOSITE_CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI           # 电视直播 (GEOSITE_非CN)
 
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),DIRECT                    # 1DM+下载 (GEOIP_CN)
-  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),DIRECT                  # 1DM+下载 (GEOSITE_CN)
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOIP,cn)),DIRECT                     # 1DM+下载 (GEOIP_CN)
+  - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(GEOSITE,cn)),DIRECT                   # 1DM+下载 (GEOSITE_CN)
   - AND,((PROCESS-NAME,idm.internet.download.manager.plus),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI  # 1DM+下载 (GEOIP_非CN)
 
   # nnngram

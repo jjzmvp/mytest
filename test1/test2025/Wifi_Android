@@ -410,7 +410,7 @@ rules:
   - GEOSITE,CN,🎯 国内-手动-WIFI
 
   # IP 规则
-  - AND,(DST-PORT,22/2021),(NOT,((GEOIP,CN))),⚡️ 腾讯HK1-自动测速
+  - AND,(DST-PORT,22/2021/10010),(NOT,((GEOIP,CN))),⚡️ 腾讯HK1-自动测速
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
   # 私有放行
   - GEOIP,PRIVATE,DIRECT,no-resolve

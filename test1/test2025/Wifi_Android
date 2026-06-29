@@ -215,8 +215,7 @@ proxy-groups:
     tolerance: 50
     # 国内继机场配置
     filter: *includeNodes_GN
-    exclude-filter: *excludeNodes_GN
-    exclude-filter: "腾讯成都|腾讯HK1"
+    exclude-filter: *excludeNodes_GN|腾讯成都|腾讯HK1
     use:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick

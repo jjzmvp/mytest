@@ -266,9 +266,9 @@ proxy-groups:
 rules:
   ## Android系统相关规则
   # 微信小程序应用
-  - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),⚡️ 腾讯成都-自动测速
+  - AND,((DOMAIN-SUFFIX,ceapfis.cn),(PROCESS-NAME,com.tencent.mm)),DIRECT
   # 腾讯应用tcp协议
-  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),⚡️ 腾讯成都-自动测速
+  - AND,((NETWORK,TCP),(PROCESS-NAME-REGEX,com.tencent.*)),⚡️ 腾讯HK1-自动测速
   # 腾讯会议udp协议
   - AND,((NETWORK,UDP),(DST-PORT,8001-8009),(PROCESS-NAME,com.tencent.wemeet.app)),DIRECT
   # 腾讯应用udp协议(如微信视频电话),优先使用国内节点以保证稳定性

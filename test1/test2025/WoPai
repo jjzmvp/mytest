@@ -231,7 +231,7 @@ proxy-groups:
       - 🔰 国外-负载均衡-头条
       - 📺 国外-负载均衡-哔哩
       - 🐧 国外-负载均衡-腾讯
-      - 🐢 国外-负载均衡-春川
+      - 🐢 春川-负载均衡-手厅
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN

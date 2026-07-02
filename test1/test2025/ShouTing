@@ -251,7 +251,7 @@ rules:
   - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-自动测速
   - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-自动测速
   # Android常用APP
-  - PROCESS-NAME,com.taobao.taobao,DIRECT                                     # 淘宝
+  - PROCESS-NAME,com.taobao.taobao,DIRECT                                      # 淘宝
 
   - PROCESS-NAME,com.unionpay,⚡️ 腾讯成都-自动测速                             # 云闪付
   - PROCESS-NAME,com.larus.nova,⚡️ 腾讯成都-自动测速                           # 豆包

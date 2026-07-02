@@ -359,12 +359,12 @@ rules:
   - PROCESS-NAME,com.xdiarys.www,🎯 国内-手动-联通沃派                     # 日历清单
   - PROCESS-NAME,com.sankuai.meituan,🎯 国内-手动-联通沃派                 # 美团
   - PROCESS-NAME,com.jingdong.app.mall,🎯 国内-手动-联通沃派               # 亰东商城
-  - PROCESS-NAME,cn.toside.music.mobile,🎯 国内-手动-联通沃派              # LX music
   - PROCESS-NAME,com.sinovatech.unicom.ui,🎯 国内-手动-联通沃派            # 中国联通
   - PROCESS-NAME,com.cctv.yangshipin.app.androidp,🎯 国内-手动-联通沃派    # 央视频
 
   - PROCESS-NAME,com.autonavi.minimap,⚡️ 腾讯HK1-自动测速                  # 高德地图
   - PROCESS-NAME,com.bilingify.readest,⚡️ 腾讯HK1-自动测速                 # Readest
+  - PROCESS-NAME,cn.toside.music.mobile,⚡️ 腾讯HK1-自动测速                # LX music
   - PROCESS-NAME,com.whmapp.wuyang.honda,⚡️ 腾讯HK1-自动测速               # 五羊本田
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速   # Google Voice
 

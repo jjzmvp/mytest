@@ -225,7 +225,7 @@ proxy-groups:
   - name: "🌏 国外-手动-联通沃派"
     type: select
     proxies:
-      - DIRECT
+      # - DIRECT
       - ⚖️ 国外-负载均衡-手厅
       - ⚓️ 国外-负载均衡-钉钉
       - 🔰 国外-负载均衡-头条

@@ -264,20 +264,21 @@ proxy-groups:
 # 分流规则
 rules:
   # Windows下的进程规则
-  - PROCESS-NAME,TIM.exe,DIRECT                      # 腾讯TIM
-  - PROCESS-NAME,Weixin.exe,DIRECT                   # 腾讯微信
-  - PROCESS-NAME,mpc-hc64.exe,DIRECT                 # MPC播放器
-  - PROCESS-NAME,wemeetapp.exe,DIRECT                # 腾讯会议
-  - PROCESS-NAME,desktopcal.exe,DIRECT               # 日历清单
-  - PROCESS-NAME,HipsDaemon.exe,DIRECT               # 火绒软件
-  - PROCESS-NAME,WeChatAppEx.exe,DIRECT              # 微信程序
-  - PROCESS-NAME,NutstoreClient.exe,DIRECT           # 坚果云
-  - PROCESS-NAME,lx-music-desktop.exe,DIRECT         # LX music
+  - PROCESS-NAME,TIM.exe,DIRECT                                   # 腾讯TIM
+  - PROCESS-NAME,Weixin.exe,DIRECT                                # 腾讯微信
+  - PROCESS-NAME,mpc-hc64.exe,DIRECT                              # MPC播放器
+  - PROCESS-NAME,wemeetapp.exe,DIRECT                             # 腾讯会议
+  - PROCESS-NAME,desktopcal.exe,DIRECT                            # 日历清单
+  - PROCESS-NAME,HipsDaemon.exe,DIRECT                            # 火绒软件
+  - PROCESS-NAME,WeChatAppEx.exe,DIRECT                           # 微信程序
+  - PROCESS-NAME,NutstoreClient.exe,DIRECT                        # 坚果云
 
-  - PROCESS-NAME,WXWork.exe,⚡️ 腾讯成都-自动测速      # 企业微信
-  - PROCESS-NAME,WXWorkWeb.exe,⚡️ 腾讯成都-自动测速   # 企业微信程序
+  - PROCESS-NAME,WXWork.exe,⚡️ 腾讯成都-自动测速                  # 企业微信
+  - PROCESS-NAME,WXWorkWeb.exe,⚡️ 腾讯成都-自动测速               # 企业微信程序
 
-  - PROCESS-NAME,HPPrinterHealthMonitor.exe,REJECT   # HP打印机监测
+  - PROCESS-NAME,lx-music-desktop.exe,⚡️ 腾讯HK1-自动测速         # LX music
+
+  - PROCESS-NAME,HPPrinterHealthMonitor.exe,REJECT                # HP打印机监测
 
   ## 以下规则不同操作系统可配置相同（但需注意SIM卡和WiFi选择的节点差别）
   # 私有放行

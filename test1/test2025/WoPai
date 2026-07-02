@@ -297,13 +297,14 @@ proxy-groups:
     use:
       - 📡 Nodes_tencent22002
 
-  - name: "🐢 国外-负载均衡-春川"
-    type: url-test
+  - name: "🐢 春川-负载均衡-手厅"
+    type: load-balance
     url: *test_url1
     interval: 3600
     lazy: false
-    tolerance: 30
+    strategy: round-robin
     filter: "春川A"
+    exclude-filter: "钉钉|腾讯|头条|哔哩"
     use:
       - 📡 Nodes_shouting22001
       - 📡 Nodes_dingtalk80

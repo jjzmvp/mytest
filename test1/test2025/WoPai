@@ -231,6 +231,7 @@ proxy-groups:
       - 🔰 国外-负载均衡-头条
       - 📺 国外-负载均衡-哔哩
       - 🐧 国外-负载均衡-腾讯
+      - 🐢 国外-负载均衡-春川
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
@@ -295,6 +296,20 @@ proxy-groups:
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_tencent22002
+
+  - name: "🐢 国外-负载均衡-春川"
+    type: url-test
+    url: *test_url1
+    interval: 3600
+    lazy: false
+    tolerance: 30
+    filter: "春川A"
+    use:
+      - 📡 Nodes_shouting22001
+      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_toutiao22003
+      - 📡 Nodes_bili22004
+      - 📡 Nodes_tencent22002 
 
   - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test

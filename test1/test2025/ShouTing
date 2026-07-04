@@ -198,9 +198,10 @@ proxy-groups:
     interval: 600
     lazy: false
     filter: *includeNodes_GN
-    exclude-filter: *excludeNodes_GN
+    exclude-filter: "国内|北京|上海|江苏|浙江|广东|四川|成都|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰|腾讯成都|腾讯HK1"
     use:
       - ✈️ Airport_quick
+      - 📡 Nodes_shouting22001
       
   - name: "⚖️ 国外-负载均衡"
     type: load-balance

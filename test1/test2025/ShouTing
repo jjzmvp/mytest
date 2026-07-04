@@ -218,6 +218,7 @@ proxy-groups:
     url: *test_url1
     interval: 3600
     lazy: false
+    tolerance: 30
     filter: "腾讯成都-"
     use:
       - 📡 Nodes_shouting22001
@@ -227,6 +228,7 @@ proxy-groups:
     url: *test_url1
     interval: 3600
     lazy: false
+    tolerance: 30
     filter: "腾讯HK1-"
     use:
       - 📡 Nodes_shouting22001

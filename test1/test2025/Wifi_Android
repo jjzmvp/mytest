@@ -306,10 +306,6 @@ rules:
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOSITE,cn)),DIRECT                                # OK影视 (GEOSITECN)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI             # OK影视 (GEOSITE_非CN)
 
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOIP,cn)),DIRECT                                         # VsTV直播 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(GEOSITE,cn)),DIRECT                                       # VsTV直播 (GEOSITE_CN)
-  - AND,((PROCESS-NAME,com.vesaa.mytv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI                    # VsTV直播 (GEOSITE_非CN)
-
   - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,cn)),DIRECT                                    # 云影空蒙 (GEOIP_CN)
   - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,hk)),DIRECT                                    # 云影空蒙 (GEOIP_HK)
   - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOSITE,cn)),DIRECT                                  # 云影空蒙 (GEOSITE_CN)

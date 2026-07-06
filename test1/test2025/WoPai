@@ -381,8 +381,8 @@ rules:
   - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOSITE,cn)),🎯 国内-手动-联通沃派                     # 云影空蒙 (GEOSITE_CN)
   - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派             # 云影空蒙 (GEOSITE_非CN)
 
+  - AND,((PROCESS-NAME,com.github.mytv.android),(DST-PORT,58766)),⚡️ 腾讯HK1-自动测速               # 电视直播 (GEOIP_CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),🎯 国内-手动-联通沃派                   # 电视直播 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,hk)),  ⚡️ 腾讯HK1-自动测速                   # 电视直播 (GEOIP_HK)
   - AND,((PROCESS-NAME,com.github.mytv.android),(GEOSITE,cn)),🎯 国内-手动-联通沃派                 # 电视直播 (GEOSITE_CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOSITE,cn)))),🌏 国外-手动-联通沃派         # 电视直播 (GEOSITE_非CN)
 

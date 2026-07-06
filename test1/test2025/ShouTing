@@ -153,10 +153,10 @@ proxy-providers:
       lazy: false
       url: *test_url1
 
-  📡 Nodes_shouting22001:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
+  📡 Nodes_22001_shouting:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22001_shouting
     type: "http"
-    path: "./ProxyProviders/Nodes_shouting22001.yaml"
+    path: "./ProxyProviders/Nodes_22001_shouting.yaml"
     proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
@@ -176,7 +176,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
       - ✈️ Airport_quick
   
   - name: "🌏 国外-手动-联通手厅"
@@ -189,7 +189,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
       - ✈️ Airport_quick
    
   - name: "♻️ 国外-故障转移"
@@ -201,7 +201,7 @@ proxy-groups:
     exclude-filter: "国内|北京|上海|江苏|浙江|广东|四川|成都|移动|联通|电信|客户|校园|配合|官网|2x|3x|5x|10x|★★|✰✰|★★★|✰✰✰|腾讯成都|腾讯HK1"
     use:
       - ✈️ Airport_quick
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
       
   - name: "⚖️ 国外-负载均衡"
     type: load-balance
@@ -212,7 +212,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
   - name: "⚡️ 腾讯成都-自动测速"
     type: url-test
@@ -222,7 +222,7 @@ proxy-groups:
     tolerance: 30
     filter: "腾讯成都-"
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
   - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
@@ -232,7 +232,7 @@ proxy-groups:
     tolerance: 30
     filter: "腾讯HK1-"
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
 # 分流规则
 rules:

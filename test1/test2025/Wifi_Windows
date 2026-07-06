@@ -164,10 +164,10 @@ proxy-providers:
       lazy: false
       url: *test_url1
 
-  📡 Nodes_tencent22002:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/tencent22002
+  📡 Nodes_22002_tencent:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22002_tencent
     type: "http"
-    path: "./ProxyProviders/Nodes_tencent22002.yaml"
+    path: "./ProxyProviders/Nodes_22002_tencent.yaml"
     proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
@@ -187,7 +187,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
       - ✈️ Airport_quick
 
   - name: "🌏 国外-手动-WIFI"
@@ -202,7 +202,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
@@ -218,7 +218,7 @@ proxy-groups:
     use:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
 
   - name: "♻️ 国外-故障转移"
     type: fallback
@@ -230,7 +230,7 @@ proxy-groups:
     use:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
 
   - name: "⚖️ 国外-负载均衡"
     type: load-balance
@@ -241,7 +241,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
 
   - name: "⚡️ 腾讯成都-自动测速"
     type: url-test
@@ -251,7 +251,7 @@ proxy-groups:
     tolerance: 30
     filter: "腾讯成都"
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
 
   - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
@@ -261,7 +261,7 @@ proxy-groups:
     tolerance: 30
     filter: "腾讯HK1"
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
 
 # 分流规则
 rules:

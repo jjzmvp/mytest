@@ -139,24 +139,11 @@ rule-providers:
 
 # Start- 机场相关配置(关键词：Airport)
 proxy-providers:
-  # 阿里系
-  📡 Nodes_dingtalk80:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/dingtalk80
-    type: "http"
-    path: "./ProxyProviders/Nodes_dingtalk80.yaml"
-    proxy: ⚡️ 腾讯HK1-自动测速
-    interval: 0
-    health-check:
-      enable: true
-      interval: 3600
-      lazy: false
-      url: *test_url1
-
   # 联通手厅
-  📡 Nodes_shouting22001:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
+  📡 Nodes_22001_shouting:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22001_shouting
     type: "http"
-    path: "./ProxyProviders/Nodes_shouting22001.yaml"
+    path: "./ProxyProviders/Nodes_22001_shouting.yaml"
     proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
@@ -166,10 +153,10 @@ proxy-providers:
       url: *test_url1
 
   # 腾讯系
-  📡 Nodes_tencent22002:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/tencent22002
+  📡 Nodes_22002_tencent:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22002_tencent
     type: "http"
-    path: "./ProxyProviders/Nodes_tencent22002.yaml"
+    path: "./ProxyProviders/Nodes_22002_tencent.yaml"
     proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
@@ -179,10 +166,10 @@ proxy-providers:
       url: *test_url1
 
   # 头条系
-  📡 Nodes_toutiao22003:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/toutiao22003
+  📡 Nodes_22003_toutiao:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22003_toutiao
     type: "http"
-    path: "./ProxyProviders/Nodes_toutiao22003.yaml"
+    path: "./ProxyProviders/Nodes_22003_toutiao.yaml"
     proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
@@ -192,10 +179,23 @@ proxy-providers:
       url: *test_url1
 
   # 哔哩系
-  📡 Nodes_bili22004:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/bili22004
+  📡 Nodes_22004_bili:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22004_bili
     type: "http"
-    path: "./ProxyProviders/Nodes_bili22004.yaml"
+    path: "./ProxyProviders/Nodes_22004_bili.yaml"
+    proxy: ⚡️ 腾讯HK1-自动测速
+    interval: 0
+    health-check:
+      enable: true
+      interval: 3600
+      lazy: false
+      url: *test_url1
+
+  # 阿里系
+  📡 Nodes_22005_aali:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22005_aali
+    type: "http"
+    path: "./ProxyProviders/Nodes_22005_aali.yaml"
     proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
@@ -216,11 +216,11 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - 📡 Nodes_shouting22001
-      - 📡 Nodes_dingtalk80
-      - 📡 Nodes_toutiao22003
-      - 📡 Nodes_bili22004
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22001_shouting
+      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22003_toutiao
+      - 📡 Nodes_22004_bili
+      - 📡 Nodes_22002_tencent
   
   - name: "🌏 国外-手动-联通沃派"
     type: select
@@ -236,11 +236,11 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_shouting22001
-      - 📡 Nodes_dingtalk80
-      - 📡 Nodes_toutiao22003
-      - 📡 Nodes_bili22004
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22001_shouting
+      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22003_toutiao
+      - 📡 Nodes_22004_bili
+      - 📡 Nodes_22002_tencent
       
   - name: "⚖️ 国外-负载均衡-手厅"
     type: load-balance
@@ -251,7 +251,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
   - name: "⚓️ 国外-负载均衡-钉钉"
     type: load-balance
@@ -262,7 +262,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_dingtalk80
+      - 📡 Nodes_22005_aali
 
   - name: "🔰 国外-负载均衡-头条"
     type: load-balance
@@ -273,7 +273,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_toutiao22003
+      - 📡 Nodes_22003_toutiao
 
   - name: "📺 国外-负载均衡-哔哩"
     type: load-balance
@@ -284,7 +284,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_bili22004
+      - 📡 Nodes_22004_bili
 
   - name: "🐧 国外-负载均衡-腾讯"
     type: load-balance
@@ -295,7 +295,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_tencent22002
+      - 📡 Nodes_22002_tencent
 
   - name: "🐢 春川-负载均衡-手厅"
     type: load-balance
@@ -306,11 +306,11 @@ proxy-groups:
     filter: "春川A"
     exclude-filter: "钉钉|腾讯|头条|哔哩"
     use:
-      - 📡 Nodes_shouting22001
-      - 📡 Nodes_dingtalk80
-      - 📡 Nodes_toutiao22003
-      - 📡 Nodes_bili22004
-      - 📡 Nodes_tencent22002 
+      - 📡 Nodes_22001_shouting
+      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22003_toutiao
+      - 📡 Nodes_22004_bili
+      - 📡 Nodes_22002_tencent 
 
   - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
@@ -320,11 +320,11 @@ proxy-groups:
     tolerance: 30
     filter: "腾讯HK1-"
     use:
-      - 📡 Nodes_shouting22001
-      - 📡 Nodes_dingtalk80
-      - 📡 Nodes_toutiao22003
-      - 📡 Nodes_bili22004
-      - 📡 Nodes_tencent22002 
+      - 📡 Nodes_22001_shouting
+      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22003_toutiao
+      - 📡 Nodes_22004_bili
+      - 📡 Nodes_22002_tencent 
 
 # 分流规则
 rules:
@@ -347,12 +347,12 @@ rules:
   - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-自动测速
   - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-自动测速
   # Android常用APP
-  - PROCESS-NAME,com.taobao.taobao,DIRECT                                  # 淘宝
-  - PROCESS-NAME,com.ccb.longjiLife,DIRECT                                 # 建行生活
-  - PROCESS-NAME,com.bilibili.app.in,DIRECT                                # B站
-  - PROCESS-NAME,com.alicloud.databox,DIRECT                               # 阿里云盘
-  - PROCESS-NAME,com.chinamworld.main,DIRECT                               # 建设银行
-  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                        # 支付宝
+  - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
+  - PROCESS-NAME,com.ccb.longjiLife,DIRECT                                # 建行生活
+  - PROCESS-NAME,com.bilibili.app.in,DIRECT                               # B站
+  - PROCESS-NAME,com.alicloud.databox,DIRECT                              # 阿里云盘
+  - PROCESS-NAME,com.chinamworld.main,DIRECT                              # 建设银行
+  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
 
   - PROCESS-NAME,com.unionpay,🎯 国内-手动-联通沃派                        # 云闪付
   - PROCESS-NAME,com.larus.nova,🎯 国内-手动-联通沃派                      # 豆包

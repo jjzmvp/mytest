@@ -217,30 +217,30 @@ proxy-groups:
     exclude-filter: *excludeNodes_CN
     use:
       - 📡 Nodes_22001_shouting
-      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bili
-      - 📡 Nodes_22002_tencent
+      - 📡 Nodes_22005_aali
   
   - name: "🌏 国外-手动-联通沃派"
     type: select
     proxies:
       # - DIRECT
       - ⚖️ 国外-负载均衡-手厅
-      - ⚓️ 国外-负载均衡-钉钉
+      - 🐧 国外-负载均衡-腾讯
       - 🔰 国外-负载均衡-头条
       - 📺 国外-负载均衡-哔哩
-      - 🐧 国外-负载均衡-腾讯
+      - ⚓️ 国外-负载均衡-阿里
       - 🐢 春川-负载均衡-手厅
     # 国外机场配置
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
       - 📡 Nodes_22001_shouting
-      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bili
-      - 📡 Nodes_22002_tencent
+      - 📡 Nodes_22005_aali
       
   - name: "⚖️ 国外-负载均衡-手厅"
     type: load-balance
@@ -253,7 +253,7 @@ proxy-groups:
     use:
       - 📡 Nodes_22001_shouting
 
-  - name: "⚓️ 国外-负载均衡-钉钉"
+  - name: "⚓️ 国外-负载均衡-阿里"
     type: load-balance
     url: *test_url1
     interval: 3600
@@ -304,13 +304,13 @@ proxy-groups:
     lazy: false
     strategy: round-robin
     filter: "春川A"
-    exclude-filter: "钉钉|腾讯|头条|哔哩"
+    exclude-filter: "腾讯|头条|哔哩|阿里"
     use:
       - 📡 Nodes_22001_shouting
-      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bili
-      - 📡 Nodes_22002_tencent 
+      - 📡 Nodes_22005_aali
 
   - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
@@ -321,10 +321,10 @@ proxy-groups:
     filter: "腾讯HK1-"
     use:
       - 📡 Nodes_22001_shouting
-      - 📡 Nodes_22005_aali
+      - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bili
-      - 📡 Nodes_22002_tencent 
+      - 📡 Nodes_22005_aali
 
 # 分流规则
 rules:

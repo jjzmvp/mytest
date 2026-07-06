@@ -165,10 +165,10 @@ proxy-providers:
       url: *test_url1
 
   # 联通手厅
-  📡 Nodes_shouting22001:
-    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/shouting22001
+  📡 Nodes_22001_shouting:
+    url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22001_shouting
     type: "http"
-    path: "./ProxyProviders/Nodes_shouting22001.yaml"
+    path: "./ProxyProviders/Nodes_22001_shouting.yaml"
     proxy: ⚡️ 腾讯HK1-自动测速
     interval: 0
     health-check:
@@ -188,7 +188,7 @@ proxy-groups:
     filter: *includeNodes_CN
     exclude-filter: *excludeNodes_CN
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
       - ✈️ Airport_quick
 
   - name: "🌏 国外-手动-WIFI"
@@ -203,7 +203,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
 
@@ -219,7 +219,7 @@ proxy-groups:
     use:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
   - name: "♻️ 国外-故障转移"
     type: fallback
@@ -231,7 +231,7 @@ proxy-groups:
     use:
       - ✈️ Airport_shen7
       - ✈️ Airport_quick
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
   - name: "⚖️ 国外-负载均衡"
     type: load-balance
@@ -242,7 +242,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
   - name: "⚡️ 腾讯成都-自动测速"
     type: url-test
@@ -252,7 +252,7 @@ proxy-groups:
     tolerance: 30
     filter: "腾讯成都-"
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
   - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
@@ -262,7 +262,7 @@ proxy-groups:
     tolerance: 30
     filter: "腾讯HK1-"
     use:
-      - 📡 Nodes_shouting22001
+      - 📡 Nodes_22001_shouting
 
 # 分流规则
 rules:

@@ -192,7 +192,7 @@ proxy-providers:
       url: *test_url1
 
   # 阿里系
-  📡 Nodes_22005_aalibaba:
+  📡 Nodes_22005_alibaba:
     url: https://raw.githubusercontent.com/jjzmvp/MyDictionaryText/refs/heads/ma1n/test2026/share/sub/22005_aali
     type: "http"
     path: "./ProxyProviders/Nodes_22005_aali.yaml"
@@ -220,7 +220,7 @@ proxy-groups:
       - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bilibili
-      - 📡 Nodes_22005_aalibaba
+      - 📡 Nodes_22005_alibaba
   
   - name: "🌏 国外-手动-联通沃派"
     type: select
@@ -240,7 +240,7 @@ proxy-groups:
       - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bilibili
-      - 📡 Nodes_22005_aalibaba
+      - 📡 Nodes_22005_alibaba
       
   - name: "⚖️ 国外-负载均衡-手厅"
     type: load-balance
@@ -295,7 +295,7 @@ proxy-groups:
     filter: *includeNodes_GN
     exclude-filter: *excludeNodes_GN
     use:
-      - 📡 Nodes_22005_aalibaba
+      - 📡 Nodes_22005_alibaba
 
   - name: "🐢 春川-负载均衡-手厅"
     type: load-balance
@@ -310,7 +310,7 @@ proxy-groups:
       - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bilibili
-      - 📡 Nodes_22005_aalibaba
+      - 📡 Nodes_22005_alibaba
 
   - name: "⚡️ 腾讯HK1-自动测速"
     type: url-test
@@ -324,7 +324,7 @@ proxy-groups:
       - 📡 Nodes_22002_tencent
       - 📡 Nodes_22003_toutiao
       - 📡 Nodes_22004_bilibili
-      - 📡 Nodes_22005_aalibaba
+      - 📡 Nodes_22005_alibaba
 
 # 分流规则
 rules:

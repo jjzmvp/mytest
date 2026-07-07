@@ -479,7 +479,7 @@ rules:
   - AND,(DST-PORT,22/2021/10010),(NOT,((GEOIP,CN))),⚡️ 腾讯HK1-自动测速
   - AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((GEOIP,CN))),REJECT # quic
   # 私有放行
-  # - GEOIP,PRIVATE,DIRECT,no-resolve
+  - GEOIP,PRIVATE,DIRECT,no-resolve
   # CIDR 规则
   - IP-CIDR,223.5.5.5/32,🎯 国内-手动-联通沃派,no-resolve
   - IP-CIDR,119.29.29.29/32,🎯 国内-手动-联通沃派,no-resolve

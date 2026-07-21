@@ -1,28 +1,28 @@
 #EXTM3U x-tvg-url="https://e.erw.cc/all.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
 # IPTV-rust
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV1" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV1.png" group-title="央视", IPTV-rust-CCTV1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV1.png" group-title="央视", IPTV-rust-CCTV1
 http://42.193.49.103:58766/live/cctv1.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV5" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5.png" group-title="央视", IPTV-rust-CCTV5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5.png" group-title="央视", IPTV-rust-CCTV5
 http://42.193.49.103:58766/live/cctv5.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV5+" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5+.png" group-title="央视", IPTV-rust-CCTV5+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5+.png" group-title="央视", IPTV-rust-CCTV5+
 http://42.193.49.103:58766/live/cctv5plus.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV6" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV6.png" group-title="央视", IPTV-rust-CCTV6
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV6.png" group-title="央视", IPTV-rust-CCTV6
 http://42.193.49.103:58766/live/cctv6.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV9" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV9.png" group-title="央视", IPTV-rust-CCTV9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV9.png" group-title="央视", IPTV-rust-CCTV9
 http://42.193.49.103:58766/live/cctv9.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV10" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV10.png" group-title="央视", IPTV-rust-CCTV10
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV10.png" group-title="央视", IPTV-rust-CCTV10
 http://42.193.49.103:58766/live/cctv10.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV16" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV16.png" group-title="央视", IPTV-rust-CCTV16
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV16.png" group-title="央视", IPTV-rust-CCTV16
 http://42.193.49.103:58766/live/cctv16hd.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV4k" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV4K.png" group-title="央视", ,IPTV-rust-CCTV4k
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV4K.png" group-title="央视",IPTV-rust-CCTV4k
 http://42.193.49.103:58766/live/cctv4k.m3u8
 
 # 视频轮播
-#EXTINF:-1,YY轮播-我爱我家
+#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/5KbhJWyaLtHKtGmrCJzcps.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-我爱我家
 https://live.ottiptv.cc/yy/1382735557
 #EXTINF:-1,YY轮播-武林外传
 https://live.ottiptv.cc/yy/1355652820
-#EXTINF:-1,YY轮播-地下交通站
+#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/5KbhJWyaLtHKtGmrCJzcps.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-地下交通站
 https://live.ottiptv.cc/yy/1382736795
 #EXTINF:-1,YY轮播-老广的味道
 https://live.ottiptv.cc/yy/1354932375

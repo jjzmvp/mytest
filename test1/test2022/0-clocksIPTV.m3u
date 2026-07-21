@@ -1,8 +1,8 @@
 #EXTM3U x-tvg-url="https://e.erw.cc/all.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
 # IPTV-rust
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV1" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/2201/057/821/202204010054_1626677671392_H32_1080.webp" group-title="央视", IPTV-rust-CCTV1
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV1" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/2201/057/821/202204010054_1626677671392_H32_1080.webp" group-title="央视"
 http://42.193.49.103:58766/live/cctv1.m3u8
-#EXTINF:-1,IPTV-rust-CCTV5
+#EXTINF:-1 tvg-name="CCTV5体育" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5500/516/171/202204010048_1626679603804_H32_1080.webp" group-title="央视"
 http://42.193.49.103:58766/live/cctv5.m3u8
 #EXTINF:-1,IPTV-rust-CCTV5+
 http://42.193.49.103:58766/live/cctv5plus.m3u8

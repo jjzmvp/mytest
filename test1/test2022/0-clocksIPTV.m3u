@@ -1,18 +1,18 @@
 #EXTM3U x-tvg-url="https://e.erw.cc/all.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
 # IPTV-rust
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV1" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/2201/057/821/202204010054_1626677671392_H32_1080.webp" group-title="央视"
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV1" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/2201/057/821/202204010054_1626677671392_H32_1080.webp" group-title="央视", IPTV-rust-CCTV1
 http://42.193.49.103:58766/live/cctv1.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV5" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5500/516/171/202204010048_1626679603804_H32_1080.webp" group-title="央视"
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV5" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5500/516/171/202204010048_1626679603804_H32_1080.webp" group-title="央视", IPTV-rust-CCTV5
 http://42.193.49.103:58766/live/cctv5.m3u8
-#EXTINF:-1,IPTV-rust-CCTV5+
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV5+" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5500/516/288/202204010048_1626679712843_H32_1080.webp" group-title="央视", IPTV-rust-CCTV5+
 http://42.193.49.103:58766/live/cctv5plus.m3u8
-#EXTINF:-1,IPTV-rust-CCTV6
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV6" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5500/212/872/202204010054_1626679914432_H32_1080.webp" group-title="央视", IPTV-rust-CCTV6
 http://42.193.49.103:58766/live/cctv6.m3u8
-#EXTINF:-1,IPTV-rust-CCTV9
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV9" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5501/083/624/202603081600_1772956792519_H32_1080.webp" group-title="央视", IPTV-rust-CCTV9
 http://42.193.49.103:58766/live/cctv9.m3u8
-#EXTINF:-1,IPTV-rust-CCTV10
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV10" tvg-logo="http://wapx.cmvideo.cn:8080/publish/poms/image/5500/212/874/202204010054_1626677767922_H32_1080.webp" group-title="央视", IPTV-rust-CCTV10
 http://42.193.49.103:58766/live/cctv10.m3u8
-#EXTINF:-1,IPTV-rust-CCTV16
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV16" tvg-logo= https://github.com/mytv-android/myTVlogo/raw/refs/heads/master/img/-CCTV16.png" group-title="央视", IPTV-rust-CCTV16
 http://42.193.49.103:58766/live/cctv16hd.m3u8
 #EXTINF:-1,IPTV-rust-CCTV4k
 http://42.193.49.103:58766/live/cctv4k.m3u8

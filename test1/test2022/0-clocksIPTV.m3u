@@ -18,7 +18,7 @@ http://42.193.49.103:58766/live/cctv16hd.m3u8
 http://42.193.49.103:58766/live/cctv4k.m3u8
 
 # 视频轮播
-#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/5KbhJWyaLtHKtGmrCJzcps.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-我爱我家
+#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/6W2QxsGilxG3wIYYexI0kp.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-我爱我家
 https://live.ottiptv.cc/yy/1382735557
 #EXTINF:-1,YY轮播-武林外传
 https://live.ottiptv.cc/yy/1355652820

@@ -4,7 +4,7 @@
 http://42.193.49.103:58766/live/cctv1.m3u8
 #EXTINF:-1 tvg-name="IPTV-rust-CCTV5" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5.png" group-title="央视", IPTV-rust-CCTV5
 http://42.193.49.103:58766/live/cctv5.m3u8
-#EXTINF:-1 tvg-name="IPTV-rust-CCTV5+" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV55+.png" group-title="央视", IPTV-rust-CCTV5+
+#EXTINF:-1 tvg-name="IPTV-rust-CCTV5+" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5+.png" group-title="央视", IPTV-rust-CCTV5+
 http://42.193.49.103:58766/live/cctv5plus.m3u8
 #EXTINF:-1 tvg-name="IPTV-rust-CCTV6" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV6.png" group-title="央视", IPTV-rust-CCTV6
 http://42.193.49.103:58766/live/cctv6.m3u8

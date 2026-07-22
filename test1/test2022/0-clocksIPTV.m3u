@@ -1,52 +1,52 @@
 #EXTM3U x-tvg-url="https://e.erw.cc/all.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
 # IPTV-rust
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV1.png" group-title="央视", IPTV-rust-CCTV1
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV1.png" group-title="央视",IPTV-rust-CCTV1
 http://42.193.49.103:58766/live/cctv1.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5.png" group-title="央视", IPTV-rust-CCTV5
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5.png" group-title="央视",IPTV-rust-CCTV5
 http://42.193.49.103:58766/live/cctv5.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5+.png" group-title="央视", IPTV-rust-CCTV5+
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5+.png" group-title="央视",IPTV-rust-CCTV5+
 http://42.193.49.103:58766/live/cctv5plus.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV6.png" group-title="央视", IPTV-rust-CCTV6
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV6.png" group-title="央视",IPTV-rust-CCTV6
 http://42.193.49.103:58766/live/cctv6.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV9.png" group-title="央视", IPTV-rust-CCTV9
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV9.png" group-title="央视",IPTV-rust-CCTV9
 http://42.193.49.103:58766/live/cctv9.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV10.png" group-title="央视", IPTV-rust-CCTV10
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV10.png" group-title="央视",IPTV-rust-CCTV10
 http://42.193.49.103:58766/live/cctv10.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV16.png" group-title="央视", IPTV-rust-CCTV16
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV16.png" group-title="央视",IPTV-rust-CCTV16
 http://42.193.49.103:58766/live/cctv16hd.m3u8
 
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV4K.png" group-title="央视",IPTV-rust-CCTV4k
 http://42.193.49.103:58766/live/cctv4k.m3u8
 
-#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/6W2QxsGilxG3wIYYexI0kp.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-我爱我家
+#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/6W2QxsGilxG3wIYYexI0kp.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播",YY-我爱我家
 https://live.ottiptv.cc/yy/1382735557
 
-#EXTINF:-1 tvg-logo="https://mobilelivephoto.bs2dl.yy.com/group16/M00/f444be7f5d1d43d399588a9cf4c27aa5.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-武林外传
+#EXTINF:-1 tvg-logo="https://mobilelivephoto.bs2dl.yy.com/group16/M00/f444be7f5d1d43d399588a9cf4c27aa5.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播",YY-武林外传
 https://live.ottiptv.cc/yy/1355652820
 
-#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/5KbhJWyaLtHKtGmrCJzcps.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-地下交通站
+#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/5KbhJWyaLtHKtGmrCJzcps.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播",YY-地下交通站
 https://live.ottiptv.cc/yy/1382736795
 
-#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/anchorCover/eKc4LqNuEw2gDywMjCjjo.png?imageview/4/0/w/400/h/500/q/80" group-title="轮播", YY-老广的味道
+#EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/anchorCover/eKc4LqNuEw2gDywMjCjjo.png?imageview/4/0/w/400/h/500/q/80" group-title="轮播",YY-老广的味道
 https://live.ottiptv.cc/yy/1354932375
 
-#EXTINF:-1 tvg-logo="https://apic.douyucdn.cn/upload/avatar_v3/202109/bf994a8b9969405a97522a81629ab03e_big.jpg" group-title="轮播", 斗鱼-孤独的美食家
+#EXTINF:-1 tvg-logo="https://apic.douyucdn.cn/upload/avatar_v3/202109/bf994a8b9969405a97522a81629ab03e_big.jpg" group-title="轮播",斗鱼-孤独的美食家
 https://live.ottiptv.cc/douyu/953193
 
-#EXTINF:-1 tvg-logo="https://apic.douyucdn.cn/upload/avatar_v3/202507/9c33a8154192466d995ac0c2653b2cad_big.jpg" group-title="轮播", 斗鱼-哇萨比抓马WD
+#EXTINF:-1 tvg-logo="https://apic.douyucdn.cn/upload/avatar_v3/202507/9c33a8154192466d995ac0c2653b2cad_big.jpg" group-title="轮播",斗鱼-哇萨比抓马WD
 https://live.ottiptv.cc/douyu/8808506
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/Dox-美剧.png" group-title="轮播", 虎牙-老友记
+#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/Dox-美剧.png" group-title="轮播",虎牙-老友记
 https://live.ottiptv.cc/huya/26355834
 
-#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1067/a7/a4ef768d73ace55fbc7adce0f4e329_180_135.jpg?1517472689" group-title="轮播", 虎牙-电影最TOP
+#EXTINF:-1 tvg-logo="http://huyaimg.msstatic.com/avatar/1067/a7/a4ef768d73ace55fbc7adce0f4e329_180_135.jpg?1517472689" group-title="轮播",虎牙-电影最TOP
 https://live.ottiptv.cc/huya/11774959
 
-#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1050/42/28f36f4d0767fb6efc42c1c1940e1c_180_135.jpg?1561358214" group-title="轮播", 虎牙-阿斗归来了
+#EXTINF:-1 tvg-logo="https://huyaimg.msstatic.com/avatar/1050/42/28f36f4d0767fb6efc42c1c1940e1c_180_135.jpg?1561358214" group-title="轮播",虎牙-阿斗归来了
 https://live.ottiptv.cc/huya/13303478

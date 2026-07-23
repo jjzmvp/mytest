@@ -1,32 +1,66 @@
 #EXTM3U x-tvg-url="https://e.erw.cc/all.xml.gz" catchup="append" catchup-source="?playseek=${(b)yyyyMMddHHmmss}-${(e)yyyyMMddHHmmss}"
 # IPTV-rust-1080P
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV1.png" group-title="央视1080P",IPTV-rust-CCTV1
+#EXTINF:-1 tvg-name="cctv1" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV1.png" group-title="央视1080P",IPTV-rust-CCTV1
 http://42.193.49.103:58766/live/cctv1.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5.png" group-title="央视1080P",IPTV-rust-CCTV5
+#EXTINF:-1 tvg-name="cctv2" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV2.png" group-title="央视1080P",IPTV-rust-CCTV2
+http://42.193.49.103:58766/live/cctv2.m3u8
+
+#EXTINF:-1 tvg-name="cctv3" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV3.png" group-title="央视1080P",IPTV-rust-CCTV3
+http://42.193.49.103:58766/live/cctv3.m3u8
+
+#EXTINF:-1 tvg-name="cctv4" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV4.png" group-title="央视1080P",IPTV-rust-CCTV4
+http://42.193.49.103:58766/live/cctv4.m3u8
+
+#EXTINF:-1 tvg-name="cctv5" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5.png" group-title="央视1080P",IPTV-rust-CCTV5
 http://42.193.49.103:58766/live/cctv5.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5+.png" group-title="央视1080P",IPTV-rust-CCTV5+
+#EXTINF:-1 tvg-name="cctv5+" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV5+.png" group-title="央视1080P",IPTV-rust-CCTV5+
 http://42.193.49.103:58766/live/cctv5plus.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV6.png" group-title="央视1080P",IPTV-rust-CCTV6
+#EXTINF:-1 tvg-name="cctv6" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV6.png" group-title="央视1080P",IPTV-rust-CCTV6
 http://42.193.49.103:58766/live/cctv6.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV9.png" group-title="央视1080P",IPTV-rust-CCTV9
+#EXTINF:-1 tvg-name="cctv7" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV7.png" group-title="央视1080P",IPTV-rust-CCTV7
+http://42.193.49.103:58766/live/cctv7.m3u8
+
+#EXTINF:-1 tvg-name="cctv8" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV8.png" group-title="央视1080P",IPTV-rust-CCTV8
+http://42.193.49.103:58766/live/cctv8.m3u8
+
+#EXTINF:-1 tvg-name="cctv9" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV9.png" group-title="央视1080P",IPTV-rust-CCTV9
 http://42.193.49.103:58766/live/cctv9.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV10.png" group-title="央视1080P",IPTV-rust-CCTV10
+#EXTINF:-1 tvg-name="cctv10" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV10.png" group-title="央视1080P",IPTV-rust-CCTV10
 http://42.193.49.103:58766/live/cctv10.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV16.png" group-title="央视1080P",IPTV-rust-CCTV16
+#EXTINF:-1 tvg-name="cctv11" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV11.png" group-title="央视1080P",IPTV-rust-CCTV11
+http://42.193.49.103:58766/live/cctv11.m3u8
+
+#EXTINF:-1 tvg-name="cctv12" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV12.png" group-title="央视1080P",IPTV-rust-CCTV12
+http://42.193.49.103:58766/live/cctv12.m3u8
+
+#EXTINF:-1 tvg-name="cctv13" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV13.png" group-title="央视1080P",IPTV-rust-CCTV13
+http://42.193.49.103:58766/live/cctv13.m3u8
+
+#EXTINF:-1 tvg-name="cctv16" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV16.png" group-title="央视1080P",IPTV-rust-CCTV16
 http://42.193.49.103:58766/live/cctv16hd.m3u8
 
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV4K.png" group-title="央视1080P",IPTV-rust-CCTV4k
+#EXTINF:-1 tvg-name="cctv4k" tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV4K.png" group-title="央视1080P",IPTV-rust-CCTV4k
 http://42.193.49.103:58766/live/cctv4k.m3u8
 
 # MCP-1080P
 #EXTINF:-1 tvg-name="cctv1" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv1.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv1-MCP
 https://live.ottiptv.cc/mcp/cctv1.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv2" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv2.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv2-MCP
+https://live.ottiptv.cc/mcp/cctv2.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv3" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv3.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv3-MCP
+https://live.ottiptv.cc/mcp/cctv3.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+
+#EXTINF:-1 tvg-name="cctv4" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv4.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv4-MCP
+https://live.ottiptv.cc/mcp/cctv4.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
 
 #EXTINF:-1 tvg-name="cctv5" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv5.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv5-MCP
 https://live.ottiptv.cc/mcp/cctv5.m3u8?userid=2012489296&sign=4b48503c4752d300224079d25d2e1bc69dd52f428c44406d74a07f76230cd29b2cc01a29a0d0df9ced773f083a787f68bf763b450c8b7d16d36c84b189a2ee7ba6a98d0daf370bddc7086a03b0&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
@@ -37,10 +71,26 @@ https://live.ottiptv.cc/mcp/cctv5p.m3u8?userid=2012489296&sign=65084c85dbc779f61
 #EXTINF:-1 tvg-name="cctv6" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv6.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv6-MCP
 https://live.ottiptv.cc/mcp/cctv6.m3u8?userid=2012489296&sign=6d1f9a47345543af1eb903004db0aa84d6f7594d648853cda5d943ac6cbaa687faac2e5ff5e6eb77668d2b97d9b7304d65b9535d0d481c441e054ec70bddaa43791db589f4b9f7837059f2a6b7&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
 
+#EXTINF:-1 tvg-name="cctv7" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv7.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv7-MCP
+https://live.ottiptv.cc/mcp/cctv7.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv8" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv8.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv8-MCP
+https://live.ottiptv.cc/mcp/cctv8.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
 #EXTINF:-1 tvg-name="cctv9" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv9.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv9-MCP
 https://live.ottiptv.cc/mcp/cctv9.m3u8?userid=2012489296&sign=94607f023f4c020a01fa6ba879e9e7f9a13f197a3b418819579ca369e54239bd453130dd114e4017061c266149ad1ed3045415b7132093c987d4f20897f64d461ab453a920c09a298c076c191b&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
 #EXTINF:-1 tvg-name="cctv10" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv10.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv10-MCP
 https://live.ottiptv.cc/mcp/cctv10.m3u8?userid=2012489296&sign=a2d1449530fc609274bf7b931523bb7d95451bcd1dd490fd695bcd8eb13d3b00b487e10975d5cbdf99a8f114732fa252c24f7bcb46dd66e7dc3e93b1b5526af30d614676eef6e889dd282cceb23c&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv11" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv11.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv11-MCP
+https://live.ottiptv.cc/mcp/cctv11.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv12" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv12.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv12-MCP
+https://live.ottiptv.cc/mcp/cctv12.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv13" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv13.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv13-MCP
+https://live.ottiptv.cc/mcp/cctv13.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
 
 #EXTINF:-1 tvg-name="cctv16" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv16.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv16-MCP
 https://live.ottiptv.cc/mcp/cctv16.m3u8?userid=2012489296&sign=d8eda5aaffae2fa86089241b519e064481425a48c7139ef694e15e79e0927cced3928608f15bd7e23183fe731469c168662e694765c668ace757699eeebf30db06d2d4b536144448711f24990b55&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
@@ -52,6 +102,15 @@ https://live.ottiptv.cc/mcp/cctv4k.m3u8?userid=2012489296&sign=8a083a41274d960b2
 #EXTINF:-1 tvg-name="CCTV1综合" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/2201/057/821/202204010054_1626677502161_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV1综合
 https://live.ottiptv.cc/mg/608807420.m3u8?userid=8094134560&sign=71f53b9e2619f6f8f2970d26e9ccb7b996f05e35633a655a8253cf32879734242b4fad6de2a8f95c70c57649baacc0f1199f6256bc17c8bc298a825b4cc9036b054cabd6a3a290794a8d9be7b36beddcbd&auth_token=52ca75466e66950e1cd2765ef10e537e
 
+#EXTINF:-1 tvg-name="CCTV2财经" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/346/945/202205311432_1653977575541_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV2财经
+https://live.ottiptv.cc/mg/631780532.m3u8?userid=8094134560&sign=9c0af62ba9ac9eb9a43e038b839b7f9e4010aace60ecfee8755351e5be8e1ff98591a3ce3315dcdf1cf1fb8a32a0c53c7fb544a584aa60569e9625a847a143e3415011c8016c6dc93df37990047eea3833&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV3综艺" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/212/864/202204010055_1626679292691_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV3综艺
+https://live.ottiptv.cc/mg/624878271.m3u8?userid=8094134560&sign=9ef1237465d728ed4c505c23d6e48c94735e01088b77ceb2c6b64ed2f0c27bd9f7fa7584c54ddad1041e5829462e33f90b3bbeacfdadea428fb9119dbe623c6cc0a71da2effbfce79646080f3e051fd150&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV4中文国际" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/346/947/202204010054_1626679457281_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV4中文国际
+https://live.ottiptv.cc/mg/631780421.m3u8?userid=8094134560&sign=91f2782bd7531dc4913b3f15299bd79f35657c7935c560a40591d2805ce188000861075c158a23ab7081e06f3499c10f1e44c9ed9ef64973e40fffce6fa8d5eba299cacc3395fb133d5f5fc3a7df667842&auth_token=52ca75466e66950e1cd2765ef10e537e
+
 #EXTINF:-1 tvg-name="CCTV5体育" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/516/171/202204010048_1626679645474_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV5体育
 https://live.ottiptv.cc/mg/641886683.m3u8?userid=8094134560&sign=72a364043650083dffe609250dcd839ec535da0178db540fbc81d9bf7749bc4ff8826d47338c6dd7077732bcbd7e66b4f5896961f07f12c5228f76ad0944184da365f30aa35eca96ed3cd7df2d28864f69&auth_token=52ca75466e66950e1cd2765ef10e537e
 
@@ -61,11 +120,69 @@ https://live.ottiptv.cc/mg/641886773.m3u8?userid=8094134560&sign=929b41d2c518599
 #EXTINF:-1 tvg-name="CCTV6电影" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/212/872/202204010054_1626679942827_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV6电影
 https://live.ottiptv.cc/mg/624878396.m3u8?userid=8094134560&sign=3a954aea593df610361d905387d654a818b373a118112ee7be0495f0dd10f4a58790f3cb9263d29f4ccd0e6cb80294b9833a49345b3c52f3e940eac04d2ee113aa12e3c3ce7c1ea3a5955e79a8dbc0d8f4&auth_token=52ca75466e66950e1cd2765ef10e537e
 
+#EXTINF:-1 tvg-name="CCTV7国防军事" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5501/083/622/202204010054_1626680072401_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV7国防军事
+https://live.ottiptv.cc/mg/673168121.m3u8?userid=8094134560&sign=bd6e33cd5a3c0ef304a2bbd5bb29f065f3eaf089c80bbf8a5d87f40714f12ad69f705b38536fe452fd972d28460d9cb6ea8874e6da33117978fbfd227467df743dbe6f26fd3b04db8facdb2fca6ead9e01&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV8电视剧" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/212/868/202204010049_1626677144094_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV8电视剧
+https://live.ottiptv.cc/mg/624878356.m3u8?userid=8094134560&sign=e1222553b31b81a1df81e7e11375e637af324808406d919fbde08285b60a070e404c69b2d1c19989e1f0cfb2a629b083ab995d5d74861b87d4913bb1d2ce7ca2a3b36d186c75658ae777575874587be3cb&auth_token=52ca75466e66950e1cd2765ef10e537e
+
 #EXTINF:-1 tvg-name="CCTV9纪录" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5501/083/624/202603081600_1772956787370_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV9纪录
 https://live.ottiptv.cc/mg/673168140.m3u8?userid=8094134560&sign=ece0adaa5f437f4001755de04c919ad9edd39101a2adbb3ffb644818ad4dee6ec789d57a3b92d150536f394e77b536113cebc2cb7c6502746b960f95980eb7685708d3a2b4ed0b11db7abbd983b8591c35&auth_token=52ca75466e66950e1cd2765ef10e537e
 
 #EXTINF:-1 tvg-name="CCTV10科教" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/212/874/202204010054_1626677759168_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV10科教
 https://live.ottiptv.cc/mg/624878405.m3u8?userid=8094134560&sign=b2d9828df0b13774744432d1f43eb582805f1345fef0c6069234e3bf7213586546d67f7d071d53c68cc3f709f777f6730ccea5a2a92644f76013fa362f4dd3929827271c6a1bf91b619195863093a074b5&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV11戏曲" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/988/610/202204010054_1626677917611_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV11戏曲
+https://live.ottiptv.cc/mg/667987558.m3u8?userid=8094134560&sign=5f678408165b66c2fc6e4cd8b32b736628fb9b04aeb2063b6689b9cc93ad494de506b54da674d1b6a03dba575b78db234fb081535beef3de49cf698136adc6f798279bb16148434c6da7ee8fdd75e30f56&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV12社会与法" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5501/083/627/202204010053_1626678104342_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV12社会与法
+https://live.ottiptv.cc/mg/673168185.m3u8?userid=8094134560&sign=b74c18d12ac94a6d94b0ccf9fe629c70c1e7192f173b33554b14ba841771fce36ab4cb3bf4e259c66aac301924f5bd91e66eea38726bc7b9dbefb92988101629f782c65fb4ffdb5eab8dbfe9c91b021822&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV13新闻" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/2202/208/864/202204010051_2202208864_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV13新闻
+https://live.ottiptv.cc/mg/608807423.m3u8?userid=8094134560&sign=193aae1309060524df75791a26539001d6a3786b1a2ce0f15926451e29950c2aaa764d8d852615517eaab767bf29a17278dba8f30b4c448e3b040030f36e034b44bab20435bae75073890b6c5382293917&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+# AV3A频道
+#EXTINF:-1 tvg-name="cctv1-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv1.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv1-AV3A
+https://live.ottiptv.cc/mcp/cctv1av3asfhd.m3u8?userid=2012489296&sign=5f2326251d102623ea7c2457128ae8f439797b123362b9c320962887dd9413fb2124f41edd099a5afd455464a5f7dc92da2bb6bc9b90314d5093628151db3c12d5aa216b36334e8c594ebc740197e1f969b6ec061a&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv2-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv2.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv2-AV3A
+https://live.ottiptv.cc/mcp/cctv2av3asfhd.m3u8?userid=2012489296&sign=d82edbf13005aa449e44c3af96b6ff549dca8a887cde0c1129cab03e2ca6020d23eaa9b25be0fa2363d08494b91d3bf9cb3a5d652217e0504b506c568e616d77e674214ffe6c846bef5f57fae7926e9d88d8cb09f1&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv3-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv3.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv3-AV3A
+https://live.ottiptv.cc/mcp/cctv3av3asfhd.m3u8?userid=2012489296&sign=82cd14efb8e58051dcae8785078d5b1d1bef816699829077cec9467051bac4e62b6b6c476f180579e27090bc0df3a0aee63d2a43b5a85ce3cda95aacbe42c9c74890c4079b8ef8ee5149f826f9f7770c5cdd1ea42d&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv4-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv4.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv4-AV3A
+https://live.ottiptv.cc/mcp/cctv4av3asfhd.m3u8?userid=2012489296&sign=7eaa33cb0afa83494706e81035f4624ec59a8dc827a4fbef4181444e9df2832e5769a3b4f955d821eb230c157cde35f0c4d5bc34b3ae77332287a2035e4a350af6cdb29e5083aed8168f9bcb6395073613de388c14&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv5-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv5.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv5-AV3A
+https://live.ottiptv.cc/mcp/cctv5av3asfhd.m3u8?userid=2012489296&sign=583e83a703f30c90eb5851d62109f728444d1de40bafb22b563fa9d498dd7bc11ca3af507dbe42ee6919399a5b866cf8420c05bde9a05bfa6c47f9d4f07b534423e4f84583a90d2b0c4e224cc261ca2e9c0a2ac00f&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv5p-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv5p.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv5p-AV3A
+https://live.ottiptv.cc/mcp/cctv5pav3asfhd.m3u8?userid=2012489296&sign=7298216b4176cb4fa07b3f6aa3407c4e2278c27f7085d231b805d33364b7c016404b5d071209b3d50a4bf4956ec8b5cc217856b1b80c840f2c9c5402493059459a6d7b74bf4f74088286c2e78c0574352a917241e143&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv6-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv6.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv6-AV3A
+https://live.ottiptv.cc/mcp/cctv6av3asfhd.m3u8?userid=2012489296&sign=a46da3397af1863f0ac07ba4e324339a07c98cc24adbc9dd22766a727152b1b855a9e93b9bb6a2e219c8317b782eaaf77e75b3fc5f9811f6a4701098152bbd92e2c0733c64cd8a671bc4213dd1c0ed92ab30f18e0b&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv7-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv7.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv7-AV3A
+https://live.ottiptv.cc/mcp/cctv7av3asfhd.m3u8?userid=2012489296&sign=d02d52ca33f51ae3b65c44f080931dbc7e71cb5ba09487ff8ebc502e93429940fd176a48055b4abcbe6fb956c31796ac3cc728e034ee2b1ded5015488d99f185218bf472af5cab5b66c7332d13aa58ab740f854c1f&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv8-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv8.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv8-AV3A
+https://live.ottiptv.cc/mcp/cctv8av3asfhd.m3u8?userid=2012489296&sign=d0e07c4ce41cc315dd575f3c1da78033c3e59414b82aeb4496f02c913fa636e8e0b5b29b4e5b6ccf800b125cef6c3dfafe8cf89612aee772d5e01fc693bc601228f52453fffb241e837cd01b1d6e18dfcb4b5985dc&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv9-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv9.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv9-AV3A
+https://live.ottiptv.cc/mcp/cctv9av3asfhd.m3u8?userid=2012489296&sign=b759839eb9a62028a4f6e240be668acd65f9c8035eda1e7e0f43ca5cafad0df522f811ca9761f35fc7a291ae1d868bbd8a673b582dc1d3d4bd2f8f334d091f61b483404e514af46de4ce9e9c2b3741a24f4f3d7bcf&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv10-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv10.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv10-AV3A
+https://live.ottiptv.cc/mcp/cctv10av3asfhd.m3u8?userid=2012489296&sign=79bde5a68faeafca6a8fdcf3ee8a7551f2d3109681a414b41b5852b6a8f6eea43006e3d4ad47fb80dab0934fe1e7596f1324f18d5195c0b066426b47259e5af6ad067e00f3d0fe3457dd0bd7bbe237c6e66a40fb4392&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv11-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv11.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv11-AV3A
+https://live.ottiptv.cc/mcp/cctv11av3asfhd.m3u8?userid=2012489296&sign=1a2e04af8708327bb0204b571c7a4fb03df9632665342eb8fb81517bdeb883e40de643eb6b2ed6b919a2e7024c96274d00620958eea86c9d2d8fbbc37880efbd659587cf6330f94146ca33e30ed89b6a54cdb09d0c1f&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv12-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv12.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv12-AV3A
+https://live.ottiptv.cc/mcp/cctv12av3asfhd.m3u8?userid=2012489296&sign=21fb8f0fa83349000e7e4f1f33217acd92f5b8b68982e2cd40781d466a5b36bd399a4820b0d47cbc676643ed05c2ca3746d0abb8c33ff799bdea95ac83228d62617389c179b07f68e63489a869b20eece935f29e5221&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv13-AV3A" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv13.png" group-title="AV3A频道" http-user-agent="okHttp/Mod-1.5.0.0",cctv13-AV3A
+https://live.ottiptv.cc/mcp/cctv13av3asfhd.m3u8?userid=2012489296&sign=8e4025482c1f1def2ebbe61fc5127f103ab00d9c75147a19930fa1c8f0927fd666554eca87ba862264ec26bb7ae199e998ccbc35db1ce09bb73b0bbc17f18f05f1764fb9b7c06535c2c1c360ed06094274478afc501e&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
 
 # 影视轮播
 #EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/6W2QxsGilxG3wIYYexI0kp.jpg?imageview/4/0/w/400/h/500/q/80" group-title="影视轮播",YY-我爱我家

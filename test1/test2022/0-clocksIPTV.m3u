@@ -42,6 +42,29 @@ https://live.ottiptv.cc/mg/673168140.m3u8?userid=8094134560&sign=ece0adaa5f437f4
 #EXTINF:-1 tvg-name="CCTV10科教" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/212/874/202204010054_1626677759168_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV10科教
 https://live.ottiptv.cc/mg/624878405.m3u8?userid=8094134560&sign=b2d9828df0b13774744432d1f43eb582805f1345fef0c6069234e3bf7213586546d67f7d071d53c68cc3f709f777f6730ccea5a2a92644f76013fa362f4dd3929827271c6a1bf91b619195863093a074b5&auth_token=52ca75466e66950e1cd2765ef10e537e
 
+#EXTINF:-1 tvg-name="cctv1" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv1.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv1-MCP
+https://live.ottiptv.cc/mcp/cctv1.m3u8?userid=2012489296&sign=9c80fa1e1c78a21b61799a7cae4db7a96162c3816d857de600a2334d7a82622a2a77716d842995e1753704fdaa0b4a74b6d2a6522112ada62cc0032a638cef14bb8230d9d3369f0fadf3a89434&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv5" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv5.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv5-MCP
+https://live.ottiptv.cc/mcp/cctv5.m3u8?userid=2012489296&sign=4b48503c4752d300224079d25d2e1bc69dd52f428c44406d74a07f76230cd29b2cc01a29a0d0df9ced773f083a787f68bf763b450c8b7d16d36c84b189a2ee7ba6a98d0daf370bddc7086a03b0&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv5p" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv5p.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv5p-MCP
+https://live.ottiptv.cc/mcp/cctv5p.m3u8?userid=2012489296&sign=65084c85dbc779f6130977c4d5af554cf2a684e236041f1a3d9f05094868af526ffaf9fb4ea1d5c0e17b8bfe23981a53ca3f0b11f000b7634a4c8767748aaade834b9d829d786ee0a687c9c4f0cc&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv6" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv6.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv6-MCP
+https://live.ottiptv.cc/mcp/cctv6.m3u8?userid=2012489296&sign=6d1f9a47345543af1eb903004db0aa84d6f7594d648853cda5d943ac6cbaa687faac2e5ff5e6eb77668d2b97d9b7304d65b9535d0d481c441e054ec70bddaa43791db589f4b9f7837059f2a6b7&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv9" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv9.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv9-MCP
+https://live.ottiptv.cc/mcp/cctv9.m3u8?userid=2012489296&sign=94607f023f4c020a01fa6ba879e9e7f9a13f197a3b418819579ca369e54239bd453130dd114e4017061c266149ad1ed3045415b7132093c987d4f20897f64d461ab453a920c09a298c076c191b&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+#EXTINF:-1 tvg-name="cctv10" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv10.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv10-MCP
+https://live.ottiptv.cc/mcp/cctv10.m3u8?userid=2012489296&sign=a2d1449530fc609274bf7b931523bb7d95451bcd1dd490fd695bcd8eb13d3b00b487e10975d5cbdf99a8f114732fa252c24f7bcb46dd66e7dc3e93b1b5526af30d614676eef6e889dd282cceb23c&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv16" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv16.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv16-MCP
+https://live.ottiptv.cc/mcp/cctv16.m3u8?userid=2012489296&sign=d8eda5aaffae2fa86089241b519e064481425a48c7139ef694e15e79e0927cced3928608f15bd7e23183fe731469c168662e694765c668ace757699eeebf30db06d2d4b536144448711f24990b55&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
+#EXTINF:-1 tvg-name="cctv4k" tvg-logo="https://cdn.jsdelivr.net/gh/mursor1985/epg/logo/cctv4k.png" group-title="央视-MCP" http-user-agent="okHttp/Mod-1.5.0.0",cctv4k-MCP
+https://live.ottiptv.cc/mcp/cctv4k.m3u8?userid=2012489296&sign=8a083a41274d960b256ab80198b5eae782ebeee608dd75f7dd0dc87bfa94acc64aac336b32e8346890ddaeebc30705d03d394f8d9665c325bf338889ff99d71c97a3b4843a6789e5beef8a8bc704&auth_token=2e290fab08c8d316b36e9d16ef4a4eaf
+
 #EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/6W2QxsGilxG3wIYYexI0kp.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播",YY-我爱我家
 https://live.ottiptv.cc/yy/1382735557
 

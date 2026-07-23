@@ -24,8 +24,23 @@ http://42.193.49.103:58766/live/cctv16hd.m3u8
 #EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/mytv-android/myTVlogo/refs/heads/main/img/-CCTV4K.png" group-title="央视",IPTV-rust-CCTV4k
 http://42.193.49.103:58766/live/cctv4k.m3u8
 
-#EXTINF:-1 tvg-name="CCTV1综合" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/2201/057/821/202204010054_1626677502161_H169_1080.jpg" group-title="央视" http-user-agent="okHttp/Mod-1.5.0.0", CCTV1综合
+#EXTINF:-1 tvg-name="CCTV1综合" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/2201/057/821/202204010054_1626677502161_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV1综合
 https://live.ottiptv.cc/mg/608807420.m3u8?userid=8094134560&sign=71f53b9e2619f6f8f2970d26e9ccb7b996f05e35633a655a8253cf32879734242b4fad6de2a8f95c70c57649baacc0f1199f6256bc17c8bc298a825b4cc9036b054cabd6a3a290794a8d9be7b36beddcbd&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV5体育" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/516/171/202204010048_1626679645474_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV5体育
+https://live.ottiptv.cc/mg/641886683.m3u8?userid=8094134560&sign=72a364043650083dffe609250dcd839ec535da0178db540fbc81d9bf7749bc4ff8826d47338c6dd7077732bcbd7e66b4f5896961f07f12c5228f76ad0944184da365f30aa35eca96ed3cd7df2d28864f69&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV5+体育赛事" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/516/288/202204010048_1626679726956_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV5+体育赛事
+https://live.ottiptv.cc/mg/641886773.m3u8?userid=8094134560&sign=929b41d2c518599ac391f5be55ad3c2624ad7da433990d9a513e866e2d3af0816dacc625729bf5c46d40b811e1c8c09736bf0a53a1354af1283b8e8bd4dda9d419365dbce06717efb426c9f25d4d1da9d6&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV6电影" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/212/872/202204010054_1626679942827_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV6电影
+https://live.ottiptv.cc/mg/624878396.m3u8?userid=8094134560&sign=3a954aea593df610361d905387d654a818b373a118112ee7be0495f0dd10f4a58790f3cb9263d29f4ccd0e6cb80294b9833a49345b3c52f3e940eac04d2ee113aa12e3c3ce7c1ea3a5955e79a8dbc0d8f4&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV9纪录" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5501/083/624/202603081600_1772956787370_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV9纪录
+https://live.ottiptv.cc/mg/673168140.m3u8?userid=8094134560&sign=ece0adaa5f437f4001755de04c919ad9edd39101a2adbb3ffb644818ad4dee6ec789d57a3b92d150536f394e77b536113cebc2cb7c6502746b960f95980eb7685708d3a2b4ed0b11db7abbd983b8591c35&auth_token=52ca75466e66950e1cd2765ef10e537e
+
+#EXTINF:-1 tvg-name="CCTV10科教" tvg-logo="https://wapx.cmvideo.cn/publish/poms/image/5500/212/874/202204010054_1626677759168_H169_1080.jpg" group-title="央视720P" http-user-agent="okHttp/Mod-1.5.0.0", CCTV10科教
+https://live.ottiptv.cc/mg/624878405.m3u8?userid=8094134560&sign=b2d9828df0b13774744432d1f43eb582805f1345fef0c6069234e3bf7213586546d67f7d071d53c68cc3f709f777f6730ccea5a2a92644f76013fa362f4dd3929827271c6a1bf91b619195863093a074b5&auth_token=52ca75466e66950e1cd2765ef10e537e
 
 #EXTINF:-1 tvg-logo="http://emyfs.bs2cdn.yy.com/offlineIndividuationCover/6W2QxsGilxG3wIYYexI0kp.jpg?imageview/4/0/w/400/h/500/q/80" group-title="轮播",YY-我爱我家
 https://live.ottiptv.cc/yy/1382735557

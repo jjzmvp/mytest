@@ -268,7 +268,7 @@ proxy-groups:
 rules:
   ## Android系统相关规则
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT                                  # OK影视 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOSITE,cn)),DIRECT                                # OK影视 (GEOSITECN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOSITE,cn)),DIRECT                                # OK影视 (GEOSITE_CN)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOSITE,cn)))),🌏 国外-手动-WIFI             # OK影视 (GEOSITE_非CN)
 
   - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,cn)),DIRECT                                    # 云影空蒙 (GEOIP_CN)

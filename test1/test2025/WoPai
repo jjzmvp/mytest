@@ -348,12 +348,12 @@ rules:
   - PROCESS-NAME-REGEX,com.android.*,⚡️ 腾讯HK1-自动测速
   - PROCESS-NAME-REGEX,com.coloros.*,⚡️ 腾讯HK1-自动测速
   # Android常用APP
-  - PROCESS-NAME,com.taobao.taobao,DIRECT                                 # 淘宝
-  - PROCESS-NAME,com.ccb.longjiLife,DIRECT                                # 建行生活
-  - PROCESS-NAME,com.bilibili.app.in,DIRECT                               # B站
-  - PROCESS-NAME,com.alicloud.databox,DIRECT                              # 阿里云盘
-  - PROCESS-NAME,com.chinamworld.main,DIRECT                              # 建设银行
-  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
+  - PROCESS-NAME,com.taobao.taobao,DIRECT                                  # 淘宝
+  - PROCESS-NAME,com.ccb.longjiLife,DIRECT                                 # 建行生活
+  - PROCESS-NAME,com.bilibili.app.in,DIRECT                                # B站
+  - PROCESS-NAME,com.alicloud.databox,DIRECT                               # 阿里云盘
+  - PROCESS-NAME,com.chinamworld.main,DIRECT                               # 建设银行
+  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                        # 支付宝
 
   - PROCESS-NAME,com.unionpay,🎯 国内-手动-联通沃派                        # 云闪付
   - PROCESS-NAME,com.larus.nova,🎯 国内-手动-联通沃派                      # 豆包

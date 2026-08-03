@@ -267,14 +267,14 @@ proxy-groups:
 # 分流规则
 rules:
   ## Android系统相关规则
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT                           # OK影视 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI        # OK影视 (GEOIP_非CN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT                                  # OK影视 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI               # OK影视 (GEOIP_非CN)
 
-  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,cn)),DIRECT                             # 云影空蒙 (GEOIP_CN)
-  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI          # 云影空蒙 (GEOIP_非CN)
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,cn)),DIRECT                                    # 云影空蒙 (GEOIP_CN)
+  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI                 # 云影空蒙 (GEOIP_非CN)
 
-  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),DIRECT                         # 电视直播 (GEOIP_CN)
-  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI      # 电视直播 (GEOIP_非CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),DIRECT                                # 电视直播 (GEOIP_CN)
+  - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI             # 电视直播 (GEOIP_非CN)
 
   ## 以下规则不同系统可配置相同
   # 私有放行

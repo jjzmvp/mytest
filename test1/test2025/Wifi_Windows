@@ -276,10 +276,10 @@ rules:
   - PROCESS-NAME,WeChatAppEx.exe,DIRECT                           # 微信程序
   - PROCESS-NAME,NutstoreClient.exe,DIRECT                        # 坚果云
 
-  - PROCESS-NAME,WXWork.exe,⚡️ 腾讯成都-自动测速                  # 企业微信
-  - PROCESS-NAME,WXWorkWeb.exe,⚡️ 腾讯成都-自动测速               # 企业微信程序
+  - PROCESS-NAME,WXWork.exe,⚡️ 腾讯成都-自动测速                   # 企业微信
+  - PROCESS-NAME,WXWorkWeb.exe,⚡️ 腾讯成都-自动测速                # 企业微信程序
 
-  - PROCESS-NAME,lx-music-desktop.exe,⚡️ 腾讯HK1-自动测速         # LX music
+  - PROCESS-NAME,lx-music-desktop.exe,⚡️ 腾讯HK1-自动测速          # LX music
 
   - PROCESS-NAME,HPPrinterHealthMonitor.exe,REJECT                # HP打印机监测
 

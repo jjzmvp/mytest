@@ -264,6 +264,16 @@ proxy-groups:
     use:
       - 📡 Nodes_22002_tencent
 
+  - name: "⚡️ 腾讯JP1-自动测速"
+    type: url-test
+    url: *test_url1
+    interval: 3600
+    lazy: false
+    tolerance: 30
+    filter: "腾讯JP1"
+    use:
+      - 📡 Nodes_22002_tencent
+
 # 分流规则
 rules:
   # Windows下的进程规则
@@ -354,8 +364,8 @@ rules:
   - OR,((DOMAIN-SUFFIX,ip.sb),(DOMAIN-SUFFIX,ipwho.is),(DOMAIN-SUFFIX,ipapi.is),),🌏 国外-手动-WIFI
 
   # 移动网络下的配置，另OPENAI不支持HK节点
+  - GEOSITE,openai,⚡️ 腾讯JP1-自动测速
   - GEOSITE,github,🌏 国外-手动-WIFI
-  - GEOSITE,openai,🌏 国外-手动-WIFI
   - GEOSITE,google,🌏 国外-手动-WIFI
   - GEOSITE,zaobao,🌏 国外-手动-WIFI
   - GEOSITE,oracle,🌏 国外-手动-WIFI

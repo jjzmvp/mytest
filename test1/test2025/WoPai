@@ -417,7 +417,6 @@ rules:
   - GEOSITE,baidu,🎯 国内-手动-联通沃派
   - GEOSITE,youku,🎯 国内-手动-联通沃派
   - GEOSITE,tencent,🎯 国内-手动-联通沃派
-  - GEOSITE,bilibili,🎯 国内-手动-联通沃派
   - GEOSITE,bytedance,🎯 国内-手动-联通沃派
   - GEOSITE,jd,DIRECT
   - GEOSITE,zhihu,DIRECT
@@ -443,6 +442,7 @@ rules:
   - DOMAIN-SUFFIX,ping.pe,🌏 国外-手动-联通沃派
   - DOMAIN-SUFFIX,lastpass.com,🌏 国外-手动-联通沃派
   - DOMAIN-SUFFIX,namesilo.com,🌏 国外-手动-联通沃派
+  - DOMAIN-SUFFIX,live.ottiptv.cc,🌏 国外-手动-联通沃派
   - OR,((DOMAIN-SUFFIX,grammarly.com),(DOMAIN-SUFFIX,grammarly.io)),🌏 国外-手动-联通沃派
   - OR,((DOMAIN-KEYWORD,qingze),(DOMAIN-KEYWORD,kuxingseng)),🌏 国外-手动-联通沃派
   # Youtube和谷歌学术(注意：部分节点可能被google拉黑，导致无法使用谷歌学术!!!)

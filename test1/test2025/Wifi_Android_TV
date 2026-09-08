@@ -270,9 +270,6 @@ rules:
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT                                  # OK影视 (GEOIP_CN)
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI               # OK影视 (GEOIP_非CN)
 
-  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(GEOIP,cn)),DIRECT                                    # 云影空蒙 (GEOIP_CN)
-  - AND,((PROCESS-NAME,top.yogiczy.yykm.tv),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI                 # 云影空蒙 (GEOIP_非CN)
-
   - AND,((PROCESS-NAME,com.github.mytv.android),(GEOIP,cn)),DIRECT                                # 电视直播 (GEOIP_CN)
   - AND,((PROCESS-NAME,com.github.mytv.android),(NOT,((GEOIP,cn)))),🌏 国外-手动-WIFI             # 电视直播 (GEOIP_非CN)
 

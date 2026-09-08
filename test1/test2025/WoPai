@@ -369,6 +369,7 @@ rules:
   - PROCESS-NAME,com.whmapp.wuyang.honda,⚡️ 腾讯HK1-自动测速               # 五羊本田
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速   # Google Voice
 
+  - DOMAIN-SUFFIX,168.sryze.cc,⚡️ 腾讯HK1-自动测速                         # IPTV直播频道
   - DOMAIN-SUFFIX,php.jdshipin.com,⚡️ 腾讯HK1-自动测速                     # IPTV直播频道
 
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),🎯 国内-手动-联通沃派                     # OK影视 (GEOIP_CN)

@@ -304,6 +304,7 @@ rules:
   - PROCESS-NAME,cn.toside.music.mobile,⚡️ 腾讯HK1-自动测速               # LX music
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速  # Google Voice
 
+  - DOMAIN-SUFFIX,168.sryze.cc,⚡️ 腾讯HK1-自动测速                        # IPTV直播频道
   - DOMAIN-SUFFIX,php.jdshipin.com,⚡️ 腾讯HK1-自动测速                    # IPTV直播频道
 
   - AND,((PROCESS-NAME,com.fongmi.android.tv),(GEOIP,cn)),DIRECT                                  # OK影视 (GEOIP_CN)

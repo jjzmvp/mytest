@@ -299,7 +299,8 @@ rules:
   - PROCESS-NAME,com.whmapp.wuyang.honda,DIRECT                           # 五羊本田
   - PROCESS-NAME,com.sinovatech.unicom.ui,DIRECT                          # 中国联通
   - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT                       # 支付宝
-  - PROCESS-NAME,com.cctv.yangshipin.app.androidp,DIRECT                  # 央视频
+ 
+  - PROCESS-NAME,com.cctv.yangshipin.app.androidp,⚡️ 腾讯成都-自动测速     # 央视频
 
   - PROCESS-NAME,cn.toside.music.mobile,⚡️ 腾讯HK1-自动测速               # LX music
   - PROCESS-NAME,com.google.android.apps.googlevoice,⚡️ 腾讯HK1-自动测速  # Google Voice
